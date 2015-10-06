@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -13,40 +14,29 @@ namespace SistemaDeLogin
 {
     public partial class IncluirConta : Form
     {
-        String minhapasta = Environment.CurrentDirectory;
-        
-        String conexao;
-
         public IncluirConta()
         {
             InitializeComponent();
-
-            conexao = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=" + minhapasta + "\\BD_Usuario.mdf;Integrated Security=True";
-          
-
         }
-     
-        private void IncluirConta_Load(object sender, EventArgs e)
-        {
 
+        private void testebd(){
+
+            ADM_BD a = new ADM_BD();
+            ArrayList al = new ArrayList();
+            al.Add(newLogin.Text);
+            al.Add(newSenha.Text);
+            if (a.Insert(al))
+            {
+                MessageBox.Show("USUARIO INSERIDO !");
+            }
+            else {
+                MessageBox.Show("ERRO NA INSERSÃO !");
+            }
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(conexao);
-            con.Open();
+            testebd();
+        }
            
-            String inserir = @"insert into tb_Usuarios(NomeUser, SenhaUser) values(@user,@senha)";
-
-            //+newLogin.Text + "', '" + newSenha.Text + "')";
-            SqlCommand cmd = new SqlCommand(inserir, con);
-            cmd.Parameters.Add("@user", SqlDbType.VarChar).Value = newLogin.Text;
-            cmd.Parameters.Add("@senha", SqlDbType.VarChar).Value = newSenha.Text;
-
-            cmd.ExecuteNonQuery();
-               con.Close();
-                MessageBox.Show("inclusao concluida");
-            }
-
-      
+        }
     }
-}

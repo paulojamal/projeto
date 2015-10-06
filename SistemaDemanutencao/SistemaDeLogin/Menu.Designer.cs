@@ -32,9 +32,9 @@
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.tsmUsuarios = new System.Windows.Forms.ToolStripMenuItem();
             this.opcIncluir = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmClientes = new System.Windows.Forms.ToolStripMenuItem();
             this.opcAlterar = new System.Windows.Forms.ToolStripMenuItem();
             this.opcExcluir = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmClientes = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,12 +75,6 @@
             this.opcIncluir.Text = "Incluir";
             this.opcIncluir.Click += new System.EventHandler(this.alterarSenhaToolStripMenuItem_Click);
             // 
-            // tsmClientes
-            // 
-            this.tsmClientes.Name = "tsmClientes";
-            this.tsmClientes.Size = new System.Drawing.Size(61, 20);
-            this.tsmClientes.Text = "Clientes";
-            // 
             // opcAlterar
             // 
             this.opcAlterar.Name = "opcAlterar";
@@ -92,6 +86,12 @@
             this.opcExcluir.Name = "opcExcluir";
             this.opcExcluir.Size = new System.Drawing.Size(152, 22);
             this.opcExcluir.Text = "Excluir";
+            // 
+            // tsmClientes
+            // 
+            this.tsmClientes.Name = "tsmClientes";
+            this.tsmClientes.Size = new System.Drawing.Size(61, 20);
+            this.tsmClientes.Text = "Clientes";
             // 
             // Menu
             // 
