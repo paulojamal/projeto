@@ -121,7 +121,8 @@ namespace SistemaDeLogin
         {
             if (this.conectar())
             {
-                vsql = "UPDATE INTO tb_Usuarios(NomeUser, SenhaUser) VALUES(@NomeUser,@SenhaUser) WHERE NomeUser = @NomeUser";
+                //                vsql = "UPDATE INTO tb_Usuarios(NomeUser, SenhaUser) VALUES(@NomeUser,@SenhaUser) WHERE NomeUser = @NomeUser";
+                vsql = "UPDATE tb_Usuarios SET NomeUser = @NomeUser, SenhaUser = @SenhaUser WHERE NomeUser = @NomeUser";
                 SqlCommand objcmd = null;
 
                 try
@@ -150,19 +151,66 @@ namespace SistemaDeLogin
             }
         }
 
-        //public bool Delete()
-        //{
+        public bool Delete(ArrayList nome_deletado)
+        {
+            if (this.conectar())
+            {
+                vsql = "DELETE FROM tb_Usuarios WHERE NomeUser = @NomeUser";
+                SqlCommand objcmd = null;
 
-        //}
+                try
+                {
+                    objcmd = new SqlCommand(vsql, objCon);
+                    objcmd.Parameters.AddWithValue("@NomeUser",nome_deletado);
+                    objcmd.ExecuteNonQuery();
 
-        //public DataTable ListaGrid() {
+                    return true;
+                }
+                catch (SqlException sqlerr)
+                {
+                    throw sqlerr;
+                }
+                finally
+                {
+                    this.desconectar();
+                }
+            }
 
+            else
+            {
+                return false;
+            }
+        }
 
-        //}
-        //public DataTable Pesquisar()
-        //{
+        public DataTable ListaGrid() {
 
+            if (this.conectar())
+            {
+                vsql = "SELECT INTO tb_Usuarios(NomeUser, SenhaUser) VALUES(@NomeUser,@SenhaUser)";
+                SqlCommand objcmd = null;
 
-        //}
+                try
+                {
+                    objcmd = new SqlCommand(vsql, objCon);
+                    SqlDataAdapter adp = new SqlDataAdapter(objcmd);
+                    DataTable dt = new DataTable();
+                    adp.Fill(dt);
+                    return dt;
+                }
+                catch (SqlException sqlerr)
+                {
+                    throw sqlerr;
+                }
+                finally
+                {
+                    this.desconectar();
+                }
+            }
+
+            else
+            {
+                return null;
+            }
+        }
     }
 }

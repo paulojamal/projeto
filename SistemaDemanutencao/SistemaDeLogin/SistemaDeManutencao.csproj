@@ -73,6 +73,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BD_UsuarioDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ExcluirConta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExcluirConta.Designer.cs">
+      <DependentUpon>ExcluirConta.cs</DependentUpon>
+    </Compile>
     <Compile Include="IncluirConta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AlterarConta.resx">
       <DependentUpon>AlterarConta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExcluirConta.resx">
+      <DependentUpon>ExcluirConta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IncluirConta.resx">
       <DependentUpon>IncluirConta.cs</DependentUpon>

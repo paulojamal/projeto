@@ -35,7 +35,10 @@
             this.opcAlterar = new System.Windows.Forms.ToolStripMenuItem();
             this.opcExcluir = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmClientes = new System.Windows.Forms.ToolStripMenuItem();
+            this.dados = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dados)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -87,6 +90,7 @@
             this.opcExcluir.Name = "opcExcluir";
             this.opcExcluir.Size = new System.Drawing.Size(152, 22);
             this.opcExcluir.Text = "Excluir";
+            this.opcExcluir.Click += new System.EventHandler(this.opcExcluir_Click);
             // 
             // tsmClientes
             // 
@@ -94,11 +98,34 @@
             this.tsmClientes.Size = new System.Drawing.Size(61, 20);
             this.tsmClientes.Text = "Clientes";
             // 
+            // dados
+            // 
+            this.dados.AllowUserToAddRows = false;
+            this.dados.AllowUserToDeleteRows = false;
+            this.dados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dados.Location = new System.Drawing.Point(160, 66);
+            this.dados.Name = "dados";
+            this.dados.ReadOnly = true;
+            this.dados.Size = new System.Drawing.Size(630, 500);
+            this.dados.TabIndex = 4;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(61, 66);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(93, 23);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Exibir Usuários";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(790, 567);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dados);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.menuStrip2);
             this.MainMenuStrip = this.menuStrip1;
@@ -108,6 +135,7 @@
             this.Load += new System.EventHandler(this.Menu_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -121,5 +149,7 @@
         private System.Windows.Forms.ToolStripMenuItem tsmClientes;
         private System.Windows.Forms.ToolStripMenuItem opcAlterar;
         private System.Windows.Forms.ToolStripMenuItem opcExcluir;
+        private System.Windows.Forms.DataGridView dados;
+        private System.Windows.Forms.Button button1;
     }
 }

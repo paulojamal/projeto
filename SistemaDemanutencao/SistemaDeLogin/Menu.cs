@@ -14,7 +14,8 @@ namespace SistemaDeLogin
     {
         IncluirConta i = new IncluirConta();
         AlterarConta a = new AlterarConta();
-        
+        ExcluirConta exc = new ExcluirConta();
+        ADM_BD lista = new ADM_BD();
         public Menu()
         {
             InitializeComponent();
@@ -40,6 +41,16 @@ namespace SistemaDeLogin
         private void opcAlterar_Click(object sender, EventArgs e)
         {
             a.ShowDialog();
+        }
+
+        private void opcExcluir_Click(object sender, EventArgs e)
+        {
+            exc.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dados.DataSource =  lista.ListaGrid();
         }
     }
 }
