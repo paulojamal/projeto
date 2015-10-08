@@ -12,31 +12,38 @@ using System.Data.SqlClient;
 
 namespace SistemaDeLogin
 {
-    public partial class IncluirConta : Form
+    public partial class AlterarConta : Form
     {
-        public IncluirConta()
+        public AlterarConta()
         {
             InitializeComponent();
         }
 
-        private void testebd(){
-            
+        private void AlterarConta_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void testebd()
+        {
+
             ADM_BD a = new ADM_BD();
             ArrayList al = new ArrayList();
-            al.Add(newLogin.Text);
-            al.Add(newSenha.Text);
-            if (a.Insert(al))
+            al.Add(LoginPesquisar.Text);
+            al.Add(SenhaMudar.Text);
+            if (a.Update(al))
             {
-                MessageBox.Show("USUARIO INSERIDO !");
+                MessageBox.Show("SENHA MODIFICADA !");
             }
-            else {
-                MessageBox.Show("ERRO NA INSERSÃO !");
+            else
+            {
+                MessageBox.Show("ERRO !");
             }
         }
+
         private void button1_Click(object sender, EventArgs e)
         {
             testebd();
         }
-           
-        }
     }
+}

@@ -9,14 +9,14 @@ using System.Data.SqlClient;
 
 namespace SistemaDeLogin
 {
-    
     class ADM_BD
     {
         static String mp = Environment.CurrentDirectory;
-        private static string _strCon = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename="+mp+"\\BD_Usuario.mdf;Integrated Security=True;Connect Timeout=30";
+        //private static string _strCon = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Guilherme\Desktop\projeto\SistemaDemanutencao\SistemaDeLogin\BD_Usuario.mdf;Integrated Security=True;Connect Timeout=30";
+        private static string _strCon = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + mp + "\\BD_Usuario.mdf;Integrated Security=True;Connect Timeout=30";
         private string vsql = "";
         SqlConnection objCon = null;
-    
+
         private bool conectar() {
             objCon = new SqlConnection(_strCon);
             try
@@ -47,7 +47,7 @@ namespace SistemaDeLogin
         public bool Logou(ArrayList p_arrVerificar)
         {
 
-            vsql = "SELEC COUNT(*) FROM tb_Usuarios WHERE NomeUser = @user AND SenhaUser =@senha";
+            vsql = "SELECT COUNT(*) FROM tb_Usuarios WHERE NomeUser = @user AND SenhaUser =@senha";
             SqlCommand objcmd = null;
             if (this.conectar())
             {
@@ -58,9 +58,9 @@ namespace SistemaDeLogin
                     objcmd.Parameters.Add("@senha", SqlDbType.VarChar).Value = p_arrVerificar[1];
 
 
-//                    int i = (int)objcmd.ExecuteScalar();
+                    int i = (int)objcmd.ExecuteScalar();
 
-                    if ((int)objcmd.ExecuteScalar() > 0)
+                    if (i > 0)
                     {
                         return true;
                     }
@@ -113,14 +113,42 @@ namespace SistemaDeLogin
             }
 
             else {
-                return true;
+                return false;
             }
         }
 
-        //public bool Update()
-        //{
+        public bool Update(ArrayList p_arrUpdate)
+        {
+            if (this.conectar())
+            {
+                vsql = "UPDATE INTO tb_Usuarios(NomeUser, SenhaUser) VALUES(@NomeUser,@SenhaUser) WHERE NomeUser = @NomeUser";
+                SqlCommand objcmd = null;
 
-        //}
+                try
+                {
+                    objcmd = new SqlCommand(vsql, objCon);
+                    objcmd.Parameters.Add(new SqlParameter("@NomeUser", p_arrUpdate[0]));
+                    objcmd.Parameters.Add(new SqlParameter("@SenhaUser", p_arrUpdate[1]));
+                    objcmd.ExecuteNonQuery();
+
+
+                    return true;
+                }
+                catch (SqlException sqlerr)
+                {
+                    throw sqlerr;
+                }
+                finally
+                {
+                    this.desconectar();
+                }
+            }
+
+            else
+            {
+                return false;
+            }
+        }
 
         //public bool Delete()
         //{

@@ -62,6 +62,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ADM_BD.cs" />
+    <Compile Include="AlterarConta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlterarConta.Designer.cs">
+      <DependentUpon>AlterarConta.cs</DependentUpon>
+    </Compile>
     <Compile Include="BD_UsuarioDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -87,6 +93,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AlterarConta.resx">
+      <DependentUpon>AlterarConta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IncluirConta.resx">
       <DependentUpon>IncluirConta.cs</DependentUpon>
     </EmbeddedResource>

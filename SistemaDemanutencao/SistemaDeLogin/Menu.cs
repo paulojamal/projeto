@@ -13,7 +13,7 @@ namespace SistemaDeLogin
     public partial class Menu : Form
     {
         IncluirConta i = new IncluirConta();
-
+        AlterarConta a = new AlterarConta();
         
         public Menu()
         {
@@ -35,6 +35,11 @@ namespace SistemaDeLogin
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void opcAlterar_Click(object sender, EventArgs e)
+        {
+            a.ShowDialog();
         }
     }
 }
