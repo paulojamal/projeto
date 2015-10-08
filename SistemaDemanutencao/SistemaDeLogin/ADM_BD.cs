@@ -9,12 +9,14 @@ using System.Data.SqlClient;
 
 namespace SistemaDeLogin
 {
+    
     class ADM_BD
     {
-        private const string _strCon = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename= C:\Users\Filipe\Desktop\Sistema de Manutencao\projeto\SistemaDemanutencao\SistemaDeLogin\BD_Usuario.mdf;Integrated Security=True";
+        static String mp = Environment.CurrentDirectory;
+        private static string _strCon = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename="+mp+"\\BD_Usuario.mdf;Integrated Security=True;Connect Timeout=30";
         private string vsql = "";
         SqlConnection objCon = null;
-
+    
         private bool conectar() {
             objCon = new SqlConnection(_strCon);
             try
@@ -45,7 +47,7 @@ namespace SistemaDeLogin
         public bool Logou(ArrayList p_arrVerificar)
         {
 
-            vsql = "SELECT COUNT(*) FROM tb_Usuarios WHERE NomeUser = @user AND SenhaUser =@senha";
+            vsql = "SELEC COUNT(*) FROM tb_Usuarios WHERE NomeUser = @user AND SenhaUser =@senha";
             SqlCommand objcmd = null;
             if (this.conectar())
             {
@@ -56,9 +58,9 @@ namespace SistemaDeLogin
                     objcmd.Parameters.Add("@senha", SqlDbType.VarChar).Value = p_arrVerificar[1];
 
 
-                    int i = (int)objcmd.ExecuteScalar();
+//                    int i = (int)objcmd.ExecuteScalar();
 
-                    if (i > 0)
+                    if ((int)objcmd.ExecuteScalar() > 0)
                     {
                         return true;
                     }
@@ -80,7 +82,7 @@ namespace SistemaDeLogin
             }
             else
             {
-                return true;
+                return false;
             }
         }
 
