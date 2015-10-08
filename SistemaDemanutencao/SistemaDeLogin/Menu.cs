@@ -16,6 +16,10 @@ namespace SistemaDeLogin
         AlterarConta a = new AlterarConta();
         ExcluirConta exc = new ExcluirConta();
         ADM_BD lista = new ADM_BD();
+        IncluirConta_Cliente icl = new IncluirConta_Cliente();
+        AlterarConta_Cliente acl = new AlterarConta_Cliente();
+        ExcluirConta_Cliente excli = new ExcluirConta_Cliente();
+        ADM_BD_Cliente listacli = new ADM_BD_Cliente();
         public Menu()
         {
             InitializeComponent();
@@ -51,6 +55,26 @@ namespace SistemaDeLogin
         private void button1_Click(object sender, EventArgs e)
         {
             dados.DataSource =  lista.ListaGrid();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            dados.DataSource = listacli.ListaGrid();
+        }
+
+        private void incluirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            icl.ShowDialog();
+        }
+
+        private void alterarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            acl.ShowDialog();
+        }
+
+        private void excluirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            excli.ShowDialog();
         }
     }
 }

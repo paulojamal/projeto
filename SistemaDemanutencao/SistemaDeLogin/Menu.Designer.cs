@@ -35,8 +35,12 @@
             this.opcAlterar = new System.Windows.Forms.ToolStripMenuItem();
             this.opcExcluir = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmClientes = new System.Windows.Forms.ToolStripMenuItem();
+            this.incluirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.alterarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.excluirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dados = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dados)).BeginInit();
             this.SuspendLayout();
@@ -67,36 +71,61 @@
             this.opcAlterar,
             this.opcExcluir});
             this.tsmUsuarios.Name = "tsmUsuarios";
-            this.tsmUsuarios.Size = new System.Drawing.Size(64, 20);
-            this.tsmUsuarios.Text = "Usuários";
+            this.tsmUsuarios.Size = new System.Drawing.Size(87, 20);
+            this.tsmUsuarios.Text = "Funcionários";
             this.tsmUsuarios.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // opcIncluir
             // 
             this.opcIncluir.Name = "opcIncluir";
-            this.opcIncluir.Size = new System.Drawing.Size(152, 22);
+            this.opcIncluir.Size = new System.Drawing.Size(143, 22);
             this.opcIncluir.Text = "Incluir";
             this.opcIncluir.Click += new System.EventHandler(this.alterarSenhaToolStripMenuItem_Click);
             // 
             // opcAlterar
             // 
             this.opcAlterar.Name = "opcAlterar";
-            this.opcAlterar.Size = new System.Drawing.Size(152, 22);
-            this.opcAlterar.Text = "Alterar";
+            this.opcAlterar.Size = new System.Drawing.Size(143, 22);
+            this.opcAlterar.Text = "Alterar senha";
             this.opcAlterar.Click += new System.EventHandler(this.opcAlterar_Click);
             // 
             // opcExcluir
             // 
             this.opcExcluir.Name = "opcExcluir";
-            this.opcExcluir.Size = new System.Drawing.Size(152, 22);
+            this.opcExcluir.Size = new System.Drawing.Size(143, 22);
             this.opcExcluir.Text = "Excluir";
             this.opcExcluir.Click += new System.EventHandler(this.opcExcluir_Click);
             // 
             // tsmClientes
             // 
+            this.tsmClientes.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.incluirToolStripMenuItem,
+            this.alterarToolStripMenuItem,
+            this.excluirToolStripMenuItem});
             this.tsmClientes.Name = "tsmClientes";
             this.tsmClientes.Size = new System.Drawing.Size(61, 20);
             this.tsmClientes.Text = "Clientes";
+            // 
+            // incluirToolStripMenuItem
+            // 
+            this.incluirToolStripMenuItem.Name = "incluirToolStripMenuItem";
+            this.incluirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.incluirToolStripMenuItem.Text = "Incluir";
+            this.incluirToolStripMenuItem.Click += new System.EventHandler(this.incluirToolStripMenuItem_Click);
+            // 
+            // alterarToolStripMenuItem
+            // 
+            this.alterarToolStripMenuItem.Name = "alterarToolStripMenuItem";
+            this.alterarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.alterarToolStripMenuItem.Text = "Alterar senha";
+            this.alterarToolStripMenuItem.Click += new System.EventHandler(this.alterarToolStripMenuItem_Click);
+            // 
+            // excluirToolStripMenuItem
+            // 
+            this.excluirToolStripMenuItem.Name = "excluirToolStripMenuItem";
+            this.excluirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.excluirToolStripMenuItem.Text = "Excluir";
+            this.excluirToolStripMenuItem.Click += new System.EventHandler(this.excluirToolStripMenuItem_Click);
             // 
             // dados
             // 
@@ -111,19 +140,30 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(61, 66);
+            this.button1.Location = new System.Drawing.Point(48, 66);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 23);
+            this.button1.Size = new System.Drawing.Size(106, 23);
             this.button1.TabIndex = 5;
-            this.button1.Text = "Exibir Usuários";
+            this.button1.Text = "Exibir Funcionários";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(48, 106);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(106, 23);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "Exibir Clientes";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(790, 567);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dados);
             this.Controls.Add(this.menuStrip1);
@@ -151,5 +191,9 @@
         private System.Windows.Forms.ToolStripMenuItem opcExcluir;
         private System.Windows.Forms.DataGridView dados;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolStripMenuItem incluirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem alterarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem excluirToolStripMenuItem;
+        private System.Windows.Forms.Button button2;
     }
 }
