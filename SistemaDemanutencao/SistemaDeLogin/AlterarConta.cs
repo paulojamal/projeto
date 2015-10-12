@@ -18,7 +18,6 @@ namespace SistemaDeLogin
         {
             InitializeComponent();
         }
-
         private void AlterarConta_Load(object sender, EventArgs e)
         {
 
@@ -26,22 +25,18 @@ namespace SistemaDeLogin
 
         private void testebd()
         {
-
             ADM_BD a = new ADM_BD();
-            ArrayList al = new ArrayList();
-            al.Add(LoginPesquisar.Text);
-            al.Add(SenhaMudar.Text);
-            if (a.Update(al))
-            {
+            a.Atualizar(pesquisaLogin.Text, alteraSenha.Text);
+            try {
                 MessageBox.Show("SENHA MODIFICADA !");
             }
-            else
+           catch(Exception e)
             {
-                MessageBox.Show("ERRO !");
+                MessageBox.Show("ERRO !"+e.Message);
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             testebd();
         }

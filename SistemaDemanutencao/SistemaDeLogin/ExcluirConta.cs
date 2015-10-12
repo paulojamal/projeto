@@ -24,18 +24,17 @@ namespace SistemaDeLogin
 
             ADM_BD a = new ADM_BD();
             ArrayList al = new ArrayList();
-            al.Add(nomeDel.Text);
-            if (a.Delete(al))
+            a.Excluir(nDel.Text);
+            try
             {
                 MessageBox.Show("USUARIO DELETADO !");
             }
-            else
+            catch
             {
                 MessageBox.Show("ERRO !");
             }
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             testebd();
         }

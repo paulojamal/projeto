@@ -5,20 +5,20 @@
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+    //    private System.ComponentModel.IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+        //protected override void Dispose(bool disposing)
+        //{
+        //    if (disposing && (components != null))
+        //    {
+        //        components.Dispose();
+        //    }
+        //    base.Dispose(disposing);
+        //}
 
         #region Windows Form Designer generated code
 
@@ -41,8 +41,14 @@
             this.dados = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.menuStrip3 = new System.Windows.Forms.MenuStrip();
+            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.incluirContaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.alterarContaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.excuirContaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dados)).BeginInit();
+            this.menuStrip3.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -73,28 +79,24 @@
             this.tsmUsuarios.Name = "tsmUsuarios";
             this.tsmUsuarios.Size = new System.Drawing.Size(87, 20);
             this.tsmUsuarios.Text = "Funcionários";
-            this.tsmUsuarios.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // opcIncluir
             // 
             this.opcIncluir.Name = "opcIncluir";
             this.opcIncluir.Size = new System.Drawing.Size(143, 22);
             this.opcIncluir.Text = "Incluir";
-            this.opcIncluir.Click += new System.EventHandler(this.alterarSenhaToolStripMenuItem_Click);
             // 
             // opcAlterar
             // 
             this.opcAlterar.Name = "opcAlterar";
             this.opcAlterar.Size = new System.Drawing.Size(143, 22);
             this.opcAlterar.Text = "Alterar senha";
-            this.opcAlterar.Click += new System.EventHandler(this.opcAlterar_Click);
             // 
             // opcExcluir
             // 
             this.opcExcluir.Name = "opcExcluir";
             this.opcExcluir.Size = new System.Drawing.Size(143, 22);
             this.opcExcluir.Text = "Excluir";
-            this.opcExcluir.Click += new System.EventHandler(this.opcExcluir_Click);
             // 
             // tsmClientes
             // 
@@ -109,23 +111,20 @@
             // incluirToolStripMenuItem
             // 
             this.incluirToolStripMenuItem.Name = "incluirToolStripMenuItem";
-            this.incluirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.incluirToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.incluirToolStripMenuItem.Text = "Incluir";
-            this.incluirToolStripMenuItem.Click += new System.EventHandler(this.incluirToolStripMenuItem_Click);
             // 
             // alterarToolStripMenuItem
             // 
             this.alterarToolStripMenuItem.Name = "alterarToolStripMenuItem";
-            this.alterarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.alterarToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.alterarToolStripMenuItem.Text = "Alterar senha";
-            this.alterarToolStripMenuItem.Click += new System.EventHandler(this.alterarToolStripMenuItem_Click);
             // 
             // excluirToolStripMenuItem
             // 
             this.excluirToolStripMenuItem.Name = "excluirToolStripMenuItem";
-            this.excluirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.excluirToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.excluirToolStripMenuItem.Text = "Excluir";
-            this.excluirToolStripMenuItem.Click += new System.EventHandler(this.excluirToolStripMenuItem_Click);
             // 
             // dados
             // 
@@ -146,7 +145,6 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Exibir Funcionários";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -156,26 +154,59 @@
             this.button2.TabIndex = 6;
             this.button2.Text = "Exibir Clientes";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // menuStrip3
+            // 
+            this.menuStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.usuariosToolStripMenuItem});
+            this.menuStrip3.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip3.Name = "menuStrip3";
+            this.menuStrip3.Size = new System.Drawing.Size(629, 24);
+            this.menuStrip3.TabIndex = 0;
+            this.menuStrip3.Text = "menuStrip3";
+            // 
+            // usuariosToolStripMenuItem
+            // 
+            this.usuariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.incluirContaToolStripMenuItem,
+            this.alterarContaToolStripMenuItem,
+            this.excuirContaToolStripMenuItem});
+            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
+            this.usuariosToolStripMenuItem.Text = "Usuarios";
+            // 
+            // incluirContaToolStripMenuItem
+            // 
+            this.incluirContaToolStripMenuItem.Name = "incluirContaToolStripMenuItem";
+            this.incluirContaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.incluirContaToolStripMenuItem.Text = "Incluir Conta";
+            this.incluirContaToolStripMenuItem.Click += new System.EventHandler(this.incluirContaToolStripMenuItem_Click);
+            // 
+            // alterarContaToolStripMenuItem
+            // 
+            this.alterarContaToolStripMenuItem.Name = "alterarContaToolStripMenuItem";
+            this.alterarContaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.alterarContaToolStripMenuItem.Text = "Alterar Conta";
+            this.alterarContaToolStripMenuItem.Click += new System.EventHandler(this.alterarContaToolStripMenuItem_Click);
+            // 
+            // excuirContaToolStripMenuItem
+            // 
+            this.excuirContaToolStripMenuItem.Name = "excuirContaToolStripMenuItem";
+            this.excuirContaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.excuirContaToolStripMenuItem.Text = "Excuir Conta";
+            this.excuirContaToolStripMenuItem.Click += new System.EventHandler(this.excuirContaToolStripMenuItem_Click);
             // 
             // Menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(790, 567);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dados);
-            this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.menuStrip2);
-            this.MainMenuStrip = this.menuStrip1;
+            this.ClientSize = new System.Drawing.Size(629, 311);
+            this.Controls.Add(this.menuStrip3);
+            this.MainMenuStrip = this.menuStrip3;
             this.Name = "Menu";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Menu";
-            this.Load += new System.EventHandler(this.Menu_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dados)).EndInit();
+            this.menuStrip3.ResumeLayout(false);
+            this.menuStrip3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,5 +226,10 @@
         private System.Windows.Forms.ToolStripMenuItem alterarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem excluirToolStripMenuItem;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.MenuStrip menuStrip3;
+        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem incluirContaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem alterarContaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem excuirContaToolStripMenuItem;
     }
 }

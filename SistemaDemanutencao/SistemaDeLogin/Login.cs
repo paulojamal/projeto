@@ -17,16 +17,13 @@ namespace SistemaDeLogin
         {
             InitializeComponent();
         }
-        Menu m = new Menu();      
+         
 
         private void B_Entrar_Click_1(object sender, EventArgs e)
         {
             ADM_BD adm = new ADM_BD();
-            ArrayList al = new ArrayList();
-            al.Add(textLogin.Text);
-            al.Add(textSenha.Text);
-
-            if (adm.Logou(al))
+            Menu m = new Menu();
+            if (adm.Logou(textLogin.Text, textSenha.Text))
             {
                 m.Show();
                 this.Hide();
@@ -36,14 +33,6 @@ namespace SistemaDeLogin
                 MessageBox.Show("Login ou Senha  não encontrado");
             }
         }
-    }
-
-    /*
-         public void Login_KeyDown(object sender, KeyEventArgs e) { 
-            if (e.KeyCode  == Keys.Enter)
-            B_Entrar_Click1(sender, null);
-        }
-      */  
-       
-    }
+    } 
+}
 

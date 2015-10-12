@@ -18,25 +18,24 @@ namespace SistemaDeLogin
         {
             InitializeComponent();
         }
-
-        private void testebd(){
-            
-            ADM_BD a = new ADM_BD();
-            ArrayList al = new ArrayList();
-            al.Add(newLogin.Text);
-            al.Add(newSenha.Text);
-            if (a.Insert(al))
+        private void IncluirBD()
+        {
+            try
             {
+                ADM_BD cbd = new ADM_BD();
+
+                cbd.Inserir(newLogin.Text, newSenha.Text);
                 MessageBox.Show("USUARIO INSERIDO !");
             }
-            else {
-                MessageBox.Show("ERRO NA INSERSÃO !");
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERRO NA INSERSÃO !" + ex.Message);
             }
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            testebd();
+            IncluirBD();
         }
-           
-        }
+
+    }
     }
