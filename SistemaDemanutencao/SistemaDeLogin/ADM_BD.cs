@@ -11,7 +11,6 @@ namespace SistemaDeLogin
 {
     public class ADM_BD
     {
-        static String mp = Environment.CurrentDirectory;
         private static string _strCon = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Filipe\Desktop\testeBD\testeBD\testeBD\BD_Usuario.mdf;Integrated Security=True;Connect Timeout=30";
 
         public const String strInserir = "INSERT INTO tb_Usuarios(NomeUser, SenhaUser) VALUES(@NomeUser, @SenhaUser)";
