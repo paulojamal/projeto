@@ -17,6 +17,8 @@ namespace SistemaDeLogin
         {
             InitializeComponent();
         }
+         
+
         private void B_Entrar_Click_1(object sender, EventArgs e)
         {
             ADM_BD adm = new ADM_BD();
@@ -29,13 +31,6 @@ namespace SistemaDeLogin
             else
             {
                 MessageBox.Show("Login ou Senha  não encontrado");
-            }
-        }
-
-        private void B_Entrar_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter) {
-                B_Entrar_Click_1(sender, e);
             }
         }
     } 

@@ -73,7 +73,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(130, 146);
+            this.button2.Location = new System.Drawing.Point(83, 147);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 0;
@@ -83,14 +83,14 @@
             // 
             // pesquisaLogin
             // 
-            this.pesquisaLogin.Location = new System.Drawing.Point(121, 55);
+            this.pesquisaLogin.Location = new System.Drawing.Point(74, 56);
             this.pesquisaLogin.Name = "pesquisaLogin";
             this.pesquisaLogin.Size = new System.Drawing.Size(100, 20);
             this.pesquisaLogin.TabIndex = 1;
             // 
             // alteraSenha
             // 
-            this.alteraSenha.Location = new System.Drawing.Point(121, 95);
+            this.alteraSenha.Location = new System.Drawing.Point(74, 96);
             this.alteraSenha.Name = "alteraSenha";
             this.alteraSenha.Size = new System.Drawing.Size(100, 20);
             this.alteraSenha.TabIndex = 2;

@@ -22,7 +22,8 @@ namespace SistemaDeLogin
         {
 
         }
-        private void AlterarBD()
+
+        private void testebd()
         {
             ADM_BD a = new ADM_BD();
             a.Atualizar(pesquisaLogin.Text, alteraSenha.Text);
@@ -37,7 +38,7 @@ namespace SistemaDeLogin
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AlterarBD();
+            testebd();
         }
     }
 }

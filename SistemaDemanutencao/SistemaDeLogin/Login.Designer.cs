@@ -38,33 +38,32 @@
             // 
             // textLogin
             // 
-            this.textLogin.Location = new System.Drawing.Point(110, 65);
+            this.textLogin.Location = new System.Drawing.Point(113, 100);
             this.textLogin.Name = "textLogin";
             this.textLogin.Size = new System.Drawing.Size(100, 20);
             this.textLogin.TabIndex = 0;
             // 
             // textSenha
             // 
-            this.textSenha.Location = new System.Drawing.Point(110, 110);
+            this.textSenha.Location = new System.Drawing.Point(113, 145);
             this.textSenha.Name = "textSenha";
             this.textSenha.Size = new System.Drawing.Size(100, 20);
             this.textSenha.TabIndex = 1;
             // 
             // B_Entrar
             // 
-            this.B_Entrar.Location = new System.Drawing.Point(125, 145);
+            this.B_Entrar.Location = new System.Drawing.Point(128, 180);
             this.B_Entrar.Name = "B_Entrar";
             this.B_Entrar.Size = new System.Drawing.Size(75, 23);
             this.B_Entrar.TabIndex = 2;
             this.B_Entrar.Text = "Entrar";
             this.B_Entrar.UseVisualStyleBackColor = true;
             this.B_Entrar.Click += new System.EventHandler(this.B_Entrar_Click_1);
-            this.B_Entrar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.B_Entrar_KeyDown);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(48, 68);
+            this.label1.Location = new System.Drawing.Point(51, 103);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 3;
@@ -73,7 +72,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(48, 116);
+            this.label2.Location = new System.Drawing.Point(51, 151);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 4;
@@ -83,16 +82,15 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(27, 9);
+            this.label3.Location = new System.Drawing.Point(-1, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(242, 31);
+            this.label3.Size = new System.Drawing.Size(305, 31);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Acesso ao sistema";
+            this.label3.Text = "Sistema de manutenção";
             // 
             // Login
             // 
-            this.AcceptButton = this.B_Entrar;
-            this.ClientSize = new System.Drawing.Size(296, 219);
+            this.ClientSize = new System.Drawing.Size(300, 262);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);

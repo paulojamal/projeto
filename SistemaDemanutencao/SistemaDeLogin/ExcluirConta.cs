@@ -19,7 +19,7 @@ namespace SistemaDeLogin
             InitializeComponent();
         }
 
-        private void ExcluirBD()
+        private void testebd()
         {
 
             ADM_BD a = new ADM_BD();
@@ -36,7 +36,7 @@ namespace SistemaDeLogin
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            ExcluirBD();
+            testebd();
         }
     }
 }
