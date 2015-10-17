@@ -69,6 +69,12 @@
     <Compile Include="AlterarConta.Designer.cs">
       <DependentUpon>AlterarConta.cs</DependentUpon>
     </Compile>
+    <Compile Include="AlterarConta_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlterarConta_Cliente.Designer.cs">
+      <DependentUpon>AlterarConta_Cliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="BD_UsuarioDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -80,11 +86,23 @@
     <Compile Include="ExcluirConta.Designer.cs">
       <DependentUpon>ExcluirConta.cs</DependentUpon>
     </Compile>
+    <Compile Include="ExcluirConta_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExcluirConta_Cliente.Designer.cs">
+      <DependentUpon>ExcluirConta_Cliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="IncluirConta.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="IncluirConta.Designer.cs">
       <DependentUpon>IncluirConta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IncluirConta_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IncluirConta_Cliente.Designer.cs">
+      <DependentUpon>IncluirConta_Cliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -103,11 +121,20 @@
     <EmbeddedResource Include="AlterarConta.resx">
       <DependentUpon>AlterarConta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AlterarConta_Cliente.resx">
+      <DependentUpon>AlterarConta_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ExcluirConta.resx">
       <DependentUpon>ExcluirConta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ExcluirConta_Cliente.resx">
+      <DependentUpon>ExcluirConta_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IncluirConta.resx">
       <DependentUpon>IncluirConta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IncluirConta_Cliente.resx">
+      <DependentUpon>IncluirConta_Cliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

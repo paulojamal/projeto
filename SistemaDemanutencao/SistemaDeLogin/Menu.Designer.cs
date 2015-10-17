@@ -46,6 +46,10 @@
             this.incluirContaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alterarContaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.excuirContaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.incluirContaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.alterarContaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.excluirContaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dados)).BeginInit();
             this.menuStrip3.SuspendLayout();
@@ -158,7 +162,8 @@
             // menuStrip3
             // 
             this.menuStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.usuariosToolStripMenuItem});
+            this.usuariosToolStripMenuItem,
+            this.clientesToolStripMenuItem});
             this.menuStrip3.Location = new System.Drawing.Point(0, 0);
             this.menuStrip3.Name = "menuStrip3";
             this.menuStrip3.Size = new System.Drawing.Size(629, 24);
@@ -178,27 +183,58 @@
             // incluirContaToolStripMenuItem
             // 
             this.incluirContaToolStripMenuItem.Name = "incluirContaToolStripMenuItem";
-            this.incluirContaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.incluirContaToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.incluirContaToolStripMenuItem.Text = "Incluir Conta";
             this.incluirContaToolStripMenuItem.Click += new System.EventHandler(this.incluirContaToolStripMenuItem_Click);
             // 
             // alterarContaToolStripMenuItem
             // 
             this.alterarContaToolStripMenuItem.Name = "alterarContaToolStripMenuItem";
-            this.alterarContaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.alterarContaToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.alterarContaToolStripMenuItem.Text = "Alterar Conta";
             this.alterarContaToolStripMenuItem.Click += new System.EventHandler(this.alterarContaToolStripMenuItem_Click);
             // 
             // excuirContaToolStripMenuItem
             // 
             this.excuirContaToolStripMenuItem.Name = "excuirContaToolStripMenuItem";
-            this.excuirContaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.excuirContaToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.excuirContaToolStripMenuItem.Text = "Excuir Conta";
             this.excuirContaToolStripMenuItem.Click += new System.EventHandler(this.excuirContaToolStripMenuItem_Click);
             // 
+            // clientesToolStripMenuItem
+            // 
+            this.clientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.incluirContaToolStripMenuItem1,
+            this.alterarContaToolStripMenuItem1,
+            this.excluirContaToolStripMenuItem});
+            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.clientesToolStripMenuItem.Text = "Clientes";
+            // 
+            // incluirContaToolStripMenuItem1
+            // 
+            this.incluirContaToolStripMenuItem1.Name = "incluirContaToolStripMenuItem1";
+            this.incluirContaToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.incluirContaToolStripMenuItem1.Text = "Incluir Conta";
+            this.incluirContaToolStripMenuItem1.Click += new System.EventHandler(this.incluirContaToolStripMenuItem1_Click);
+            // 
+            // alterarContaToolStripMenuItem1
+            // 
+            this.alterarContaToolStripMenuItem1.Name = "alterarContaToolStripMenuItem1";
+            this.alterarContaToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.alterarContaToolStripMenuItem1.Text = "Alterar Conta";
+            this.alterarContaToolStripMenuItem1.Click += new System.EventHandler(this.alterarContaToolStripMenuItem1_Click);
+            // 
+            // excluirContaToolStripMenuItem
+            // 
+            this.excluirContaToolStripMenuItem.Name = "excluirContaToolStripMenuItem";
+            this.excluirContaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.excluirContaToolStripMenuItem.Text = "Excluir Conta";
+            this.excluirContaToolStripMenuItem.Click += new System.EventHandler(this.excluirContaToolStripMenuItem_Click);
+            // 
             // Menu
             // 
-            this.ClientSize = new System.Drawing.Size(629, 311);
+            this.ClientSize = new System.Drawing.Size(629, 313);
             this.Controls.Add(this.menuStrip3);
             this.MainMenuStrip = this.menuStrip3;
             this.Name = "Menu";
@@ -231,5 +267,9 @@
         private System.Windows.Forms.ToolStripMenuItem incluirContaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem alterarContaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem excuirContaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem incluirContaToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem alterarContaToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem excluirContaToolStripMenuItem;
     }
 }

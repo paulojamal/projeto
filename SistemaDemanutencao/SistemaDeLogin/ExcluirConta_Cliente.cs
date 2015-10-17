@@ -12,9 +12,9 @@ using System.Data.SqlClient;
 
 namespace SistemaDeLogin
 {
-    public partial class ExcluirConta : Form
+    public partial class ExcluirConta_Cliente : Form
     {
-        public ExcluirConta()
+        public ExcluirConta_Cliente()
         {
             InitializeComponent();
         }
@@ -22,21 +22,24 @@ namespace SistemaDeLogin
         private void ExcluirBD()
         {
 
-            ADM_BD a = new ADM_BD();
+            ADM_BD_Cliente a = new ADM_BD_Cliente();
             ArrayList al = new ArrayList();
             a.Excluir(nDel.Text);
             try
             {
-                MessageBox.Show("USUARIO DELETADO !");
+                MessageBox.Show("CLIENTE DELETADO !");
             }
             catch
             {
                 MessageBox.Show("ERRO !");
             }
         }
-        private void button2_Click(object sender, EventArgs e)
+        private void Enviar_Click(object sender, EventArgs e)
         {
             ExcluirBD();
         }
     }
 }
+
+
+

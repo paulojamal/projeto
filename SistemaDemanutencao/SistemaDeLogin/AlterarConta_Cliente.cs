@@ -12,9 +12,9 @@ using System.Data.SqlClient;
 
 namespace SistemaDeLogin
 {
-    public partial class AlterarConta : Form
+    public partial class AlterarConta_Cliente : Form
     {
-        public AlterarConta()
+        public AlterarConta_Cliente()
         {
             InitializeComponent();
         }
@@ -24,7 +24,7 @@ namespace SistemaDeLogin
         }
         private void AlterarBD()
         {
-            ADM_BD a = new ADM_BD();
+            ADM_BD_Cliente a = new ADM_BD_Cliente();
             a.Atualizar(pesquisaLogin.Text, alteraSenha.Text);
             try {
                 MessageBox.Show("SENHA MODIFICADA !");
@@ -35,7 +35,7 @@ namespace SistemaDeLogin
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Enviar_Click_1(object sender, EventArgs e)
         {
             AlterarBD();
         }
