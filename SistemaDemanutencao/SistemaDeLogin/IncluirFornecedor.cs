@@ -16,5 +16,34 @@ namespace SistemaDeLogin
         {
             InitializeComponent();
         }
+        /*
+                public IncluirConta()
+        {
+            InitializeComponent();
+        }
+       
+        private void button1_Click(object sender, EventArgs e)
+        {
+            IncluirBD();
+        }
+        */
+        private void IncluirBD()
+        {
+            try
+            {
+                ADM_BD_Fornecedor cbd = new ADM_BD_Fornecedor();
+
+                cbd.Inserir(nome.Text, CNPJ.Text, rua.Text, bairro.Text, cidade.Text, CEP.Text);
+                MessageBox.Show("FORNECEDOR INSERIDO !");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERRO NA INSERSÃO !" + ex.Message);
+            }
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            IncluirBD();
+        }
     }
 }

@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ADM_BD.cs" />
+    <Compile Include="ADM_BD_Fornecedor.cs" />
     <Compile Include="ADM_BD_Cliente.cs" />
     <Compile Include="AlterarConta.cs">
       <SubType>Form</SubType>
