@@ -83,3 +83,9 @@ C:\Users\Guilherme\Desktop\projeto\projeto\SistemaDemanutencao\SistemaDeLogin\ob
 C:\Users\Guilherme\Desktop\projeto\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeLogin.Menu.resources
 C:\Users\Guilherme\Desktop\projeto\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeLogin.Properties.Resources.resources
 C:\Users\Guilherme\Desktop\projeto\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeManutencao.csproj.GenerateResource.Cache
+C:\Users\Guilherme\Desktop\projeto\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeLogin.AlterarEquip.resources
+C:\Users\Guilherme\Desktop\projeto\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeLogin.ExcluirEquip.resources
+C:\Users\Guilherme\Desktop\projeto\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeLogin.ExcluirFornecedor.resources
+C:\Users\Guilherme\Desktop\projeto\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeLogin.IncluirEquip.resources
+C:\Users\Guilherme\Desktop\projeto\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeLogin.AlterarFornecedor.resources
+C:\Users\Guilherme\Desktop\projeto\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeLogin.IncluirFornecedor.resources

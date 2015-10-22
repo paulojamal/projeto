@@ -20,6 +20,12 @@ namespace SistemaDeLogin
         IncluirConta_Cliente incl = new IncluirConta_Cliente();
         AlterarConta_Cliente alc = new AlterarConta_Cliente();
         ExcluirConta_Cliente excl = new ExcluirConta_Cliente();
+        IncluirEquip inequi = new IncluirEquip();
+        AlterarEquip alequi = new AlterarEquip();
+        ExcluirEquip exclqui = new ExcluirEquip();
+        IncluirFornecedor incfor = new IncluirFornecedor();
+        AlterarFornecedor altfor = new AlterarFornecedor();
+        ExcluirFornecedor excfor = new ExcluirFornecedor();
         public Menu()
         {
             InitializeComponent();
@@ -73,6 +79,50 @@ namespace SistemaDeLogin
         private void button4_Click(object sender, EventArgs e)
         {
             tabela.DataSource = listacli.Listar();
+        }
+
+        private void incluirToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            inequi.ShowDialog();
+        }
+
+        private void alterarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            alequi.ShowDialog();
+        }
+
+        private void excluirToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            exclqui.ShowDialog();
+        }
+
+        private void incluirToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            incfor.ShowDialog();
+        }
+
+        private void alterarToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            altfor.ShowDialog();
+        }
+
+        private void excluirToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            excfor.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            /*
+            tabela.DataSource =  listaEquip.Listar();
+            */
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            /*
+            tabela.DataSource =  listaForne.Listar();
+            */
         }
     }
 

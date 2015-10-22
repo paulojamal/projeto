@@ -50,9 +50,19 @@
             this.incluirContaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.alterarContaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.excluirContaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.equipamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.incluirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.alterarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.excluirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.fornecedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.incluirToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.alterarToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.excluirToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.tabela = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dados)).BeginInit();
             this.menuStrip3.SuspendLayout();
@@ -167,7 +177,9 @@
             // 
             this.menuStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.usuariosToolStripMenuItem,
-            this.clientesToolStripMenuItem});
+            this.clientesToolStripMenuItem,
+            this.equipamentosToolStripMenuItem,
+            this.fornecedoresToolStripMenuItem});
             this.menuStrip3.Location = new System.Drawing.Point(0, 0);
             this.menuStrip3.Name = "menuStrip3";
             this.menuStrip3.Size = new System.Drawing.Size(629, 24);
@@ -236,6 +248,68 @@
             this.excluirContaToolStripMenuItem.Text = "Excluir Conta";
             this.excluirContaToolStripMenuItem.Click += new System.EventHandler(this.excluirContaToolStripMenuItem_Click);
             // 
+            // equipamentosToolStripMenuItem
+            // 
+            this.equipamentosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.incluirToolStripMenuItem1,
+            this.alterarToolStripMenuItem1,
+            this.excluirToolStripMenuItem1});
+            this.equipamentosToolStripMenuItem.Name = "equipamentosToolStripMenuItem";
+            this.equipamentosToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
+            this.equipamentosToolStripMenuItem.Text = "Equipamentos";
+            // 
+            // incluirToolStripMenuItem1
+            // 
+            this.incluirToolStripMenuItem1.Name = "incluirToolStripMenuItem1";
+            this.incluirToolStripMenuItem1.Size = new System.Drawing.Size(109, 22);
+            this.incluirToolStripMenuItem1.Text = "Incluir";
+            this.incluirToolStripMenuItem1.Click += new System.EventHandler(this.incluirToolStripMenuItem1_Click);
+            // 
+            // alterarToolStripMenuItem1
+            // 
+            this.alterarToolStripMenuItem1.Name = "alterarToolStripMenuItem1";
+            this.alterarToolStripMenuItem1.Size = new System.Drawing.Size(109, 22);
+            this.alterarToolStripMenuItem1.Text = "Alterar";
+            this.alterarToolStripMenuItem1.Click += new System.EventHandler(this.alterarToolStripMenuItem1_Click);
+            // 
+            // excluirToolStripMenuItem1
+            // 
+            this.excluirToolStripMenuItem1.Name = "excluirToolStripMenuItem1";
+            this.excluirToolStripMenuItem1.Size = new System.Drawing.Size(109, 22);
+            this.excluirToolStripMenuItem1.Text = "Excluir";
+            this.excluirToolStripMenuItem1.Click += new System.EventHandler(this.excluirToolStripMenuItem1_Click);
+            // 
+            // fornecedoresToolStripMenuItem
+            // 
+            this.fornecedoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.incluirToolStripMenuItem2,
+            this.alterarToolStripMenuItem2,
+            this.excluirToolStripMenuItem2});
+            this.fornecedoresToolStripMenuItem.Name = "fornecedoresToolStripMenuItem";
+            this.fornecedoresToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
+            this.fornecedoresToolStripMenuItem.Text = "Fornecedores";
+            // 
+            // incluirToolStripMenuItem2
+            // 
+            this.incluirToolStripMenuItem2.Name = "incluirToolStripMenuItem2";
+            this.incluirToolStripMenuItem2.Size = new System.Drawing.Size(109, 22);
+            this.incluirToolStripMenuItem2.Text = "Incluir";
+            this.incluirToolStripMenuItem2.Click += new System.EventHandler(this.incluirToolStripMenuItem2_Click);
+            // 
+            // alterarToolStripMenuItem2
+            // 
+            this.alterarToolStripMenuItem2.Name = "alterarToolStripMenuItem2";
+            this.alterarToolStripMenuItem2.Size = new System.Drawing.Size(109, 22);
+            this.alterarToolStripMenuItem2.Text = "Alterar";
+            this.alterarToolStripMenuItem2.Click += new System.EventHandler(this.alterarToolStripMenuItem2_Click);
+            // 
+            // excluirToolStripMenuItem2
+            // 
+            this.excluirToolStripMenuItem2.Name = "excluirToolStripMenuItem2";
+            this.excluirToolStripMenuItem2.Size = new System.Drawing.Size(109, 22);
+            this.excluirToolStripMenuItem2.Text = "Excluir";
+            this.excluirToolStripMenuItem2.Click += new System.EventHandler(this.excluirToolStripMenuItem2_Click);
+            // 
             // tabela
             // 
             this.tabela.AllowUserToAddRows = false;
@@ -250,7 +324,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(12, 163);
+            this.button3.Location = new System.Drawing.Point(12, 88);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(102, 23);
             this.button3.TabIndex = 2;
@@ -260,7 +334,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(12, 228);
+            this.button4.Location = new System.Drawing.Point(12, 136);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(102, 23);
             this.button4.TabIndex = 3;
@@ -268,9 +342,31 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(12, 184);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(102, 40);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "Listar equipamentos";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(12, 246);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(102, 38);
+            this.button6.TabIndex = 5;
+            this.button6.Text = "Listar Fornecedores";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // Menu
             // 
             this.ClientSize = new System.Drawing.Size(629, 313);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.tabela);
@@ -314,5 +410,15 @@
         private System.Windows.Forms.DataGridView tabela;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.ToolStripMenuItem equipamentosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem incluirToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem alterarToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem excluirToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem fornecedoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem incluirToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem alterarToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem excluirToolStripMenuItem2;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
     }
 }

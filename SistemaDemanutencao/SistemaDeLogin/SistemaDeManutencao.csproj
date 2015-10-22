@@ -75,6 +75,12 @@
     <Compile Include="AlterarConta_Cliente.Designer.cs">
       <DependentUpon>AlterarConta_Cliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="AlterarEquip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlterarEquip.Designer.cs">
+      <DependentUpon>AlterarEquip.cs</DependentUpon>
+    </Compile>
     <Compile Include="BD_UsuarioDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -92,6 +98,18 @@
     <Compile Include="ExcluirConta_Cliente.Designer.cs">
       <DependentUpon>ExcluirConta_Cliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="ExcluirEquip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExcluirEquip.Designer.cs">
+      <DependentUpon>ExcluirEquip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExcluirFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExcluirFornecedor.Designer.cs">
+      <DependentUpon>ExcluirFornecedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="IncluirConta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +121,24 @@
     </Compile>
     <Compile Include="IncluirConta_Cliente.Designer.cs">
       <DependentUpon>IncluirConta_Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IncluirEquip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IncluirEquip.Designer.cs">
+      <DependentUpon>IncluirEquip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlterarFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlterarFornecedor.Designer.cs">
+      <DependentUpon>AlterarFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IncluirFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IncluirFornecedor.Designer.cs">
+      <DependentUpon>IncluirFornecedor.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -124,17 +160,35 @@
     <EmbeddedResource Include="AlterarConta_Cliente.resx">
       <DependentUpon>AlterarConta_Cliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AlterarEquip.resx">
+      <DependentUpon>AlterarEquip.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ExcluirConta.resx">
       <DependentUpon>ExcluirConta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExcluirConta_Cliente.resx">
       <DependentUpon>ExcluirConta_Cliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ExcluirEquip.resx">
+      <DependentUpon>ExcluirEquip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExcluirFornecedor.resx">
+      <DependentUpon>ExcluirFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IncluirConta.resx">
       <DependentUpon>IncluirConta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IncluirConta_Cliente.resx">
       <DependentUpon>IncluirConta_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IncluirEquip.resx">
+      <DependentUpon>IncluirEquip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlterarFornecedor.resx">
+      <DependentUpon>AlterarFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IncluirFornecedor.resx">
+      <DependentUpon>IncluirFornecedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
