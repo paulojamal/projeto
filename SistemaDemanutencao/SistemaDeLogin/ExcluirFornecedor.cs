@@ -16,5 +16,32 @@ namespace SistemaDeLogin
         {
             InitializeComponent();
         }
+        private void ExcluirBD()
+        {
+
+            ADM_BD_Fornecedor a = new ADM_BD_Fornecedor();
+            //ArrayList al = new ArrayList();
+            a.Excluir(excNome.Text);
+            try
+            {
+                MessageBox.Show("FORNECEDOR DELETADO !");
+            }
+            catch
+            {
+                MessageBox.Show("ERRO !");
+            }
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ExcluirBD();
+        }
+
+        /*
+        
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ExcluirBD();
+        }
+        */
     }
 }
