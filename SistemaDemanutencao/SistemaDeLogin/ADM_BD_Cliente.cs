@@ -12,11 +12,11 @@ namespace SistemaDeLogin
     public class ADM_BD_Cliente
     {
         static String mp = Environment.CurrentDirectory;
-        //private static string _strCon = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Guilherme\Desktop\projeto\SistemaDemanutencao\SistemaDeLogin\BD_Cliente.mdf;Integrated Security=True;Connect Timeout=30";
+        //private static string _strCon = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Guilherme\Desktop\projeto\projeto\SistemaDemanutencao\SistemaDeLogin\BD_Usuario.mdf;Integrated Security=True;Connect Timeout=30";
         //private static string _strCon = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + mp + "\\BD_Usuario.mdf;Integrated Security=True;Connect Timeout=30";
 
         //        private static string _strCon = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Filipe\Desktop\testeBD\testeBD\testeBD\BD_Usuario.mdf;Integrated Security=True;Connect Timeout=30";
-        private static string _strCon = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Filipe\Desktop\Sistema de Manutencao\projeto\SistemaDemanutencao\SistemaDeLogin\BD_Usuario.mdf;Integrated Security=True;Connect Timeout=30";
+        private static string _strCon = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Guilherme\Desktop\projeto\projeto\SistemaDemanutencao\SistemaDeLogin\BD_Usuario.mdf;Integrated Security=True;Connect Timeout=30";
         public const String strInserir = "INSERT INTO tb_Cliente(NomeUser, SenhaUser) VALUES(@NomeUser, @SenhaUser)";
         public const String strExcluir = "DELETE FROM tb_Cliente WHERE NomeUser = @NomeUser";
         public const String strAlterar = "UPDATE tb_Cliente SET SenhaUser = @SenhaUser WHERE NomeUser = @NomeUser";
@@ -97,6 +97,39 @@ namespace SistemaDeLogin
                         return false;
                     }
                 }
+            }
+
+        }
+        public DataTable Listar()
+        {
+
+            /*using (SqlConnection objCon = new SqlConnection(_strCon))
+            {
+                using (SqlCommand objCmd = new SqlCommand(strSelecionar, objCon)) //testar objCon, strSelecionar 
+                {
+
+
+                    SqlDataAdapter adp = new SqlDataAdapter(objCmd);
+                    DataTable dt = new DataTable();
+                    adp.Fill(dt);
+                    return dt;
+
+                }
+
+            }*/
+            try
+            {
+                SqlConnection objCon = new SqlConnection(_strCon);
+                SqlCommand objcmd = null;
+                objcmd = new SqlCommand(strSelecionar, objCon);
+                SqlDataAdapter adp = new SqlDataAdapter(objcmd);
+                DataTable dt = new DataTable();
+                adp.Fill(dt);
+                return dt;
+            }
+            catch (SqlException sqlerr)
+            {
+                throw sqlerr;
             }
         }
     }

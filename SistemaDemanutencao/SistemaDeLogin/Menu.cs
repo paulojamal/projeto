@@ -59,6 +59,21 @@ namespace SistemaDeLogin
         {
             excl.ShowDialog();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            tabela.DataSource =  lista.Listar();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            tabela.DataSource = listacli.Listar();
+        }
     }
 
 }
