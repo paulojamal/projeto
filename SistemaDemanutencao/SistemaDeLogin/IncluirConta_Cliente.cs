@@ -24,7 +24,7 @@ namespace SistemaDeLogin
             {
                 ADM_BD_Cliente cbd = new ADM_BD_Cliente();
 
-                cbd.Inserir(newLogin.Text, newSenha.Text);
+                cbd.Inserir(newLogin.Text, newSenha.Text, name.Text, sobrenome.Text, id.Text, tel.Text, rua.Text, n.Text, bairro.Text, cidade.Text, estado.Text);
                 MessageBox.Show("CLIENTE INSERIDO !");
             }
             catch (Exception ex)
@@ -33,7 +33,12 @@ namespace SistemaDeLogin
             }
         }
 
-        private void Enviar_Click_1(object sender, EventArgs e)
+        /*private void Enviar_Click_1(object sender, EventArgs e)
+        {
+            IncluirBD();
+        }*/
+
+        private void Enviar_Click(object sender, EventArgs e)
         {
             IncluirBD();
         }

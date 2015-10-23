@@ -33,16 +33,34 @@
             this.Enviar = new System.Windows.Forms.Button();
             this.pesquisaLogin = new System.Windows.Forms.TextBox();
             this.alteraSenha = new System.Windows.Forms.TextBox();
+            this.nome = new System.Windows.Forms.TextBox();
+            this.sobrenome = new System.Windows.Forms.TextBox();
+            this.identidade = new System.Windows.Forms.TextBox();
+            this.telefone = new System.Windows.Forms.MaskedTextBox();
+            this.rua = new System.Windows.Forms.TextBox();
+            this.n = new System.Windows.Forms.TextBox();
+            this.bairro = new System.Windows.Forms.TextBox();
+            this.cidade = new System.Windows.Forms.TextBox();
+            this.estado = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 65);
+            this.label1.Location = new System.Drawing.Point(52, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 13);
+            this.label1.Size = new System.Drawing.Size(135, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Cliente";
+            this.label1.Text = "Login para mudar os dados";
             // 
             // label2
             // 
@@ -55,7 +73,7 @@
             // 
             // Enviar
             // 
-            this.Enviar.Location = new System.Drawing.Point(127, 148);
+            this.Enviar.Location = new System.Drawing.Point(67, 521);
             this.Enviar.Name = "Enviar";
             this.Enviar.Size = new System.Drawing.Size(75, 23);
             this.Enviar.TabIndex = 2;
@@ -65,7 +83,7 @@
             // 
             // pesquisaLogin
             // 
-            this.pesquisaLogin.Location = new System.Drawing.Point(117, 65);
+            this.pesquisaLogin.Location = new System.Drawing.Point(67, 51);
             this.pesquisaLogin.Name = "pesquisaLogin";
             this.pesquisaLogin.Size = new System.Drawing.Size(100, 20);
             this.pesquisaLogin.TabIndex = 3;
@@ -77,11 +95,174 @@
             this.alteraSenha.Size = new System.Drawing.Size(100, 20);
             this.alteraSenha.TabIndex = 4;
             // 
+            // nome
+            // 
+            this.nome.Location = new System.Drawing.Point(117, 155);
+            this.nome.Name = "nome";
+            this.nome.Size = new System.Drawing.Size(100, 20);
+            this.nome.TabIndex = 5;
+            // 
+            // sobrenome
+            // 
+            this.sobrenome.Location = new System.Drawing.Point(117, 203);
+            this.sobrenome.Name = "sobrenome";
+            this.sobrenome.Size = new System.Drawing.Size(100, 20);
+            this.sobrenome.TabIndex = 6;
+            // 
+            // identidade
+            // 
+            this.identidade.Location = new System.Drawing.Point(117, 246);
+            this.identidade.Name = "identidade";
+            this.identidade.Size = new System.Drawing.Size(100, 20);
+            this.identidade.TabIndex = 7;
+            // 
+            // telefone
+            // 
+            this.telefone.Location = new System.Drawing.Point(117, 288);
+            this.telefone.Mask = "(00)0000-0000";
+            this.telefone.Name = "telefone";
+            this.telefone.Size = new System.Drawing.Size(98, 20);
+            this.telefone.TabIndex = 42;
+            // 
+            // rua
+            // 
+            this.rua.Location = new System.Drawing.Point(117, 332);
+            this.rua.Name = "rua";
+            this.rua.Size = new System.Drawing.Size(100, 20);
+            this.rua.TabIndex = 43;
+            // 
+            // n
+            // 
+            this.n.Location = new System.Drawing.Point(117, 373);
+            this.n.Name = "n";
+            this.n.Size = new System.Drawing.Size(50, 20);
+            this.n.TabIndex = 44;
+            // 
+            // bairro
+            // 
+            this.bairro.Location = new System.Drawing.Point(115, 411);
+            this.bairro.Name = "bairro";
+            this.bairro.Size = new System.Drawing.Size(100, 20);
+            this.bairro.TabIndex = 45;
+            // 
+            // cidade
+            // 
+            this.cidade.Location = new System.Drawing.Point(115, 449);
+            this.cidade.Name = "cidade";
+            this.cidade.Size = new System.Drawing.Size(100, 20);
+            this.cidade.TabIndex = 46;
+            // 
+            // estado
+            // 
+            this.estado.Location = new System.Drawing.Point(115, 486);
+            this.estado.Name = "estado";
+            this.estado.Size = new System.Drawing.Size(100, 20);
+            this.estado.TabIndex = 47;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 162);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 48;
+            this.label3.Text = "Nome";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 206);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(61, 13);
+            this.label4.TabIndex = 49;
+            this.label4.Text = "Sobrenome";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(12, 249);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(57, 13);
+            this.label5.TabIndex = 50;
+            this.label5.Text = "Identidade";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(12, 291);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(49, 13);
+            this.label6.TabIndex = 51;
+            this.label6.Text = "Telefone";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 335);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(27, 13);
+            this.label7.TabIndex = 52;
+            this.label7.Text = "Rua";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(12, 376);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(19, 13);
+            this.label8.TabIndex = 53;
+            this.label8.Text = "Nº";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(12, 414);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(34, 13);
+            this.label9.TabIndex = 54;
+            this.label9.Text = "Bairro";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(12, 452);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(40, 13);
+            this.label10.TabIndex = 55;
+            this.label10.Text = "Cidade";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(12, 489);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(40, 13);
+            this.label11.TabIndex = 56;
+            this.label11.Text = "Estado";
+            // 
             // AlterarConta_Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(236, 191);
+            this.ClientSize = new System.Drawing.Size(236, 556);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.estado);
+            this.Controls.Add(this.cidade);
+            this.Controls.Add(this.bairro);
+            this.Controls.Add(this.n);
+            this.Controls.Add(this.rua);
+            this.Controls.Add(this.telefone);
+            this.Controls.Add(this.identidade);
+            this.Controls.Add(this.sobrenome);
+            this.Controls.Add(this.nome);
             this.Controls.Add(this.alteraSenha);
             this.Controls.Add(this.pesquisaLogin);
             this.Controls.Add(this.Enviar);
@@ -101,5 +282,23 @@
         private System.Windows.Forms.Button Enviar;
         private System.Windows.Forms.TextBox pesquisaLogin;
         private System.Windows.Forms.TextBox alteraSenha;
+        private System.Windows.Forms.TextBox nome;
+        private System.Windows.Forms.TextBox sobrenome;
+        private System.Windows.Forms.TextBox identidade;
+        private System.Windows.Forms.MaskedTextBox telefone;
+        private System.Windows.Forms.TextBox rua;
+        private System.Windows.Forms.TextBox n;
+        private System.Windows.Forms.TextBox bairro;
+        private System.Windows.Forms.TextBox cidade;
+        private System.Windows.Forms.TextBox estado;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
     }
 }

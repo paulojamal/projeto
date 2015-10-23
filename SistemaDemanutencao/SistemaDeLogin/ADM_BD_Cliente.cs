@@ -15,21 +15,31 @@ namespace SistemaDeLogin
         //private static string _strCon = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Guilherme\Desktop\projeto\projeto\SistemaDemanutencao\SistemaDeLogin\BD_Usuario.mdf;Integrated Security=True;Connect Timeout=30";
         //private static string _strCon = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + mp + "\\BD_Usuario.mdf;Integrated Security=True;Connect Timeout=30";
 
-       // private static string _strCon = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Filipe\Desktop\testeBD\testeBD\testeBD\BD_Usuario.mdf;Integrated Security=True;Connect Timeout=30";
+        // private static string _strCon = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Filipe\Desktop\testeBD\testeBD\testeBD\BD_Usuario.mdf;Integrated Security=True;Connect Timeout=30";
         private static string _strCon = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Guilherme\Desktop\projeto\projeto\SistemaDemanutencao\SistemaDeLogin\BD_Usuario.mdf;Integrated Security=True;Connect Timeout=30";
-        public const String strInserir = "INSERT INTO tb_Cliente(NomeUser, SenhaUser) VALUES(@NomeUser, @SenhaUser)";
+        public const String strInserir = "INSERT INTO tb_Cliente(NomeUser, SenhaUser, Name, Sobrenome, ID, Telefone, Rua, Numero, Bairro, Cidade, Estado) VALUES(@NomeUser, @SenhaUser, @Name, @Sobrenome, @ID, @Telefone, @Rua, @Numero, @Bairro, @Cidade, @Estado)";
         public const String strExcluir = "DELETE FROM tb_Cliente WHERE NomeUser = @NomeUser";
-        public const String strAlterar = "UPDATE tb_Cliente SET SenhaUser = @SenhaUser WHERE NomeUser = @NomeUser";
+        //public const String strAlterar = "UPDATE tb_Cliente SET SenhaUser = @SenhaUser WHERE NomeUser = @NomeUser";
+        public const String strAlterar = "UPDATE tb_Cliente SET SenhaUser = @SenhaUser , Name = @Name ,  Sobrenome = @Sobrenome , ID = @ID  , Telefone = @Telefone , Rua = @Rua , Numero = @Numero , Bairro = @Bairro, Cidade = @Cidade, Estado = @Estado  WHERE NomeUser = @NomeUser";
         public const String strSelecionar = "SELECT COUNT(*) FROM tb_Cliente WHERE NomeUser = @NomeUser AND SenhaUser =@SenhaUser";
-
-        public void Inserir(String Nome, String Senha)
+        public const string strConsultar = "SELECT NomeUser , SenhaUser , Name, Sobrenome, ID, Telefone, Rua, Numero, Bairro, Cidade, Estado FROM tb_Cliente";
+        public void Inserir(String Login, String Senha, String Nome, String Sobrenome, String Identidade, String Telefone, String Rua, String N, String Bairro, String Cidade, String Estado)
         {
             using (SqlConnection objCon = new SqlConnection(_strCon))
             {
                 using (SqlCommand objCmd = new SqlCommand(strInserir, objCon))
                 {
-                    objCmd.Parameters.AddWithValue("@NomeUser", Nome);
+                    objCmd.Parameters.AddWithValue("@NomeUser", Login);
                     objCmd.Parameters.AddWithValue("@SenhaUser", Senha);
+                    objCmd.Parameters.AddWithValue("@Name", Nome);
+                    objCmd.Parameters.AddWithValue("@Sobrenome", Sobrenome);
+                    objCmd.Parameters.AddWithValue("@ID", Identidade);
+                    objCmd.Parameters.AddWithValue("@Telefone", Telefone);
+                    objCmd.Parameters.AddWithValue("@Rua", Rua);
+                    objCmd.Parameters.AddWithValue("@Numero", N);
+                    objCmd.Parameters.AddWithValue("@Bairro", Bairro);
+                    objCmd.Parameters.AddWithValue("@Cidade", Cidade);
+                    objCmd.Parameters.AddWithValue("@Estado", Estado);
                     objCon.Open();
                     objCmd.ExecuteNonQuery();
                     objCon.Close();
@@ -39,7 +49,7 @@ namespace SistemaDeLogin
 
         }
 
-        public void Atualizar(String Nome, String Senha)
+        public void Atualizar(String Login, String Senha, String Nome, String Sobrenome, String Identidade, String Telefone, String Rua, String N, String Bairro, String Cidade, String Estado)
         {
 
             using (SqlConnection objCon = new SqlConnection(_strCon))
@@ -47,8 +57,17 @@ namespace SistemaDeLogin
                 using (SqlCommand objCmd = new SqlCommand(strAlterar, objCon))
                 {
 
-                    objCmd.Parameters.AddWithValue("@NomeUser", Nome);
+                    objCmd.Parameters.AddWithValue("@NomeUser", Login);
                     objCmd.Parameters.AddWithValue("@SenhaUser", Senha);
+                    objCmd.Parameters.AddWithValue("@Name", Nome);
+                    objCmd.Parameters.AddWithValue("@Sobrenome", Sobrenome);
+                    objCmd.Parameters.AddWithValue("@ID", Identidade);
+                    objCmd.Parameters.AddWithValue("@Telefone", Telefone);
+                    objCmd.Parameters.AddWithValue("@Rua", Rua);
+                    objCmd.Parameters.AddWithValue("@Numero", N);
+                    objCmd.Parameters.AddWithValue("@Bairro", Bairro);
+                    objCmd.Parameters.AddWithValue("@Cidade", Cidade);
+                    objCmd.Parameters.AddWithValue("@Estado", Estado);
                     objCon.Open();
                     objCmd.ExecuteNonQuery();
                     objCon.Close();
@@ -100,7 +119,7 @@ namespace SistemaDeLogin
             }
 
         }
-        public DataTable Listar()
+        /*public DataTable Listar()
         {
 
             /*using (SqlConnection objCon = new SqlConnection(_strCon))
@@ -116,7 +135,7 @@ namespace SistemaDeLogin
 
                 }
 
-            }*/
+            }
             try
             {
                 SqlConnection objCon = new SqlConnection(_strCon);
@@ -130,6 +149,63 @@ namespace SistemaDeLogin
             catch (SqlException sqlerr)
             {
                 throw sqlerr;
+            }
+        }*/
+        public class Clientes
+        {
+            public String NomeUser { get; set; }
+            public String SenhaUser { get; set; }
+            public String Name { get; set; }
+            public String Sobrenome { get; set; }
+            public String ID { get; set; }
+            public String Telefone { get; set; }
+            public String Rua { get; set; }
+            public String Numero { get; set; }
+            public String Bairro { get; set; }
+            public String Cidade { get; set; }
+            public String Estado { get; set; }
+            
+
+
+        }
+        public List<Clientes> Consultar()
+        {
+            List<Clientes> lstUsuarios = new List<Clientes>();
+            using (SqlConnection objCon = new SqlConnection(_strCon))
+            {
+                using (SqlCommand objCmd = new SqlCommand(strConsultar, objCon))
+                {
+                    objCon.Open();
+
+                    SqlDataReader objDataReader = objCmd.ExecuteReader();
+                    if (objDataReader.HasRows)
+                    {
+
+                        while (objDataReader.Read())
+                        {
+                            Clientes objUsuarios = new Clientes();
+                            objUsuarios.NomeUser = objDataReader["NomeUser"].ToString();
+                            objUsuarios.SenhaUser = objDataReader["SenhaUser"].ToString();
+                            objUsuarios.Name = objDataReader["Name"].ToString();
+                            objUsuarios.Sobrenome = objDataReader["Sobrenome"].ToString();
+                            objUsuarios.ID = objDataReader["ID"].ToString();
+                            objUsuarios.Telefone = objDataReader["Telefone"].ToString();
+                            objUsuarios.Rua = objDataReader["Rua"].ToString();
+                            objUsuarios.Numero = objDataReader["Numero"].ToString();
+                            objUsuarios.Bairro = objDataReader["Bairro"].ToString();
+                            objUsuarios.Cidade = objDataReader["Cidade"].ToString();
+                            objUsuarios.Estado = objDataReader["Estado"].ToString();
+                            lstUsuarios.Add(objUsuarios);
+                        }
+
+                        objCon.Close();
+
+                    }
+
+
+                    objCon.Close();
+                }
+                return lstUsuarios;
             }
         }
     }

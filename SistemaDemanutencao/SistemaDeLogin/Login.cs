@@ -28,7 +28,18 @@ namespace SistemaDeLogin
             }
             else
             {
-                MessageBox.Show("Login ou Senha  não encontrado");
+                
+                ADM_BD_Cliente cli = new ADM_BD_Cliente();
+                Menu_Cliente mc = new Menu_Cliente();
+                if(cli.Logou(textLogin.Text, textSenha.Text))
+                {
+                    mc.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Login ou senha não encontrados");
+                }
             }
         }
 

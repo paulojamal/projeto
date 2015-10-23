@@ -25,9 +25,9 @@ namespace SistemaDeLogin
         private void AlterarBD()
         {
             ADM_BD_Cliente a = new ADM_BD_Cliente();
-            a.Atualizar(pesquisaLogin.Text, alteraSenha.Text);
+            a.Atualizar(pesquisaLogin.Text, alteraSenha.Text, nome.Text, sobrenome.Text, identidade.Text, telefone.Text, rua.Text, n.Text, bairro.Text, cidade.Text, estado.Text);
             try {
-                MessageBox.Show("SENHA MODIFICADA !");
+                MessageBox.Show("DADOS MODIFICADOS !");
             }
            catch(Exception e)
             {

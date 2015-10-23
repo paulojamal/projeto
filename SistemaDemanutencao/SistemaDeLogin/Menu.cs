@@ -16,8 +16,9 @@ namespace SistemaDeLogin
         AlterarConta a = new AlterarConta();
         ExcluirConta exc = new ExcluirConta();
         ConsultaUsuarios c = new ConsultaUsuarios();
-        ADM_BD lista = new ADM_BD();
-        ADM_BD_Cliente listacli = new ADM_BD_Cliente();
+        ConsultaClientes cl = new ConsultaClientes();
+        ConsultaFornecedor forl = new ConsultaFornecedor();
+        ConsultaEquips equil = new ConsultaEquips();
         IncluirConta_Cliente incl = new IncluirConta_Cliente();
         AlterarConta_Cliente alc = new AlterarConta_Cliente();
         ExcluirConta_Cliente excl = new ExcluirConta_Cliente();
@@ -100,6 +101,28 @@ namespace SistemaDeLogin
         private void lISTAToolStripMenuItem_Click(object sender, EventArgs e)
         {
             c.ShowDialog();
+        }
+
+        private void listarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cl.ShowDialog();
+        }
+
+        private void listarToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            forl.ShowDialog();
+        }
+
+        private void listarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            equil.ShowDialog();
+        }
+
+        private void novoLoginToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Login l = new Login();
+            l.Show();
+            this.Hide();
         }
     }
 

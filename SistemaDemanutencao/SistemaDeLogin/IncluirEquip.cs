@@ -16,5 +16,23 @@ namespace SistemaDeLogin
         {
             InitializeComponent();
         }
+        private void IncluirBD()
+        {
+            try
+            {
+                ADM_BD_Equip cbd = new ADM_BD_Equip();
+
+                cbd.Inserir(codigo.Text, cliente.Text, tipo.Text, prioridade.Text);
+                MessageBox.Show("EQUIPAMENTO INSERIDO !");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERRO NA INSERSÃO !" + ex.Message);
+            }
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            IncluirBD();
+        }
     }
 }

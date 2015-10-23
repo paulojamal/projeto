@@ -16,5 +16,24 @@ namespace SistemaDeLogin
         {
             InitializeComponent();
         }
+        private void ExcluirBD()
+        {
+
+            ADM_BD_Equip a = new ADM_BD_Equip();
+            //ArrayList al = new ArrayList();
+            a.Excluir(excCodigo.Text);
+            try
+            {
+                MessageBox.Show("EQUIPAMENTO DELETADO !");
+            }
+            catch
+            {
+                MessageBox.Show("ERRO !");
+            }
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ExcluirBD();
+        }
     }
 }

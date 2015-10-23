@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ADM_BD.cs" />
+    <Compile Include="ADM_BD_Equip.cs" />
     <Compile Include="ADM_BD_Fornecedor.cs" />
     <Compile Include="ADM_BD_Cliente.cs" />
     <Compile Include="AlterarConta.cs">
@@ -86,6 +87,24 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BD_UsuarioDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaClientes.Designer.cs">
+      <DependentUpon>ConsultaClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaFornecedor.Designer.cs">
+      <DependentUpon>ConsultaFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaEquips.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaEquips.Designer.cs">
+      <DependentUpon>ConsultaEquips.cs</DependentUpon>
     </Compile>
     <Compile Include="ConsultaUsuarios.cs">
       <SubType>Form</SubType>
@@ -159,6 +178,12 @@
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Menu_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_Cliente.Designer.cs">
+      <DependentUpon>Menu_Cliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AlterarConta.resx">
@@ -169,6 +194,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AlterarEquip.resx">
       <DependentUpon>AlterarEquip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaClientes.resx">
+      <DependentUpon>ConsultaClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaFornecedor.resx">
+      <DependentUpon>ConsultaFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaEquips.resx">
+      <DependentUpon>ConsultaEquips.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultaUsuarios.resx">
       <DependentUpon>ConsultaUsuarios.cs</DependentUpon>
@@ -205,6 +239,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Cliente.resx">
+      <DependentUpon>Menu_Cliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

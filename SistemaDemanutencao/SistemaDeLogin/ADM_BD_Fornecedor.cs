@@ -15,12 +15,15 @@ namespace SistemaDeLogin
         //private static string _strCon = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Guilherme\Desktop\projeto\projeto\SistemaDemanutencao\SistemaDeLogin\BD_Usuario.mdf;Integrated Security=True;Connect Timeout=30";
         //private static string _strCon = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + mp + "\\BD_Usuario.mdf;Integrated Security=True;Connect Timeout=30";
         //private static string _strCon = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Guilherme\Desktop\projeto\projeto\SistemaDemanutencao\SistemaDeLogin\BD_Usuario.mdf;Integrated Security=True;Connect Timeout=30";
-        private static string _strCon = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Filipe\Desktop\Sistema de Manutencao\projeto\SistemaDemanutencao\SistemaDeLogin\BD_Usuario.mdf;Integrated Security=True;Connect Timeout=30";
+        //String Filipe
+        //private static string _strCon = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Filipe\Desktop\Sistema de Manutencao\projeto\SistemaDemanutencao\SistemaDeLogin\BD_Usuario.mdf;Integrated Security=True;Connect Timeout=30";
+        //String Guilherme
+        private static string _strCon = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Guilherme\Desktop\projeto\projeto\SistemaDemanutencao\SistemaDeLogin\BD_Usuario.mdf;Integrated Security=True;Connect Timeout=30";
         public const String strInserir = "INSERT INTO tb_Fornecedor(Nome, CNPJ, Rua, Bairro, Cidade, CEP) VALUES(@Nome, @CNPJ, @Rua, @Bairro, @Cidade, @CEP)";
         public const String strExcluir = "DELETE FROM tb_Fornecedor WHERE Nome = @Nome";
         public const String strAlterar = "UPDATE tb_Fornecedor SET CNPJ = @CNPJ ,  Rua = @Rua , Bairro = @Bairro  , Cidade = @Cidade , CEP = @CEP WHERE Nome = @Nome";
         public const String strSelecionar = "SELECT COUNT(*) FROM tb_Fornecedor WHERE Nome = @Nome";
-
+        public const string strConsultar = "SELECT Nome , CNPJ , Rua, Bairro, Cidade, CEP FROM tb_Fornecedor";
         public void Inserir(String Nome, String CNPJ, String Rua, String Bairro, String Cidade, String CEP)
         {
             using (SqlConnection objCon = new SqlConnection(_strCon))
@@ -107,44 +110,88 @@ namespace SistemaDeLogin
             }
 
         }
-
-        /*
-        public DataTable Listar()
+        public class Fornecedores
         {
+            public String Nome { get; set; }
+            public String CNPJ { get; set; }
+            public String Rua { get; set; }
+            public String Bairro { get; set; }
+            public String Cidade { get; set; }
+            public String CEP { get; set; }
 
-            /*using (SqlConnection objCon = new SqlConnection(_strCon))
+        }
+        public List<Fornecedores> Consultar()
+        {
+            List<Fornecedores> lstUsuarios = new List<Fornecedores>();
+            using (SqlConnection objCon = new SqlConnection(_strCon))
             {
-                using (SqlCommand objCmd = new SqlCommand(strSelecionar, objCon)) //testar objCon, strSelecionar 
+                using (SqlCommand objCmd = new SqlCommand(strConsultar, objCon))
                 {
+                    objCon.Open();
+
+                    SqlDataReader objDataReader = objCmd.ExecuteReader();
+                    if (objDataReader.HasRows)
+                    {
+
+                        while (objDataReader.Read())
+                        {
+                            Fornecedores objUsuarios = new Fornecedores();
+                            objUsuarios.Nome = objDataReader["Nome"].ToString();
+                            objUsuarios.CNPJ = objDataReader["CNPJ"].ToString();
+                            objUsuarios.Rua = objDataReader["Rua"].ToString();
+                            objUsuarios.Bairro = objDataReader["Bairro"].ToString();
+                            objUsuarios.Cidade = objDataReader["Cidade"].ToString();
+                            objUsuarios.CEP = objDataReader["CEP"].ToString();
+                            lstUsuarios.Add(objUsuarios);
+                        }
+
+                        objCon.Close();
+
+                    }
 
 
-                    SqlDataAdapter adp = new SqlDataAdapter(objCmd);
+                    objCon.Close();
+                }
+                return lstUsuarios;
+            }
+        }
+            /*
+            public DataTable Listar()
+            {
+
+                /*using (SqlConnection objCon = new SqlConnection(_strCon))
+                {
+                    using (SqlCommand objCmd = new SqlCommand(strSelecionar, objCon)) //testar objCon, strSelecionar 
+                    {
+
+
+                        SqlDataAdapter adp = new SqlDataAdapter(objCmd);
+                        DataTable dt = new DataTable();
+                        adp.Fill(dt);
+                        return dt;
+
+                    }
+
+                }
+                try
+                {
+                    SqlConnection objCon = new SqlConnection(_strCon);
+                    SqlCommand objcmd = null;
+                    objcmd = new SqlCommand(strSelecionar, objCon);
+                    SqlDataAdapter adp = new SqlDataAdapter(objcmd);
                     DataTable dt = new DataTable();
                     adp.Fill(dt);
                     return dt;
-
                 }
+                catch (SqlException sqlerr)
+                {
+                    throw sqlerr;
+                }
+            }
 
-            }
-            try
-            {
-                SqlConnection objCon = new SqlConnection(_strCon);
-                SqlCommand objcmd = null;
-                objcmd = new SqlCommand(strSelecionar, objCon);
-                SqlDataAdapter adp = new SqlDataAdapter(objcmd);
-                DataTable dt = new DataTable();
-                adp.Fill(dt);
-                return dt;
-            }
-            catch (SqlException sqlerr)
-            {
-                throw sqlerr;
-            }
+    */
+
         }
-
-*/
-
-    }
 }
 
 

@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.estado = new System.Windows.Forms.TextBox();
+            this.id = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.bairro = new System.Windows.Forms.TextBox();
+            this.cidade = new System.Windows.Forms.TextBox();
+            this.tel = new System.Windows.Forms.MaskedTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.n = new System.Windows.Forms.TextBox();
+            this.rua = new System.Windows.Forms.TextBox();
+            this.sobrenome = new System.Windows.Forms.TextBox();
+            this.name = new System.Windows.Forms.TextBox();
             this.newSenha = new System.Windows.Forms.TextBox();
             this.newLogin = new System.Windows.Forms.TextBox();
             this.Enviar = new System.Windows.Forms.Button();
@@ -62,28 +62,28 @@
             this.label11.TabIndex = 49;
             this.label11.Text = "Estado:";
             // 
-            // textBox8
+            // estado
             // 
-            this.textBox8.Location = new System.Drawing.Point(96, 250);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(158, 20);
-            this.textBox8.TabIndex = 48;
+            this.estado.Location = new System.Drawing.Point(96, 250);
+            this.estado.Name = "estado";
+            this.estado.Size = new System.Drawing.Size(158, 20);
+            this.estado.TabIndex = 48;
             // 
-            // textBox7
+            // id
             // 
-            this.textBox7.Location = new System.Drawing.Point(96, 94);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 47;
+            this.id.Location = new System.Drawing.Point(96, 94);
+            this.id.Name = "id";
+            this.id.Size = new System.Drawing.Size(100, 20);
+            this.id.TabIndex = 47;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(28, 99);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(66, 13);
+            this.label10.Size = new System.Drawing.Size(60, 13);
             this.label10.TabIndex = 46;
-            this.label10.Text = "Indentidade:";
+            this.label10.Text = "Identidade:";
             // 
             // label9
             // 
@@ -103,27 +103,27 @@
             this.label3.TabIndex = 44;
             this.label3.Text = "Bairro:";
             // 
-            // textBox6
+            // bairro
             // 
-            this.textBox6.Location = new System.Drawing.Point(96, 198);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(158, 20);
-            this.textBox6.TabIndex = 43;
+            this.bairro.Location = new System.Drawing.Point(96, 198);
+            this.bairro.Name = "bairro";
+            this.bairro.Size = new System.Drawing.Size(158, 20);
+            this.bairro.TabIndex = 43;
             // 
-            // textBox3
+            // cidade
             // 
-            this.textBox3.Location = new System.Drawing.Point(96, 224);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(158, 20);
-            this.textBox3.TabIndex = 42;
+            this.cidade.Location = new System.Drawing.Point(96, 224);
+            this.cidade.Name = "cidade";
+            this.cidade.Size = new System.Drawing.Size(158, 20);
+            this.cidade.TabIndex = 42;
             // 
-            // maskedTextBox1
+            // tel
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(96, 120);
-            this.maskedTextBox1.Mask = "(00)0000-0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(98, 20);
-            this.maskedTextBox1.TabIndex = 41;
+            this.tel.Location = new System.Drawing.Point(96, 120);
+            this.tel.Mask = "(00)0000-0000";
+            this.tel.Name = "tel";
+            this.tel.Size = new System.Drawing.Size(98, 20);
+            this.tel.TabIndex = 41;
             // 
             // label8
             // 
@@ -170,33 +170,33 @@
             this.label4.TabIndex = 36;
             this.label4.Text = "Nome:";
             // 
-            // textBox5
+            // n
             // 
-            this.textBox5.Location = new System.Drawing.Point(96, 172);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(47, 20);
-            this.textBox5.TabIndex = 35;
+            this.n.Location = new System.Drawing.Point(96, 172);
+            this.n.Name = "n";
+            this.n.Size = new System.Drawing.Size(47, 20);
+            this.n.TabIndex = 35;
             // 
-            // textBox4
+            // rua
             // 
-            this.textBox4.Location = new System.Drawing.Point(96, 146);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(158, 20);
-            this.textBox4.TabIndex = 34;
+            this.rua.Location = new System.Drawing.Point(96, 146);
+            this.rua.Name = "rua";
+            this.rua.Size = new System.Drawing.Size(158, 20);
+            this.rua.TabIndex = 34;
             // 
-            // textBox2
+            // sobrenome
             // 
-            this.textBox2.Location = new System.Drawing.Point(96, 68);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(158, 20);
-            this.textBox2.TabIndex = 33;
+            this.sobrenome.Location = new System.Drawing.Point(96, 68);
+            this.sobrenome.Name = "sobrenome";
+            this.sobrenome.Size = new System.Drawing.Size(158, 20);
+            this.sobrenome.TabIndex = 33;
             // 
-            // textBox1
+            // name
             // 
-            this.textBox1.Location = new System.Drawing.Point(96, 42);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(158, 20);
-            this.textBox1.TabIndex = 32;
+            this.name.Location = new System.Drawing.Point(96, 42);
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(158, 20);
+            this.name.TabIndex = 32;
             // 
             // newSenha
             // 
@@ -220,6 +220,7 @@
             this.Enviar.TabIndex = 29;
             this.Enviar.Text = "Enviar";
             this.Enviar.UseVisualStyleBackColor = true;
+            this.Enviar.Click += new System.EventHandler(this.Enviar_Click);
             // 
             // label2
             // 
@@ -245,23 +246,23 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(275, 398);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.estado);
+            this.Controls.Add(this.id);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.bairro);
+            this.Controls.Add(this.cidade);
+            this.Controls.Add(this.tel);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.n);
+            this.Controls.Add(this.rua);
+            this.Controls.Add(this.sobrenome);
+            this.Controls.Add(this.name);
             this.Controls.Add(this.newSenha);
             this.Controls.Add(this.newLogin);
             this.Controls.Add(this.Enviar);
@@ -277,23 +278,23 @@
         #endregion
 
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox estado;
+        private System.Windows.Forms.TextBox id;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.TextBox bairro;
+        private System.Windows.Forms.TextBox cidade;
+        private System.Windows.Forms.MaskedTextBox tel;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox n;
+        private System.Windows.Forms.TextBox rua;
+        private System.Windows.Forms.TextBox sobrenome;
+        private System.Windows.Forms.TextBox name;
         private System.Windows.Forms.TextBox newSenha;
         private System.Windows.Forms.TextBox newLogin;
         private System.Windows.Forms.Button Enviar;

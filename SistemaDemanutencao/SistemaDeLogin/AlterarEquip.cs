@@ -16,5 +16,22 @@ namespace SistemaDeLogin
         {
             InitializeComponent();
         }
+        private void AlterarBD()
+        {
+            ADM_BD_Equip a = new ADM_BD_Equip();
+            a.Atualizar(pesquisaCod.Text, newCliente.Text, newTipo.Text, newPrioridade.Text);
+            try
+            {
+                MessageBox.Show("DADOS MODIFICADOS !");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("ERRO !" + e.Message);
+            }
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AlterarBD();
+        }
     }
 }
