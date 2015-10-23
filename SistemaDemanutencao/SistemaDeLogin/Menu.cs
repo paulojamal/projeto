@@ -15,6 +15,7 @@ namespace SistemaDeLogin
         IncluirConta i = new IncluirConta();
         AlterarConta a = new AlterarConta();
         ExcluirConta exc = new ExcluirConta();
+        ConsultaUsuarios c = new ConsultaUsuarios();
         ADM_BD lista = new ADM_BD();
         ADM_BD_Cliente listacli = new ADM_BD_Cliente();
         IncluirConta_Cliente incl = new IncluirConta_Cliente();
@@ -66,21 +67,6 @@ namespace SistemaDeLogin
             excl.ShowDialog();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            tabela.DataSource =  lista.Listar();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            tabela.DataSource = listacli.Listar();
-        }
-
         private void incluirToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             inequi.ShowDialog();
@@ -111,18 +97,9 @@ namespace SistemaDeLogin
             excfor.ShowDialog();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void lISTAToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            /*
-            tabela.DataSource =  listaEquip.Listar();
-            */
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            /*
-            tabela.DataSource =  listaForne.Listar();
-            */
+            c.ShowDialog();
         }
     }
 

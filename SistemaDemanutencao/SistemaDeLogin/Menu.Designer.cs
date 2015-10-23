@@ -46,6 +46,7 @@
             this.incluirContaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alterarContaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.excuirContaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lISTAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.incluirContaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.alterarContaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -58,15 +59,9 @@
             this.incluirToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.alterarToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.excluirToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.tabela = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dados)).BeginInit();
             this.menuStrip3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tabela)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -191,7 +186,8 @@
             this.usuariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.incluirContaToolStripMenuItem,
             this.alterarContaToolStripMenuItem,
-            this.excuirContaToolStripMenuItem});
+            this.excuirContaToolStripMenuItem,
+            this.lISTAToolStripMenuItem});
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
             this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
@@ -199,23 +195,30 @@
             // incluirContaToolStripMenuItem
             // 
             this.incluirContaToolStripMenuItem.Name = "incluirContaToolStripMenuItem";
-            this.incluirContaToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.incluirContaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.incluirContaToolStripMenuItem.Text = "Incluir Conta";
             this.incluirContaToolStripMenuItem.Click += new System.EventHandler(this.incluirContaToolStripMenuItem_Click);
             // 
             // alterarContaToolStripMenuItem
             // 
             this.alterarContaToolStripMenuItem.Name = "alterarContaToolStripMenuItem";
-            this.alterarContaToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.alterarContaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.alterarContaToolStripMenuItem.Text = "Alterar Conta";
             this.alterarContaToolStripMenuItem.Click += new System.EventHandler(this.alterarContaToolStripMenuItem_Click);
             // 
             // excuirContaToolStripMenuItem
             // 
             this.excuirContaToolStripMenuItem.Name = "excuirContaToolStripMenuItem";
-            this.excuirContaToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.excuirContaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.excuirContaToolStripMenuItem.Text = "Excuir Conta";
             this.excuirContaToolStripMenuItem.Click += new System.EventHandler(this.excuirContaToolStripMenuItem_Click);
+            // 
+            // lISTAToolStripMenuItem
+            // 
+            this.lISTAToolStripMenuItem.Name = "lISTAToolStripMenuItem";
+            this.lISTAToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.lISTAToolStripMenuItem.Text = "Listar Conta";
+            this.lISTAToolStripMenuItem.Click += new System.EventHandler(this.lISTAToolStripMenuItem_Click);
             // 
             // clientesToolStripMenuItem
             // 
@@ -310,66 +313,9 @@
             this.excluirToolStripMenuItem2.Text = "Excluir";
             this.excluirToolStripMenuItem2.Click += new System.EventHandler(this.excluirToolStripMenuItem2_Click);
             // 
-            // tabela
-            // 
-            this.tabela.AllowUserToAddRows = false;
-            this.tabela.AllowUserToDeleteRows = false;
-            this.tabela.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tabela.Location = new System.Drawing.Point(132, 88);
-            this.tabela.Name = "tabela";
-            this.tabela.ReadOnly = true;
-            this.tabela.Size = new System.Drawing.Size(485, 222);
-            this.tabela.TabIndex = 1;
-            this.tabela.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(12, 88);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(102, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Listar funcionários";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(12, 136);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(102, 23);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Listar clientes";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(12, 184);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(102, 40);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Listar equipamentos";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(12, 246);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(102, 38);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Listar Fornecedores";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
             // Menu
             // 
             this.ClientSize = new System.Drawing.Size(629, 313);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.tabela);
             this.Controls.Add(this.menuStrip3);
             this.MainMenuStrip = this.menuStrip3;
             this.Name = "Menu";
@@ -378,7 +324,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dados)).EndInit();
             this.menuStrip3.ResumeLayout(false);
             this.menuStrip3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tabela)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -407,9 +352,6 @@
         private System.Windows.Forms.ToolStripMenuItem incluirContaToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem alterarContaToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem excluirContaToolStripMenuItem;
-        private System.Windows.Forms.DataGridView tabela;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ToolStripMenuItem equipamentosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem incluirToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem alterarToolStripMenuItem1;
@@ -418,7 +360,6 @@
         private System.Windows.Forms.ToolStripMenuItem incluirToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem alterarToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem excluirToolStripMenuItem2;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.ToolStripMenuItem lISTAToolStripMenuItem;
     }
 }

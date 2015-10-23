@@ -14,12 +14,11 @@ namespace SistemaDeLogin
         static String mp = Environment.CurrentDirectory;
         //private static string _strCon = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Guilherme\Desktop\projeto\projeto\SistemaDemanutencao\SistemaDeLogin\BD_Usuario.mdf;Integrated Security=True;Connect Timeout=30";
         //private static string _strCon = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + mp + "\\BD_Usuario.mdf;Integrated Security=True;Connect Timeout=30";
-
-        //        private static string _strCon = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Filipe\Desktop\testeBD\testeBD\testeBD\BD_Usuario.mdf;Integrated Security=True;Connect Timeout=30";
-        private static string _strCon = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Guilherme\Desktop\projeto\projeto\SistemaDemanutencao\SistemaDeLogin\BD_Usuario.mdf;Integrated Security=True;Connect Timeout=30";
+        //private static string _strCon = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Guilherme\Desktop\projeto\projeto\SistemaDemanutencao\SistemaDeLogin\BD_Usuario.mdf;Integrated Security=True;Connect Timeout=30";
+        private static string _strCon = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Filipe\Desktop\Sistema de Manutencao\projeto\SistemaDemanutencao\SistemaDeLogin\BD_Usuario.mdf;Integrated Security=True;Connect Timeout=30";
         public const String strInserir = "INSERT INTO tb_Fornecedor(Nome, CNPJ, Rua, Bairro, Cidade, CEP) VALUES(@Nome, @CNPJ, @Rua, @Bairro, @Cidade, @CEP)";
         public const String strExcluir = "DELETE FROM tb_Fornecedor WHERE Nome = @Nome";
-        public const String strAlterar = "UPDATE tb_Fornecedor SET CNPJ = @CNPJ AND SET Rua = @Rua AND SET Bairro = @Baiirro AND SET Cidade = @Cidade AND SET CEP = @CEP WHERE Nome = @Nome";
+        public const String strAlterar = "UPDATE tb_Fornecedor SET CNPJ = @CNPJ ,  Rua = @Rua , Bairro = @Bairro  , Cidade = @Cidade , CEP = @CEP WHERE Nome = @Nome";
         public const String strSelecionar = "SELECT COUNT(*) FROM tb_Fornecedor WHERE Nome = @Nome";
 
         public void Inserir(String Nome, String CNPJ, String Rua, String Bairro, String Cidade, String CEP)
@@ -108,6 +107,8 @@ namespace SistemaDeLogin
             }
 
         }
+
+        /*
         public DataTable Listar()
         {
 
@@ -124,7 +125,7 @@ namespace SistemaDeLogin
 
                 }
 
-            }*/
+            }
             try
             {
                 SqlConnection objCon = new SqlConnection(_strCon);
@@ -140,6 +141,9 @@ namespace SistemaDeLogin
                 throw sqlerr;
             }
         }
+
+*/
+
     }
 }
 
