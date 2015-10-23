@@ -12,13 +12,8 @@ namespace SistemaDeLogin
     public class ADM_BD_Fornecedor
     {
         static String mp = Environment.CurrentDirectory;
-        //private static string _strCon = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Guilherme\Desktop\projeto\projeto\SistemaDemanutencao\SistemaDeLogin\BD_Usuario.mdf;Integrated Security=True;Connect Timeout=30";
-        //private static string _strCon = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + mp + "\\BD_Usuario.mdf;Integrated Security=True;Connect Timeout=30";
-        //private static string _strCon = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Guilherme\Desktop\projeto\projeto\SistemaDemanutencao\SistemaDeLogin\BD_Usuario.mdf;Integrated Security=True;Connect Timeout=30";
-        //String Filipe
-        //private static string _strCon = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Filipe\Desktop\Sistema de Manutencao\projeto\SistemaDemanutencao\SistemaDeLogin\BD_Usuario.mdf;Integrated Security=True;Connect Timeout=30";
-        //String Guilherme
-        private static string _strCon = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Guilherme\Desktop\projeto\projeto\SistemaDemanutencao\SistemaDeLogin\BD_Usuario.mdf;Integrated Security=True;Connect Timeout=30";
+        private static string _strCon = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=" + mp + "\\BD_Usuario.mdf;Integrated Security=True;Connect Timeout=30";
+
         public const String strInserir = "INSERT INTO tb_Fornecedor(Nome, CNPJ, Rua, Bairro, Cidade, CEP) VALUES(@Nome, @CNPJ, @Rua, @Bairro, @Cidade, @CEP)";
         public const String strExcluir = "DELETE FROM tb_Fornecedor WHERE Nome = @Nome";
         public const String strAlterar = "UPDATE tb_Fornecedor SET CNPJ = @CNPJ ,  Rua = @Rua , Bairro = @Bairro  , Cidade = @Cidade , CEP = @CEP WHERE Nome = @Nome";

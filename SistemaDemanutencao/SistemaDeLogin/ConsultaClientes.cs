@@ -17,21 +17,24 @@ namespace SistemaDeLogin
         public ConsultaClientes()
         {
             InitializeComponent();
+           
         }
 
         private void ConsultaUsuarios_Load(object sender, EventArgs e)
         {
             carregarListView();
-
         }
+        private void carregarListView(){
 
-        private void carregarListView()
-        {
             ADM_BD_Cliente cli = new ADM_BD_Cliente();
             List<ADM_BD_Cliente.Clientes> lstCli = new List<ADM_BD_Cliente.Clientes>();
             lstCli = cli.Consultar();
+            LV_Cliente.Items.Clear();
+
             foreach (var itemLista in lstCli) {
+                
                 ListViewItem objListView = new ListViewItem();
+
                 objListView.Text = itemLista.NomeUser;
                 objListView.SubItems.Add(itemLista.SenhaUser);
                 objListView.SubItems.Add(itemLista.Name);
@@ -46,16 +49,6 @@ namespace SistemaDeLogin
 
                 LV_Cliente.Items.Add(objListView);
             }
-            
         }
-
-        //private void carregarGrid()
-        //{
-        //    ADM_BD usu = new ADM_BD();
-        //    List<ADM_BD.Usuarios> lstUsu = new List<ADM_BD.Usuarios>();
-        //    lstUsu = usu.Consultar();
-        //    DGV_Usuarios.DataSource = lstUsu;
-
-        //}
     }
 }

@@ -101,3 +101,7 @@ C:\Users\Guilherme\Desktop\projeto\projeto\SistemaDemanutencao\SistemaDeLogin\ob
 C:\Users\Guilherme\Desktop\projeto\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeLogin.ConsultaFornecedor.resources
 C:\Users\Guilherme\Desktop\projeto\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeLogin.ConsultaEquips.resources
 C:\Users\Guilherme\Desktop\projeto\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeLogin.Menu_Cliente.resources
+C:\Users\Filipe\Desktop\Sistema de Manutencao\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeLogin.ConsultaClientes.resources
+C:\Users\Filipe\Desktop\Sistema de Manutencao\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeLogin.ConsultaFornecedor.resources
+C:\Users\Filipe\Desktop\Sistema de Manutencao\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeLogin.ConsultaEquips.resources
+C:\Users\Filipe\Desktop\Sistema de Manutencao\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeLogin.Menu_Cliente.resources

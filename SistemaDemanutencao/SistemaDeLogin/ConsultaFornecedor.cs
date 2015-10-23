@@ -13,16 +13,15 @@ namespace SistemaDeLogin
     public partial class ConsultaFornecedor : Form
     {
         
-
         public ConsultaFornecedor()
         {
             InitializeComponent();
+            
         }
 
         private void ConsultaUsuarios_Load(object sender, EventArgs e)
         {
             carregarListView();
-
         }
 
         private void carregarListView()
@@ -30,6 +29,8 @@ namespace SistemaDeLogin
             ADM_BD_Fornecedor usu = new ADM_BD_Fornecedor();
             List<ADM_BD_Fornecedor.Fornecedores> lstUsu = new List<ADM_BD_Fornecedor.Fornecedores>();
             lstUsu = usu.Consultar();
+            LV_Fornecedor.Items.Clear();
+
             foreach (var itemLista in lstUsu) {
                 ListViewItem objListView = new ListViewItem();
                 objListView.Text = itemLista.Nome;
@@ -40,17 +41,7 @@ namespace SistemaDeLogin
                 objListView.SubItems.Add(itemLista.CEP);
 
                 LV_Fornecedor.Items.Add(objListView);
-            }
-            
+            }   
         }
-
-        //private void carregarGrid()
-        //{
-        //    ADM_BD usu = new ADM_BD();
-        //    List<ADM_BD.Usuarios> lstUsu = new List<ADM_BD.Usuarios>();
-        //    lstUsu = usu.Consultar();
-        //    DGV_Usuarios.DataSource = lstUsu;
-
-        //}
     }
 }

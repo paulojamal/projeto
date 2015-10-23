@@ -12,17 +12,11 @@ namespace SistemaDeLogin
     class ADM_BD_Equip
     {
         static String mp = Environment.CurrentDirectory;
-        //private static string _strCon = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + mp + "\\BD_Usuario.mdf;Integrated Security=True;Connect Timeout=30";
-        //String Guilherme:
-        private static string _strCon = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Guilherme\Desktop\projeto\projeto\SistemaDemanutencao\SistemaDeLogin\BD_Usuario.mdf;Integrated Security=True;Connect Timeout=30";
+        private static string _strCon = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=" + mp + "\\BD_Usuario.mdf;Integrated Security=True;Connect Timeout=30";
 
-        //private static string _strCon = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Guilherme\Desktop\projeto\projeto\SistemaDemanutencao\SistemaDeLogin\BD_Usuario.mdf;Integrated Security=True;Connect Timeout=30";
-        //String Filipe
-        //private static string _strCon = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Filipe\Desktop\Sistema de Manutencao\projeto\SistemaDemanutencao\SistemaDeLogin\BD_Usuario.mdf;Integrated Security=True;Connect Timeout=30";
         public const String strInserir = "INSERT INTO tb_Equip(Codigo, Cliente, Tipo, Prioridade) VALUES(@Codigo, @Cliente, @Tipo, @Prioridade)";
         public const String strExcluir = "DELETE FROM tb_Equip WHERE Codigo = @Codigo";
         public const String strAlterar = "UPDATE tb_Equip SET Cliente = @Cliente , Tipo = @Tipo ,  Prioridade = @Prioridade WHERE Codigo = @Codigo";
-        
         public const string strConsultar = "SELECT Codigo , Cliente, Tipo, Prioridade FROM tb_Equip";
 
         public class Equips

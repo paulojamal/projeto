@@ -11,18 +11,17 @@ namespace SistemaDeLogin
 {
     public class ADM_BD_Cliente
     {
-        static String mp = Environment.CurrentDirectory;
-        //private static string _strCon = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Guilherme\Desktop\projeto\projeto\SistemaDemanutencao\SistemaDeLogin\BD_Usuario.mdf;Integrated Security=True;Connect Timeout=30";
-        //private static string _strCon = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + mp + "\\BD_Usuario.mdf;Integrated Security=True;Connect Timeout=30";
 
-        // private static string _strCon = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Filipe\Desktop\testeBD\testeBD\testeBD\BD_Usuario.mdf;Integrated Security=True;Connect Timeout=30";
-        private static string _strCon = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Guilherme\Desktop\projeto\projeto\SistemaDemanutencao\SistemaDeLogin\BD_Usuario.mdf;Integrated Security=True;Connect Timeout=30";
+        static String mp = Environment.CurrentDirectory;
+
+        private static string _strCon = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=" + mp + "\\BD_Usuario.mdf;Integrated Security=True;Connect Timeout=30";
+
         public const String strInserir = "INSERT INTO tb_Cliente(NomeUser, SenhaUser, Name, Sobrenome, ID, Telefone, Rua, Numero, Bairro, Cidade, Estado) VALUES(@NomeUser, @SenhaUser, @Name, @Sobrenome, @ID, @Telefone, @Rua, @Numero, @Bairro, @Cidade, @Estado)";
         public const String strExcluir = "DELETE FROM tb_Cliente WHERE NomeUser = @NomeUser";
-        //public const String strAlterar = "UPDATE tb_Cliente SET SenhaUser = @SenhaUser WHERE NomeUser = @NomeUser";
         public const String strAlterar = "UPDATE tb_Cliente SET SenhaUser = @SenhaUser , Name = @Name ,  Sobrenome = @Sobrenome , ID = @ID  , Telefone = @Telefone , Rua = @Rua , Numero = @Numero , Bairro = @Bairro, Cidade = @Cidade, Estado = @Estado  WHERE NomeUser = @NomeUser";
         public const String strSelecionar = "SELECT COUNT(*) FROM tb_Cliente WHERE NomeUser = @NomeUser AND SenhaUser =@SenhaUser";
         public const string strConsultar = "SELECT NomeUser , SenhaUser , Name, Sobrenome, ID, Telefone, Rua, Numero, Bairro, Cidade, Estado FROM tb_Cliente";
+
         public void Inserir(String Login, String Senha, String Nome, String Sobrenome, String Identidade, String Telefone, String Rua, String N, String Bairro, String Cidade, String Estado)
         {
             using (SqlConnection objCon = new SqlConnection(_strCon))

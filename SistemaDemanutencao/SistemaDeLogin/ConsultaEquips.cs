@@ -17,12 +17,13 @@ namespace SistemaDeLogin
         public ConsultaEquips()
         {
             InitializeComponent();
+            
         }
 
         private void ConsultaUsuarios_Load(object sender, EventArgs e)
         {
-            carregarListView();
 
+            carregarListView();
         }
 
         private void carregarListView()
@@ -30,6 +31,7 @@ namespace SistemaDeLogin
             ADM_BD_Equip usu = new ADM_BD_Equip();
             List<ADM_BD_Equip.Equips> lstUsu = new List<ADM_BD_Equip.Equips>();
             lstUsu = usu.Consultar();
+            LV_Equip.Items.Clear();
             foreach (var itemLista in lstUsu) {
                 ListViewItem objListView = new ListViewItem();
                 objListView.Text = itemLista.Codigo;
