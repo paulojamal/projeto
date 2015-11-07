@@ -58,7 +58,7 @@
             this.LV_Cliente.GridLines = true;
             this.LV_Cliente.Location = new System.Drawing.Point(12, 12);
             this.LV_Cliente.Name = "LV_Cliente";
-            this.LV_Cliente.Size = new System.Drawing.Size(1091, 332);
+            this.LV_Cliente.Size = new System.Drawing.Size(1084, 332);
             this.LV_Cliente.TabIndex = 1;
             this.LV_Cliente.UseCompatibleStateImageBehavior = false;
             this.LV_Cliente.View = System.Windows.Forms.View.Details;

@@ -38,21 +38,21 @@
             // 
             // textLogin
             // 
-            this.textLogin.Location = new System.Drawing.Point(110, 65);
+            this.textLogin.Location = new System.Drawing.Point(76, 59);
             this.textLogin.Name = "textLogin";
             this.textLogin.Size = new System.Drawing.Size(100, 20);
             this.textLogin.TabIndex = 0;
             // 
             // textSenha
             // 
-            this.textSenha.Location = new System.Drawing.Point(110, 110);
+            this.textSenha.Location = new System.Drawing.Point(80, 107);
             this.textSenha.Name = "textSenha";
-            this.textSenha.Size = new System.Drawing.Size(100, 20);
+            this.textSenha.Size = new System.Drawing.Size(96, 20);
             this.textSenha.TabIndex = 1;
             // 
             // B_Entrar
             // 
-            this.B_Entrar.Location = new System.Drawing.Point(125, 145);
+            this.B_Entrar.Location = new System.Drawing.Point(80, 133);
             this.B_Entrar.Name = "B_Entrar";
             this.B_Entrar.Size = new System.Drawing.Size(75, 23);
             this.B_Entrar.TabIndex = 2;
@@ -64,7 +64,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(48, 68);
+            this.label1.Location = new System.Drawing.Point(27, 62);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 3;
@@ -73,7 +73,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(48, 116);
+            this.label2.Location = new System.Drawing.Point(27, 110);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 4;
@@ -82,17 +82,19 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.Control;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(27, 9);
+            this.label3.Location = new System.Drawing.Point(12, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(242, 31);
+            this.label3.Size = new System.Drawing.Size(186, 31);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Acesso ao sistema";
+            this.label3.Text = "Autentificação";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // Login
             // 
             this.AcceptButton = this.B_Entrar;
-            this.ClientSize = new System.Drawing.Size(296, 219);
+            this.ClientSize = new System.Drawing.Size(209, 168);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);

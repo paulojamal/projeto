@@ -40,5 +40,46 @@ namespace SistemaDeLogin
                 
             }            
         }
+
+        private void resultadoPesquisa()
+        {
+            string login = PSQ_Login.Text;
+            string senha = PSQ_Senha.Text;
+
+            ADM_BD usu = new ADM_BD();
+            List<ADM_BD.Usuarios> lstUsu = new List<ADM_BD.Usuarios>();
+            lstUsu = usu.Pesquisar(login, senha);
+            LV_Usuario.Items.Clear();
+            foreach (var itemLista in lstUsu)
+            {
+                ListViewItem objListView = new ListViewItem();
+                objListView.Text = itemLista.NomeUser;
+                objListView.SubItems.Add(itemLista.SenhaUser);
+
+                LV_Usuario.Items.Add(objListView);
+
+
+                
+
+
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            resultadoPesquisa();
+
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            carregarListView();
+        }
     }
 }
