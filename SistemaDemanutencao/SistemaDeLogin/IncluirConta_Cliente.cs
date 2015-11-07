@@ -33,10 +33,7 @@ namespace SistemaDeLogin
             }
         }
 
-        /*private void Enviar_Click_1(object sender, EventArgs e)
-        {
-            IncluirBD();
-        }*/
+
 
         private void Enviar_Click(object sender, EventArgs e)
         {

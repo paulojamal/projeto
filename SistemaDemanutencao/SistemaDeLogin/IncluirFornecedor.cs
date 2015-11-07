@@ -16,17 +16,7 @@ namespace SistemaDeLogin
         {
             InitializeComponent();
         }
-        /*
-                public IncluirConta()
-        {
-            InitializeComponent();
-        }
-       
-        private void button1_Click(object sender, EventArgs e)
-        {
-            IncluirBD();
-        }
-        */
+
         private void IncluirBD()
         {
             try

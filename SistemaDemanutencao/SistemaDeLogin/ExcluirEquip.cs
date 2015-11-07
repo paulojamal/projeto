@@ -20,7 +20,7 @@ namespace SistemaDeLogin
         {
 
             ADM_BD_Equip a = new ADM_BD_Equip();
-            //ArrayList al = new ArrayList();
+            
             a.Excluir(excCodigo.Text);
             try
             {

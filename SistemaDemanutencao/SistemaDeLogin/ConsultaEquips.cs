@@ -28,11 +28,11 @@ namespace SistemaDeLogin
 
         private void carregarListView()
         {
-            ADM_BD_Equip usu = new ADM_BD_Equip();
-            List<ADM_BD_Equip.Equips> lstUsu = new List<ADM_BD_Equip.Equips>();
-            lstUsu = usu.Consultar();
+            ADM_BD_Equip equip = new ADM_BD_Equip();
+            List<ADM_BD_Equip.Equips> lstEquip = new List<ADM_BD_Equip.Equips>();
+            lstEquip = equip.Consultar();
             LV_Equip.Items.Clear();
-            foreach (var itemLista in lstUsu) {
+            foreach (var itemLista in lstEquip) {
                 ListViewItem objListView = new ListViewItem();
                 objListView.Text = itemLista.Codigo;
                 objListView.SubItems.Add(itemLista.Cliente);
@@ -56,11 +56,11 @@ namespace SistemaDeLogin
             string tipo = PSQ_Tipo.Text;
             string prioridade = PSQ_Prioridade.Text;
 
-            ADM_BD_Equip usu = new ADM_BD_Equip();
-            List<ADM_BD_Equip.Equips> lstUsu = new List<ADM_BD_Equip.Equips>();
-            lstUsu = usu.Pesquisar(codigo, cliente, tipo, prioridade);
+            ADM_BD_Equip equip = new ADM_BD_Equip();
+            List<ADM_BD_Equip.Equips> lstEquip = new List<ADM_BD_Equip.Equips>();
+            lstEquip = equip.Pesquisar(codigo, cliente, tipo, prioridade);
             LV_Equip.Items.Clear();
-            foreach (var itemLista in lstUsu)
+            foreach (var itemLista in lstEquip)
             {
                 ListViewItem objListView = new ListViewItem();
                 objListView.Text = itemLista.Codigo;
@@ -81,13 +81,6 @@ namespace SistemaDeLogin
             resultadoPesquisa();
         }
 
-        //private void carregarGrid()
-        //{
-        //    ADM_BD usu = new ADM_BD();
-        //    List<ADM_BD.Usuarios> lstUsu = new List<ADM_BD.Usuarios>();
-        //    lstUsu = usu.Consultar();
-        //    DGV_Usuarios.DataSource = lstUsu;
 
-        //}
     }
 }

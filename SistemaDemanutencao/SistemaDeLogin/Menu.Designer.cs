@@ -64,6 +64,8 @@
             this.alterarToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.excluirToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.listarToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dados)).BeginInit();
             this.menuStrip3.SuspendLayout();
@@ -358,12 +360,39 @@
             this.listarToolStripMenuItem2.Text = "Listar/Pesquisar";
             this.listarToolStripMenuItem2.Click += new System.EventHandler(this.listarToolStripMenuItem2_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.Control;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(64, 50);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(305, 31);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Sistema de manutenção";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.Control;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(24, 120);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(390, 16);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Bem-Vindo! Você está logado com privilégios de um funcionário";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
             // Menu
             // 
-            this.ClientSize = new System.Drawing.Size(436, 119);
+            this.ClientSize = new System.Drawing.Size(436, 190);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.menuStrip3);
             this.MainMenuStrip = this.menuStrip3;
             this.Name = "Menu";
+            this.Text = "Menu";
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dados)).EndInit();
@@ -411,5 +440,7 @@
         private System.Windows.Forms.ToolStripMenuItem listarToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem novoLoginToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem novoLoginToolStripMenuItem1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
     }
 }

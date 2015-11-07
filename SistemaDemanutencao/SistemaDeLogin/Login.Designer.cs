@@ -45,14 +45,14 @@
             // 
             // textSenha
             // 
-            this.textSenha.Location = new System.Drawing.Point(80, 107);
+            this.textSenha.Location = new System.Drawing.Point(76, 95);
             this.textSenha.Name = "textSenha";
             this.textSenha.Size = new System.Drawing.Size(96, 20);
             this.textSenha.TabIndex = 1;
             // 
             // B_Entrar
             // 
-            this.B_Entrar.Location = new System.Drawing.Point(80, 133);
+            this.B_Entrar.Location = new System.Drawing.Point(85, 133);
             this.B_Entrar.Name = "B_Entrar";
             this.B_Entrar.Size = new System.Drawing.Size(75, 23);
             this.B_Entrar.TabIndex = 2;
@@ -64,20 +64,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 62);
+            this.label1.Location = new System.Drawing.Point(23, 62);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.Size = new System.Drawing.Size(36, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "LOGIN:";
+            this.label1.Text = "Login:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(27, 110);
+            this.label2.Location = new System.Drawing.Point(23, 95);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 13);
+            this.label2.Size = new System.Drawing.Size(41, 13);
             this.label2.TabIndex = 4;
-            this.label2.Text = "SENHA:";
+            this.label2.Text = "Senha:";
             // 
             // label3
             // 
@@ -102,6 +102,7 @@
             this.Controls.Add(this.textSenha);
             this.Controls.Add(this.textLogin);
             this.Name = "Login";
+            this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();
 

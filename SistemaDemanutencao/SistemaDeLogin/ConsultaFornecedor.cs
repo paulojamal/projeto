@@ -26,12 +26,12 @@ namespace SistemaDeLogin
 
         private void carregarListView()
         {
-            ADM_BD_Fornecedor usu = new ADM_BD_Fornecedor();
-            List<ADM_BD_Fornecedor.Fornecedores> lstUsu = new List<ADM_BD_Fornecedor.Fornecedores>();
-            lstUsu = usu.Consultar();
+            ADM_BD_Fornecedor forn = new ADM_BD_Fornecedor();
+            List<ADM_BD_Fornecedor.Fornecedores> lstForn = new List<ADM_BD_Fornecedor.Fornecedores>();
+            lstForn = forn.Consultar();
             LV_Fornecedor.Items.Clear();
 
-            foreach (var itemLista in lstUsu) {
+            foreach (var itemLista in lstForn) {
                 ListViewItem objListView = new ListViewItem();
                 objListView.Text = itemLista.Nome;
                 objListView.SubItems.Add(itemLista.CNPJ);
@@ -59,11 +59,11 @@ namespace SistemaDeLogin
             string cidade = PSQ_Cidade.Text;
             string cep = PSQ_CEP.Text;
 
-            ADM_BD_Fornecedor usu = new ADM_BD_Fornecedor();
-            List<ADM_BD_Fornecedor.Fornecedores> lstUsu = new List<ADM_BD_Fornecedor.Fornecedores>();
-            lstUsu = usu.Pesquisar(nome, cnpj, rua, bairro, cidade, cep);
+            ADM_BD_Fornecedor forn = new ADM_BD_Fornecedor();
+            List<ADM_BD_Fornecedor.Fornecedores> lstForn = new List<ADM_BD_Fornecedor.Fornecedores>();
+            lstForn = forn.Pesquisar(nome, cnpj, rua, bairro, cidade, cep);
             LV_Fornecedor.Items.Clear();
-            foreach (var itemLista in lstUsu)
+            foreach (var itemLista in lstForn)
             {
                 ListViewItem objListView = new ListViewItem();
                 objListView.Text = itemLista.Nome;

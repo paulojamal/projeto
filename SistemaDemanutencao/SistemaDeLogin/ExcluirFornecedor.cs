@@ -20,7 +20,7 @@ namespace SistemaDeLogin
         {
 
             ADM_BD_Fornecedor a = new ADM_BD_Fornecedor();
-            //ArrayList al = new ArrayList();
+            
             a.Excluir(excNome.Text);
             try
             {
@@ -36,12 +36,6 @@ namespace SistemaDeLogin
             ExcluirBD();
         }
 
-        /*
-        
-        private void button2_Click(object sender, EventArgs e)
-        {
-            ExcluirBD();
-        }
-        */
+
     }
 }

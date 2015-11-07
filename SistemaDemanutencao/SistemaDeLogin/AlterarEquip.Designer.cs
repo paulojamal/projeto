@@ -37,18 +37,19 @@
             this.newTipo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // pesquisaCod
             // 
-            this.pesquisaCod.Location = new System.Drawing.Point(48, 36);
+            this.pesquisaCod.Location = new System.Drawing.Point(84, 90);
             this.pesquisaCod.Name = "pesquisaCod";
             this.pesquisaCod.Size = new System.Drawing.Size(100, 20);
             this.pesquisaCod.TabIndex = 0;
             // 
             // newPrioridade
             // 
-            this.newPrioridade.Location = new System.Drawing.Point(90, 82);
+            this.newPrioridade.Location = new System.Drawing.Point(128, 129);
             this.newPrioridade.Name = "newPrioridade";
             this.newPrioridade.Size = new System.Drawing.Size(100, 20);
             this.newPrioridade.TabIndex = 1;
@@ -56,24 +57,24 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 9);
+            this.label1.Location = new System.Drawing.Point(60, 64);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(155, 13);
+            this.label1.Size = new System.Drawing.Size(158, 13);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Código para modificar os dados";
+            this.label1.Text = "Código para modificar os dados:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(2, 82);
+            this.label2.Location = new System.Drawing.Point(40, 129);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 13);
+            this.label2.Size = new System.Drawing.Size(85, 13);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Nova prioridade";
+            this.label2.Text = "Nova prioridade:";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(60, 220);
+            this.button1.Location = new System.Drawing.Point(98, 267);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 4;
@@ -83,14 +84,14 @@
             // 
             // newCliente
             // 
-            this.newCliente.Location = new System.Drawing.Point(90, 134);
+            this.newCliente.Location = new System.Drawing.Point(128, 181);
             this.newCliente.Name = "newCliente";
             this.newCliente.Size = new System.Drawing.Size(100, 20);
             this.newCliente.TabIndex = 5;
             // 
             // newTipo
             // 
-            this.newTipo.Location = new System.Drawing.Point(90, 181);
+            this.newTipo.Location = new System.Drawing.Point(128, 231);
             this.newTipo.Name = "newTipo";
             this.newTipo.Size = new System.Drawing.Size(100, 20);
             this.newTipo.TabIndex = 6;
@@ -98,26 +99,39 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(2, 134);
+            this.label3.Location = new System.Drawing.Point(40, 181);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 13);
+            this.label3.Size = new System.Drawing.Size(70, 13);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Novo cliente";
+            this.label3.Text = "Novo cliente:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(2, 184);
+            this.label4.Location = new System.Drawing.Point(40, 231);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 13);
+            this.label4.Size = new System.Drawing.Size(56, 13);
             this.label4.TabIndex = 8;
-            this.label4.Text = "Novo tipo";
+            this.label4.Text = "Novo tipo:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.SystemColors.Control;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(12, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(257, 31);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Alterar equipamento";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // AlterarEquip
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(197, 267);
+            this.ClientSize = new System.Drawing.Size(275, 309);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.newTipo);
@@ -145,5 +159,6 @@
         private System.Windows.Forms.TextBox newTipo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }

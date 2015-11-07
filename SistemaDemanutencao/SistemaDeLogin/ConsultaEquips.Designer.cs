@@ -34,16 +34,18 @@
             this.Tipo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Prioridade = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.PSQ_Prioridade = new System.Windows.Forms.TextBox();
-            this.PSQ_Tipo = new System.Windows.Forms.TextBox();
-            this.PSQ_Codigo = new System.Windows.Forms.TextBox();
-            this.PSQ_Cliente = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.PSQ_Cliente = new System.Windows.Forms.TextBox();
+            this.PSQ_Codigo = new System.Windows.Forms.TextBox();
+            this.PSQ_Tipo = new System.Windows.Forms.TextBox();
+            this.PSQ_Prioridade = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -101,33 +103,41 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pesquisa";
             // 
-            // PSQ_Prioridade
+            // label4
             // 
-            this.PSQ_Prioridade.Location = new System.Drawing.Point(181, 88);
-            this.PSQ_Prioridade.Name = "PSQ_Prioridade";
-            this.PSQ_Prioridade.Size = new System.Drawing.Size(100, 20);
-            this.PSQ_Prioridade.TabIndex = 0;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(178, 72);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(57, 13);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Prioridade:";
             // 
-            // PSQ_Tipo
+            // label3
             // 
-            this.PSQ_Tipo.Location = new System.Drawing.Point(181, 39);
-            this.PSQ_Tipo.Name = "PSQ_Tipo";
-            this.PSQ_Tipo.Size = new System.Drawing.Size(100, 20);
-            this.PSQ_Tipo.TabIndex = 1;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(178, 23);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(31, 13);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Tipo:";
             // 
-            // PSQ_Codigo
+            // label2
             // 
-            this.PSQ_Codigo.Location = new System.Drawing.Point(19, 39);
-            this.PSQ_Codigo.Name = "PSQ_Codigo";
-            this.PSQ_Codigo.Size = new System.Drawing.Size(100, 20);
-            this.PSQ_Codigo.TabIndex = 2;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(16, 72);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(42, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Cliente:";
             // 
-            // PSQ_Cliente
+            // label1
             // 
-            this.PSQ_Cliente.Location = new System.Drawing.Point(19, 88);
-            this.PSQ_Cliente.Name = "PSQ_Cliente";
-            this.PSQ_Cliente.Size = new System.Drawing.Size(100, 20);
-            this.PSQ_Cliente.TabIndex = 3;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(16, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Código:";
             // 
             // button1
             // 
@@ -139,9 +149,37 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // PSQ_Cliente
+            // 
+            this.PSQ_Cliente.Location = new System.Drawing.Point(19, 88);
+            this.PSQ_Cliente.Name = "PSQ_Cliente";
+            this.PSQ_Cliente.Size = new System.Drawing.Size(100, 20);
+            this.PSQ_Cliente.TabIndex = 3;
+            // 
+            // PSQ_Codigo
+            // 
+            this.PSQ_Codigo.Location = new System.Drawing.Point(19, 39);
+            this.PSQ_Codigo.Name = "PSQ_Codigo";
+            this.PSQ_Codigo.Size = new System.Drawing.Size(100, 20);
+            this.PSQ_Codigo.TabIndex = 2;
+            // 
+            // PSQ_Tipo
+            // 
+            this.PSQ_Tipo.Location = new System.Drawing.Point(181, 39);
+            this.PSQ_Tipo.Name = "PSQ_Tipo";
+            this.PSQ_Tipo.Size = new System.Drawing.Size(100, 20);
+            this.PSQ_Tipo.TabIndex = 1;
+            // 
+            // PSQ_Prioridade
+            // 
+            this.PSQ_Prioridade.Location = new System.Drawing.Point(181, 88);
+            this.PSQ_Prioridade.Name = "PSQ_Prioridade";
+            this.PSQ_Prioridade.Size = new System.Drawing.Size(100, 20);
+            this.PSQ_Prioridade.TabIndex = 0;
+            // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(602, 89);
+            this.button2.Location = new System.Drawing.Point(602, 151);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 5;
@@ -149,56 +187,47 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // label1
+            // label5
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Código";
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.SystemColors.Control;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(465, 39);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(343, 31);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Equipamentos cadastrados";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // label2
+            // label6
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 72);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Cliente";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(178, 23);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(28, 13);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Tipo";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(178, 72);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 13);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Prioridade";
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.SystemColors.Control;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(568, 91);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(145, 31);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "no sistema";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // ConsultaEquips
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(820, 365);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.LV_Equip);
             this.Name = "ConsultaEquips";
-            this.Text = "ConsultaUsuarios";
+            this.Text = "ConsultaEquips";
             this.Load += new System.EventHandler(this.ConsultaUsuarios_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -220,5 +249,7 @@
         private System.Windows.Forms.TextBox PSQ_Tipo;
         private System.Windows.Forms.TextBox PSQ_Prioridade;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }

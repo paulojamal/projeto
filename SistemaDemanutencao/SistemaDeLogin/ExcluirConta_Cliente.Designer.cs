@@ -31,20 +31,21 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Enviar = new System.Windows.Forms.Button();
             this.nDel = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 71);
+            this.label1.Location = new System.Drawing.Point(17, 104);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 13);
+            this.label1.Size = new System.Drawing.Size(42, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Cliente";
+            this.label1.Text = "Cliente:";
             // 
             // Enviar
             // 
-            this.Enviar.Location = new System.Drawing.Point(89, 111);
+            this.Enviar.Location = new System.Drawing.Point(115, 157);
             this.Enviar.Name = "Enviar";
             this.Enviar.Size = new System.Drawing.Size(75, 23);
             this.Enviar.TabIndex = 1;
@@ -54,16 +55,29 @@
             // 
             // nDel
             // 
-            this.nDel.Location = new System.Drawing.Point(89, 71);
+            this.nDel.Location = new System.Drawing.Point(104, 101);
             this.nDel.Name = "nDel";
             this.nDel.Size = new System.Drawing.Size(100, 20);
             this.nDel.TabIndex = 2;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.Control;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(14, 21);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(277, 31);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Excluir conta - Cliente";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // ExcluirConta_Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(208, 175);
+            this.ClientSize = new System.Drawing.Size(303, 209);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.nDel);
             this.Controls.Add(this.Enviar);
             this.Controls.Add(this.label1);
@@ -79,5 +93,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Enviar;
         private System.Windows.Forms.TextBox nDel;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -118,38 +118,7 @@ namespace SistemaDeLogin
             }
 
         }
-        /*public DataTable Listar()
-        {
 
-            /*using (SqlConnection objCon = new SqlConnection(_strCon))
-            {
-                using (SqlCommand objCmd = new SqlCommand(strSelecionar, objCon)) //testar objCon, strSelecionar 
-                {
-
-
-                    SqlDataAdapter adp = new SqlDataAdapter(objCmd);
-                    DataTable dt = new DataTable();
-                    adp.Fill(dt);
-                    return dt;
-
-                }
-
-            }
-            try
-            {
-                SqlConnection objCon = new SqlConnection(_strCon);
-                SqlCommand objcmd = null;
-                objcmd = new SqlCommand(strSelecionar, objCon);
-                SqlDataAdapter adp = new SqlDataAdapter(objcmd);
-                DataTable dt = new DataTable();
-                adp.Fill(dt);
-                return dt;
-            }
-            catch (SqlException sqlerr)
-            {
-                throw sqlerr;
-            }
-        }*/
         public class Clientes
         {
             public String NomeUser { get; set; }
@@ -163,13 +132,13 @@ namespace SistemaDeLogin
             public String Bairro { get; set; }
             public String Cidade { get; set; }
             public String Estado { get; set; }
-            
+
 
 
         }
         public List<Clientes> Consultar()
         {
-            List<Clientes> lstUsuarios = new List<Clientes>();
+            List<Clientes> lstClientes = new List<Clientes>();
             using (SqlConnection objCon = new SqlConnection(_strCon))
             {
                 using (SqlCommand objCmd = new SqlCommand(strConsultar, objCon))
@@ -182,19 +151,19 @@ namespace SistemaDeLogin
 
                         while (objDataReader.Read())
                         {
-                            Clientes objUsuarios = new Clientes();
-                            objUsuarios.NomeUser = objDataReader["NomeUser"].ToString();
-                            objUsuarios.SenhaUser = objDataReader["SenhaUser"].ToString();
-                            objUsuarios.Name = objDataReader["Name"].ToString();
-                            objUsuarios.Sobrenome = objDataReader["Sobrenome"].ToString();
-                            objUsuarios.ID = objDataReader["ID"].ToString();
-                            objUsuarios.Telefone = objDataReader["Telefone"].ToString();
-                            objUsuarios.Rua = objDataReader["Rua"].ToString();
-                            objUsuarios.Numero = objDataReader["Numero"].ToString();
-                            objUsuarios.Bairro = objDataReader["Bairro"].ToString();
-                            objUsuarios.Cidade = objDataReader["Cidade"].ToString();
-                            objUsuarios.Estado = objDataReader["Estado"].ToString();
-                            lstUsuarios.Add(objUsuarios);
+                            Clientes objClientes = new Clientes();
+                            objClientes.NomeUser = objDataReader["NomeUser"].ToString();
+                            objClientes.SenhaUser = objDataReader["SenhaUser"].ToString();
+                            objClientes.Name = objDataReader["Name"].ToString();
+                            objClientes.Sobrenome = objDataReader["Sobrenome"].ToString();
+                            objClientes.ID = objDataReader["ID"].ToString();
+                            objClientes.Telefone = objDataReader["Telefone"].ToString();
+                            objClientes.Rua = objDataReader["Rua"].ToString();
+                            objClientes.Numero = objDataReader["Numero"].ToString();
+                            objClientes.Bairro = objDataReader["Bairro"].ToString();
+                            objClientes.Cidade = objDataReader["Cidade"].ToString();
+                            objClientes.Estado = objDataReader["Estado"].ToString();
+                            lstClientes.Add(objClientes);
                         }
 
                         objCon.Close();
@@ -204,17 +173,18 @@ namespace SistemaDeLogin
 
                     objCon.Close();
                 }
-                return lstUsuarios;
+                return lstClientes;
             }
         }
-        
+
         public List<Clientes> Pesquisar(String Login, String Senha, String Name, String Sobrenome, String ID, String Telefone, String Rua, String Numero, String Bairro, String Cidade, String Estado)
         {
             string strPesquisa = "SELECT NomeUser , SenhaUser , Name, Sobrenome, ID, Telefone, Rua, Numero, Bairro, Cidade, Estado FROM tb_Cliente WHERE 1=1 ";
             List<Clientes> lstClientes = new List<Clientes>();
             using (SqlConnection objCon = new SqlConnection(_strCon))
             {
-                if (Login != "") {
+                if (Login != "")
+                {
                     strPesquisa += " AND NomeUser LIKE @NomeUser ";
                 }
                 if (Senha != "")
@@ -303,8 +273,8 @@ namespace SistemaDeLogin
                     {
                         objCmd.Parameters.AddWithValue("@Estado", "%" + Estado + "%");
                     }
-                    
-                    
+
+
                     objCon.Open();
 
                     SqlDataReader objDataReader = objCmd.ExecuteReader();
@@ -339,221 +309,9 @@ namespace SistemaDeLogin
             }
 
         }
-        
+
     }
 }
 
 
-//backup da versão passada, não remova
-/*namespace SistemaDeLogin
-{
-    class ADM_BD_Cliente
-    {
-        private string vsql = "";
-        SqlConnection objCon = null;
 
-        private bool conectar()
-        {
-            objCon = new SqlConnection(_strCon);
-            try
-            {
-                objCon.Open();
-                return true;
-            }
-            catch
-            {
-                return false;
-
-            }
-        }
-
-        private bool desconectar()
-        {
-            if (objCon.State != ConnectionState.Closed)
-            {
-                objCon.Close();
-                objCon.Dispose();
-                return true;
-            }
-            else
-            {
-                objCon.Dispose();
-                return false;
-            }
-        }
-
-        public bool Logou(ArrayList p_arrVerificar)
-        {
-
-            vsql = "SELECT COUNT(*) FROM tb_Cliente WHERE NomeUser = @user AND SenhaUser =@senha";
-            SqlCommand objcmd = null;
-            if (this.conectar())
-            {
-                try
-                {
-                    objcmd = new SqlCommand(vsql, objCon);
-                    objcmd.Parameters.Add("@user", SqlDbType.VarChar).Value = p_arrVerificar[0];
-                    objcmd.Parameters.Add("@senha", SqlDbType.VarChar).Value = p_arrVerificar[1];
-
-
-                    int i = (int)objcmd.ExecuteScalar();
-
-                    if (i > 0)
-                    {
-                        return true;
-                    }
-                    else
-                    {
-
-                        return false;
-                    }
-
-
-                }
-                catch (SqlException sqlerr)
-                {
-                    throw sqlerr;
-                }
-                finally
-                {
-                    this.desconectar();
-                }
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        public bool Insert(ArrayList p_arrInsert)
-        {
-            if (this.conectar())
-            {
-                vsql = "INSERT INTO tb_Cliente(NomeUser, SenhaUser) VALUES(@NomeUser,@SenhaUser)";
-                SqlCommand objcmd = null;
-
-                try
-                {
-                    objcmd = new SqlCommand(vsql, objCon);
-                    objcmd.Parameters.Add(new SqlParameter("@NomeUser", p_arrInsert[0]));
-                    objcmd.Parameters.Add(new SqlParameter("@SenhaUser", p_arrInsert[1]));
-                    objcmd.ExecuteNonQuery();
-
-
-                    return true;
-                }
-                catch (SqlException sqlerr)
-                {
-                    throw sqlerr;
-                }
-                finally
-                {
-                    this.desconectar();
-                }
-            }
-
-            else
-            {
-                return false;
-            }
-        }
-
-        public bool Update(ArrayList p_arrUpdate)
-        {
-            if (this.conectar())
-            {
-                //                vsql = "UPDATE INTO tb_Cliente(NomeUser, SenhaUser) VALUES(@NomeUser,@SenhaUser) WHERE NomeUser = @NomeUser";
-                vsql = "UPDATE tb_Cliente SET NomeUser = @NomeUser, SenhaUser = @SenhaUser WHERE NomeUser = @NomeUser";
-                SqlCommand objcmd = null;
-
-                try
-                {
-                    objcmd = new SqlCommand(vsql, objCon);
-                    objcmd.Parameters.Add(new SqlParameter("@NomeUser", p_arrUpdate[0]));
-                    objcmd.Parameters.Add(new SqlParameter("@SenhaUser", p_arrUpdate[1]));
-                    objcmd.ExecuteNonQuery();
-
-
-                    return true;
-                }
-                catch (SqlException sqlerr)
-                {
-                    throw sqlerr;
-                }
-                finally
-                {
-                    this.desconectar();
-                }
-            }
-
-            else
-            {
-                return false;
-            }
-        }
-
-        public bool Delete(ArrayList nome_deletado)
-        {
-            if (this.conectar())
-            {
-                vsql = "DELETE FROM tb_Cliente WHERE NomeUser = @NomeUser";
-                SqlCommand objcmd = null;
-
-                try
-                {
-                    objcmd = new SqlCommand(vsql, objCon);
-                    objcmd.Parameters.AddWithValue("@NomeUser", nome_deletado);
-                    objcmd.ExecuteNonQuery();
-
-                    return true;
-                }
-                catch (SqlException sqlerr)
-                {
-                    throw sqlerr;
-                }
-                finally
-                {
-                    this.desconectar();
-                }
-            }
-
-            else
-            {
-                return false;
-            }
-        }
-
-        public DataTable ListaGrid()
-        {
-
-            if (this.conectar())
-            {
-                vsql = "SELECT INTO tb_Cliente(NomeUser, SenhaUser) VALUES(@NomeUser,@SenhaUser)";
-                SqlCommand objcmd = null;
-
-                try
-                {
-                    objcmd = new SqlCommand(vsql, objCon);
-                    SqlDataAdapter adp = new SqlDataAdapter(objcmd);
-                    DataTable dt = new DataTable();
-                    adp.Fill(dt);
-                    return dt;
-                }
-                catch (SqlException sqlerr)
-                {
-                    throw sqlerr;
-                }
-                finally
-                {
-                    this.desconectar();
-                }
-            }
-
-            else
-            {
-                return null;
-            }
-        }
-    }
-}
-*/

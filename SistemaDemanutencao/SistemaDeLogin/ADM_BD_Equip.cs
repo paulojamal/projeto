@@ -89,7 +89,7 @@ namespace SistemaDeLogin
 
         public List<Equips> Consultar()
         {
-            List<Equips> lstUsuarios = new List<Equips>();
+            List<Equips> lstEquips = new List<Equips>();
             using (SqlConnection objCon = new SqlConnection(_strCon))
             {
                 using (SqlCommand objCmd = new SqlCommand(strConsultar, objCon))
@@ -102,12 +102,12 @@ namespace SistemaDeLogin
 
                         while (objDataReader.Read())
                         {
-                            Equips objUsuarios = new Equips();
-                            objUsuarios.Codigo = objDataReader["Codigo"].ToString();
-                            objUsuarios.Cliente = objDataReader["Cliente"].ToString();
-                            objUsuarios.Tipo = objDataReader["Tipo"].ToString();
-                            objUsuarios.Prioridade = objDataReader["Prioridade"].ToString();
-                            lstUsuarios.Add(objUsuarios);
+                            Equips objEquips = new Equips();
+                            objEquips.Codigo = objDataReader["Codigo"].ToString();
+                            objEquips.Cliente = objDataReader["Cliente"].ToString();
+                            objEquips.Tipo = objDataReader["Tipo"].ToString();
+                            objEquips.Prioridade = objDataReader["Prioridade"].ToString();
+                            lstEquips.Add(objEquips);
                         }
 
                         objCon.Close();
@@ -117,18 +117,19 @@ namespace SistemaDeLogin
 
                     objCon.Close();
                 }
-                return lstUsuarios;
+                return lstEquips;
             }
         }
 
-        
+
         public List<Equips> Pesquisar(String Codigo, String Cliente, String Tipo, String Prioridade)
         {
-             string strPesquisa = "SELECT Codigo , Cliente, Tipo, Prioridade FROM tb_Equip WHERE 1=1 " ;
-            List<Equips> lstUsuarios = new List<Equips>();
+            string strPesquisa = "SELECT Codigo , Cliente, Tipo, Prioridade FROM tb_Equip WHERE 1=1 ";
+            List<Equips> lstEquips = new List<Equips>();
             using (SqlConnection objCon = new SqlConnection(_strCon))
             {
-                if (Codigo != "") {
+                if (Codigo != "")
+                {
                     strPesquisa += " AND Codigo LIKE @Codigo ";
                 }
                 if (Cliente != "")
@@ -162,8 +163,8 @@ namespace SistemaDeLogin
                         objCmd.Parameters.AddWithValue("@Prioridade", "%" + Prioridade + "%");
                     }
 
-                    
-                    
+
+
                     objCon.Open();
 
                     SqlDataReader objDataReader = objCmd.ExecuteReader();
@@ -172,12 +173,12 @@ namespace SistemaDeLogin
 
                         while (objDataReader.Read())
                         {
-                            Equips objUsuarios = new Equips();
-                            objUsuarios.Codigo = objDataReader["Codigo"].ToString();
-                            objUsuarios.Cliente = objDataReader["Cliente"].ToString();
-                            objUsuarios.Tipo = objDataReader["Tipo"].ToString();
-                            objUsuarios.Prioridade = objDataReader["Prioridade"].ToString();
-                            lstUsuarios.Add(objUsuarios);
+                            Equips objEquips = new Equips();
+                            objEquips.Codigo = objDataReader["Codigo"].ToString();
+                            objEquips.Cliente = objDataReader["Cliente"].ToString();
+                            objEquips.Tipo = objDataReader["Tipo"].ToString();
+                            objEquips.Prioridade = objDataReader["Prioridade"].ToString();
+                            lstEquips.Add(objEquips);
                         }
 
                         objCon.Close();
@@ -187,11 +188,11 @@ namespace SistemaDeLogin
 
                     objCon.Close();
                 }
-                return lstUsuarios;
+                return lstEquips;
             }
 
         }
-        
+
 
 
     }

@@ -34,13 +34,6 @@ namespace SistemaDeLogin
             AlterarBD();
         }
 
-        /*
 
-
-        private void Enviar_Click_1(object sender, EventArgs e)
-        {
-            AlterarBD();
-        }
-        */
     }
 }
