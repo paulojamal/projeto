@@ -37,5 +37,9 @@ namespace SistemaDeLogin
             IncluirBD();
         }
 
+        private void newLogin_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     }

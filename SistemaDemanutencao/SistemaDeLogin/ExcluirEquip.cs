@@ -35,5 +35,10 @@ namespace SistemaDeLogin
         {
             ExcluirBD();
         }
+
+        private void ExcluirEquip_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

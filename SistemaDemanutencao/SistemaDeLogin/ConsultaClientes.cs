@@ -102,5 +102,35 @@ namespace SistemaDeLogin
         {
             carregarListView();
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PSQ_Cidade_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PSQ_Estado_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PSQ_Rua_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

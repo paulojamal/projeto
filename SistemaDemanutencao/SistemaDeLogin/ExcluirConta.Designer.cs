@@ -35,6 +35,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // nomeDel
@@ -64,14 +65,15 @@
             // 
             // nDel
             // 
-            this.nDel.Location = new System.Drawing.Point(162, 110);
+            this.nDel.Location = new System.Drawing.Point(41, 95);
             this.nDel.Name = "nDel";
             this.nDel.Size = new System.Drawing.Size(100, 20);
             this.nDel.TabIndex = 0;
+            this.nDel.TextChanged += new System.EventHandler(this.nDel_TextChanged);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(124, 173);
+            this.button2.Location = new System.Drawing.Point(54, 121);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 1;
@@ -82,27 +84,40 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(73, 110);
+            this.label2.Location = new System.Drawing.Point(68, 79);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Usuário:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.Control;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(9, 35);
+            this.label3.Location = new System.Drawing.Point(9, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(334, 31);
+            this.label3.Size = new System.Drawing.Size(169, 31);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Excluir conta - Funcionário";
+            this.label3.Text = "Excluir conta";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(9, 40);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(156, 31);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Funcionário";
             // 
             // ExcluirConta
             // 
-            this.ClientSize = new System.Drawing.Size(350, 231);
+            this.ClientSize = new System.Drawing.Size(183, 173);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
@@ -123,5 +138,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

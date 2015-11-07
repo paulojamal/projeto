@@ -34,5 +34,15 @@ namespace SistemaDeLogin
         {
             IncluirBD();
         }
+
+        private void codigo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

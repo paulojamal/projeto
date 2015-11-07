@@ -41,6 +41,7 @@
             this.Cidade = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Estado = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.PSQ_Telefone = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.PSQ_Numero = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -65,8 +66,9 @@
             this.PSQ_Sobrenome = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
-            this.PSQ_Telefone = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // LV_Cliente
@@ -171,17 +173,24 @@
             this.groupBox1.Controls.Add(this.PSQ_Bairro);
             this.groupBox1.Controls.Add(this.PSQ_Senha);
             this.groupBox1.Controls.Add(this.PSQ_Sobrenome);
-            this.groupBox1.Location = new System.Drawing.Point(50, 404);
+            this.groupBox1.Location = new System.Drawing.Point(12, 404);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(912, 123);
+            this.groupBox1.Size = new System.Drawing.Size(461, 146);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pesquisa";
             // 
+            // PSQ_Telefone
+            // 
+            this.PSQ_Telefone.Location = new System.Drawing.Point(118, 35);
+            this.PSQ_Telefone.Name = "PSQ_Telefone";
+            this.PSQ_Telefone.Size = new System.Drawing.Size(100, 20);
+            this.PSQ_Telefone.TabIndex = 21;
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(516, 81);
+            this.label11.Location = new System.Drawing.Point(221, 19);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(47, 13);
             this.label11.TabIndex = 20;
@@ -189,14 +198,14 @@
             // 
             // PSQ_Numero
             // 
-            this.PSQ_Numero.Location = new System.Drawing.Point(519, 97);
+            this.PSQ_Numero.Location = new System.Drawing.Point(221, 35);
             this.PSQ_Numero.Name = "PSQ_Numero";
             this.PSQ_Numero.Size = new System.Drawing.Size(100, 20);
             this.PSQ_Numero.TabIndex = 19;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(782, 94);
+            this.button1.Location = new System.Drawing.Point(333, 114);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 18;
@@ -207,16 +216,17 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(770, 16);
+            this.label10.Location = new System.Drawing.Point(330, 16);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(43, 13);
             this.label10.TabIndex = 18;
             this.label10.Text = "Estado:";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(657, 80);
+            this.label9.Location = new System.Drawing.Point(330, 55);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(43, 13);
             this.label9.TabIndex = 17;
@@ -224,15 +234,16 @@
             // 
             // PSQ_Estado
             // 
-            this.PSQ_Estado.Location = new System.Drawing.Point(773, 42);
+            this.PSQ_Estado.Location = new System.Drawing.Point(330, 35);
             this.PSQ_Estado.Name = "PSQ_Estado";
             this.PSQ_Estado.Size = new System.Drawing.Size(100, 20);
             this.PSQ_Estado.TabIndex = 3;
+            this.PSQ_Estado.TextChanged += new System.EventHandler(this.PSQ_Estado_TextChanged);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(657, 23);
+            this.label8.Location = new System.Drawing.Point(221, 97);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(37, 13);
             this.label8.TabIndex = 16;
@@ -241,7 +252,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(516, 23);
+            this.label7.Location = new System.Drawing.Point(221, 55);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(30, 13);
             this.label7.TabIndex = 15;
@@ -250,16 +261,17 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(379, 81);
+            this.label6.Location = new System.Drawing.Point(118, 16);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 13);
             this.label6.TabIndex = 14;
             this.label6.Text = "Telefone:";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(379, 23);
+            this.label5.Location = new System.Drawing.Point(118, 54);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(21, 13);
             this.label5.TabIndex = 13;
@@ -268,7 +280,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(202, 81);
+            this.label4.Location = new System.Drawing.Point(118, 100);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(64, 13);
             this.label4.TabIndex = 12;
@@ -277,16 +289,17 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(202, 23);
+            this.label3.Location = new System.Drawing.Point(9, 97);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 13);
             this.label3.TabIndex = 11;
             this.label3.Text = "Nome:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 81);
+            this.label2.Location = new System.Drawing.Point(9, 58);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 13);
             this.label2.TabIndex = 10;
@@ -295,7 +308,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 23);
+            this.label1.Location = new System.Drawing.Point(9, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(36, 13);
             this.label1.TabIndex = 9;
@@ -303,63 +316,65 @@
             // 
             // PSQ_ID
             // 
-            this.PSQ_ID.Location = new System.Drawing.Point(382, 42);
+            this.PSQ_ID.Location = new System.Drawing.Point(118, 73);
             this.PSQ_ID.Name = "PSQ_ID";
             this.PSQ_ID.Size = new System.Drawing.Size(100, 20);
             this.PSQ_ID.TabIndex = 7;
             // 
             // PSQ_Cidade
             // 
-            this.PSQ_Cidade.Location = new System.Drawing.Point(660, 96);
+            this.PSQ_Cidade.Location = new System.Drawing.Point(330, 71);
             this.PSQ_Cidade.Name = "PSQ_Cidade";
             this.PSQ_Cidade.Size = new System.Drawing.Size(100, 20);
             this.PSQ_Cidade.TabIndex = 6;
+            this.PSQ_Cidade.TextChanged += new System.EventHandler(this.PSQ_Cidade_TextChanged);
             // 
             // PSQ_Nome
             // 
-            this.PSQ_Nome.Location = new System.Drawing.Point(205, 42);
+            this.PSQ_Nome.Location = new System.Drawing.Point(9, 116);
             this.PSQ_Nome.Name = "PSQ_Nome";
             this.PSQ_Nome.Size = new System.Drawing.Size(100, 20);
             this.PSQ_Nome.TabIndex = 5;
             // 
             // PSQ_Rua
             // 
-            this.PSQ_Rua.Location = new System.Drawing.Point(519, 42);
+            this.PSQ_Rua.Location = new System.Drawing.Point(221, 71);
             this.PSQ_Rua.Name = "PSQ_Rua";
             this.PSQ_Rua.Size = new System.Drawing.Size(100, 20);
             this.PSQ_Rua.TabIndex = 4;
+            this.PSQ_Rua.TextChanged += new System.EventHandler(this.PSQ_Rua_TextChanged);
             // 
             // PSQ_Login
             // 
-            this.PSQ_Login.Location = new System.Drawing.Point(31, 42);
+            this.PSQ_Login.Location = new System.Drawing.Point(9, 35);
             this.PSQ_Login.Name = "PSQ_Login";
             this.PSQ_Login.Size = new System.Drawing.Size(100, 20);
             this.PSQ_Login.TabIndex = 3;
             // 
             // PSQ_Bairro
             // 
-            this.PSQ_Bairro.Location = new System.Drawing.Point(660, 42);
+            this.PSQ_Bairro.Location = new System.Drawing.Point(221, 116);
             this.PSQ_Bairro.Name = "PSQ_Bairro";
             this.PSQ_Bairro.Size = new System.Drawing.Size(100, 20);
             this.PSQ_Bairro.TabIndex = 2;
             // 
             // PSQ_Senha
             // 
-            this.PSQ_Senha.Location = new System.Drawing.Point(31, 97);
+            this.PSQ_Senha.Location = new System.Drawing.Point(9, 74);
             this.PSQ_Senha.Name = "PSQ_Senha";
             this.PSQ_Senha.Size = new System.Drawing.Size(100, 20);
             this.PSQ_Senha.TabIndex = 1;
             // 
             // PSQ_Sobrenome
             // 
-            this.PSQ_Sobrenome.Location = new System.Drawing.Point(205, 97);
+            this.PSQ_Sobrenome.Location = new System.Drawing.Point(118, 116);
             this.PSQ_Sobrenome.Name = "PSQ_Sobrenome";
             this.PSQ_Sobrenome.Size = new System.Drawing.Size(100, 20);
             this.PSQ_Sobrenome.TabIndex = 0;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(1031, 457);
+            this.button2.Location = new System.Drawing.Point(6, 19);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 3;
@@ -379,20 +394,23 @@
             this.label12.Text = "Clientes cadastrados no sistema";
             this.label12.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // PSQ_Telefone
+            // groupBox2
             // 
-            this.PSQ_Telefone.Location = new System.Drawing.Point(382, 96);
-            this.PSQ_Telefone.Name = "PSQ_Telefone";
-            this.PSQ_Telefone.Size = new System.Drawing.Size(100, 20);
-            this.PSQ_Telefone.TabIndex = 21;
+            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Location = new System.Drawing.Point(479, 495);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(200, 55);
+            this.groupBox2.TabIndex = 7;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Lista completa";
             // 
             // ConsultaClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1176, 562);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.LV_Cliente);
             this.Name = "ConsultaClientes";
@@ -400,6 +418,7 @@
             this.Load += new System.EventHandler(this.ConsultaUsuarios_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -445,5 +464,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox PSQ_Telefone;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }

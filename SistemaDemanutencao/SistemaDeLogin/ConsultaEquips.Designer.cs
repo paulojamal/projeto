@@ -45,8 +45,9 @@
             this.PSQ_Prioridade = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // LV_Equip
@@ -60,7 +61,7 @@
             this.LV_Equip.GridLines = true;
             this.LV_Equip.Location = new System.Drawing.Point(12, 12);
             this.LV_Equip.Name = "LV_Equip";
-            this.LV_Equip.Size = new System.Drawing.Size(439, 332);
+            this.LV_Equip.Size = new System.Drawing.Size(434, 332);
             this.LV_Equip.TabIndex = 1;
             this.LV_Equip.UseCompatibleStateImageBehavior = false;
             this.LV_Equip.View = System.Windows.Forms.View.Details;
@@ -179,7 +180,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(602, 151);
+            this.button2.Location = new System.Drawing.Point(13, 19);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 5;
@@ -199,26 +200,23 @@
             this.label5.Text = "Equipamentos cadastrados";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // label6
+            // groupBox2
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.SystemColors.Control;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(568, 91);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(145, 31);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "no sistema";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Location = new System.Drawing.Point(491, 122);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(307, 52);
+            this.groupBox2.TabIndex = 8;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Lista Completa";
             // 
             // ConsultaEquips
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(820, 365);
-            this.Controls.Add(this.label6);
+            this.ClientSize = new System.Drawing.Size(816, 365);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.LV_Equip);
             this.Name = "ConsultaEquips";
@@ -226,6 +224,7 @@
             this.Load += new System.EventHandler(this.ConsultaUsuarios_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -250,6 +249,6 @@
         private System.Windows.Forms.TextBox PSQ_Prioridade;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
