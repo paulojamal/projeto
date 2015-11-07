@@ -150,43 +150,133 @@ namespace SistemaDeLogin
                 return lstUsuarios;
             }
         }
-            /*
-            public DataTable Listar()
-            {
 
-                /*using (SqlConnection objCon = new SqlConnection(_strCon))
+        
+        public List<Fornecedores> Pesquisar(String Nome, String CNPJ, String Rua, String Bairro, String Cidade, String CEP)
+        {
+             string strPesquisa = "SELECT Nome , CNPJ , Rua, Bairro, Cidade, CEP FROM tb_Fornecedor WHERE 1=1 " ;
+            List<Fornecedores> lstUsuarios = new List<Fornecedores>();
+            using (SqlConnection objCon = new SqlConnection(_strCon))
+            {
+                if (Nome != "") {
+                    strPesquisa += " AND Nome LIKE @Nome ";
+                }
+                if (CNPJ != "")
                 {
-                    using (SqlCommand objCmd = new SqlCommand(strSelecionar, objCon)) //testar objCon, strSelecionar 
+                    strPesquisa += " AND CNPJ LIKE @CNPJ ";
+                }
+                if (Rua != "")
+                {
+                    strPesquisa += " AND Rua LIKE @Rua ";
+                }
+                if (Bairro != "")
+                {
+                    strPesquisa += " AND Bairro LIKE @Bairro ";
+                }
+                if (Cidade != "")
+                {
+                    strPesquisa += " AND Cidade LIKE @Cidade ";
+                }
+                if (CEP != "")
+                {
+                    strPesquisa += " AND CEP LIKE @CEP ";
+                }
+                using (SqlCommand objCmd = new SqlCommand(strPesquisa, objCon))
+                {
+                    if (Nome != "")
+                    {
+                        objCmd.Parameters.AddWithValue("@Nome", "%" + Nome + "%");
+                    }
+                    if (CNPJ != "")
+                    {
+                        objCmd.Parameters.AddWithValue("@CNPJ", "%" + CNPJ + "%");
+                    }
+                    if (Rua != "")
+                    {
+                        objCmd.Parameters.AddWithValue("@Rua", "%" + Rua + "%");
+                    }
+                    if (Bairro != "")
+                    {
+                        objCmd.Parameters.AddWithValue("@Bairro", "%" + Bairro + "%");
+                    }
+                    if (Cidade != "")
+                    {
+                        objCmd.Parameters.AddWithValue("@Cidade", "%" + Cidade + "%");
+                    }
+                    if (CEP != "")
+                    {
+                        objCmd.Parameters.AddWithValue("@CEP", "%" + CEP + "%");
+                    }
+
+                    
+                    
+                    objCon.Open();
+
+                    SqlDataReader objDataReader = objCmd.ExecuteReader();
+                    if (objDataReader.HasRows)
                     {
 
+                        while (objDataReader.Read())
+                        {
+                            Fornecedores objUsuarios = new Fornecedores();
+                            objUsuarios.Nome = objDataReader["Nome"].ToString();
+                            objUsuarios.CNPJ = objDataReader["CNPJ"].ToString();
+                            objUsuarios.Rua = objDataReader["Rua"].ToString();
+                            objUsuarios.Bairro = objDataReader["Bairro"].ToString();
+                            objUsuarios.Cidade = objDataReader["Cidade"].ToString();
+                            objUsuarios.CEP = objDataReader["CEP"].ToString();
+                            lstUsuarios.Add(objUsuarios);
+                        }
 
-                        SqlDataAdapter adp = new SqlDataAdapter(objCmd);
-                        DataTable dt = new DataTable();
-                        adp.Fill(dt);
-                        return dt;
+                        objCon.Close();
 
                     }
 
+
+                    objCon.Close();
                 }
-                try
+                return lstUsuarios;
+            }
+
+        }
+        
+        /*
+        public DataTable Listar()
+        {
+
+            /*using (SqlConnection objCon = new SqlConnection(_strCon))
+            {
+                using (SqlCommand objCmd = new SqlCommand(strSelecionar, objCon)) //testar objCon, strSelecionar 
                 {
-                    SqlConnection objCon = new SqlConnection(_strCon);
-                    SqlCommand objcmd = null;
-                    objcmd = new SqlCommand(strSelecionar, objCon);
-                    SqlDataAdapter adp = new SqlDataAdapter(objcmd);
+
+
+                    SqlDataAdapter adp = new SqlDataAdapter(objCmd);
                     DataTable dt = new DataTable();
                     adp.Fill(dt);
                     return dt;
+
                 }
-                catch (SqlException sqlerr)
-                {
-                    throw sqlerr;
-                }
+
             }
-
-    */
-
+            try
+            {
+                SqlConnection objCon = new SqlConnection(_strCon);
+                SqlCommand objcmd = null;
+                objcmd = new SqlCommand(strSelecionar, objCon);
+                SqlDataAdapter adp = new SqlDataAdapter(objcmd);
+                DataTable dt = new DataTable();
+                adp.Fill(dt);
+                return dt;
+            }
+            catch (SqlException sqlerr)
+            {
+                throw sqlerr;
+            }
         }
+
+*/
+
+    }
 }
 
 

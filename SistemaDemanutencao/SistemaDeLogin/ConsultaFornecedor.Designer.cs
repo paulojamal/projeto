@@ -35,6 +35,22 @@
             this.Bairro = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Cidade = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.CEP = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.PSQ_Rua = new System.Windows.Forms.TextBox();
+            this.PSQ_CNPJ = new System.Windows.Forms.TextBox();
+            this.PSQ_Nome = new System.Windows.Forms.TextBox();
+            this.PSQ_CEP = new System.Windows.Forms.TextBox();
+            this.PSQ_Cidade = new System.Windows.Forms.TextBox();
+            this.PSQ_Bairro = new System.Windows.Forms.TextBox();
+            this.Pesquisar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.Atualizar = new System.Windows.Forms.Button();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // LV_Fornecedor
@@ -85,15 +101,157 @@
             this.CEP.Text = "CEP";
             this.CEP.Width = 122;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.Pesquisar);
+            this.groupBox1.Controls.Add(this.PSQ_Bairro);
+            this.groupBox1.Controls.Add(this.PSQ_Cidade);
+            this.groupBox1.Controls.Add(this.PSQ_CEP);
+            this.groupBox1.Controls.Add(this.PSQ_Nome);
+            this.groupBox1.Controls.Add(this.PSQ_CNPJ);
+            this.groupBox1.Controls.Add(this.PSQ_Rua);
+            this.groupBox1.Location = new System.Drawing.Point(774, 102);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(377, 216);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Pesquisa";
+            // 
+            // PSQ_Rua
+            // 
+            this.PSQ_Rua.Location = new System.Drawing.Point(261, 35);
+            this.PSQ_Rua.Name = "PSQ_Rua";
+            this.PSQ_Rua.Size = new System.Drawing.Size(100, 20);
+            this.PSQ_Rua.TabIndex = 0;
+            // 
+            // PSQ_CNPJ
+            // 
+            this.PSQ_CNPJ.Location = new System.Drawing.Point(135, 35);
+            this.PSQ_CNPJ.Name = "PSQ_CNPJ";
+            this.PSQ_CNPJ.Size = new System.Drawing.Size(100, 20);
+            this.PSQ_CNPJ.TabIndex = 1;
+            // 
+            // PSQ_Nome
+            // 
+            this.PSQ_Nome.Location = new System.Drawing.Point(11, 35);
+            this.PSQ_Nome.Name = "PSQ_Nome";
+            this.PSQ_Nome.Size = new System.Drawing.Size(100, 20);
+            this.PSQ_Nome.TabIndex = 2;
+            // 
+            // PSQ_CEP
+            // 
+            this.PSQ_CEP.Location = new System.Drawing.Point(261, 110);
+            this.PSQ_CEP.Name = "PSQ_CEP";
+            this.PSQ_CEP.Size = new System.Drawing.Size(100, 20);
+            this.PSQ_CEP.TabIndex = 3;
+            // 
+            // PSQ_Cidade
+            // 
+            this.PSQ_Cidade.Location = new System.Drawing.Point(135, 110);
+            this.PSQ_Cidade.Name = "PSQ_Cidade";
+            this.PSQ_Cidade.Size = new System.Drawing.Size(100, 20);
+            this.PSQ_Cidade.TabIndex = 4;
+            // 
+            // PSQ_Bairro
+            // 
+            this.PSQ_Bairro.Location = new System.Drawing.Point(11, 110);
+            this.PSQ_Bairro.Name = "PSQ_Bairro";
+            this.PSQ_Bairro.Size = new System.Drawing.Size(100, 20);
+            this.PSQ_Bairro.TabIndex = 5;
+            // 
+            // Pesquisar
+            // 
+            this.Pesquisar.Location = new System.Drawing.Point(146, 168);
+            this.Pesquisar.Name = "Pesquisar";
+            this.Pesquisar.Size = new System.Drawing.Size(75, 23);
+            this.Pesquisar.TabIndex = 6;
+            this.Pesquisar.Text = "Pesquisar";
+            this.Pesquisar.UseVisualStyleBackColor = true;
+            this.Pesquisar.Click += new System.EventHandler(this.Pesquisar_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(11, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Nome";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(132, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(34, 13);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "CNPJ";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(258, 16);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(27, 13);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Rua";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(11, 84);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(34, 13);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Bairro";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(132, 84);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(40, 13);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Cidade";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(258, 84);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(28, 13);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "CEP";
+            // 
+            // Atualizar
+            // 
+            this.Atualizar.Location = new System.Drawing.Point(920, 50);
+            this.Atualizar.Name = "Atualizar";
+            this.Atualizar.Size = new System.Drawing.Size(75, 23);
+            this.Atualizar.TabIndex = 13;
+            this.Atualizar.Text = "Atualizar";
+            this.Atualizar.UseVisualStyleBackColor = true;
+            this.Atualizar.Click += new System.EventHandler(this.Atualizar_Click);
+            // 
             // ConsultaFornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(761, 365);
+            this.ClientSize = new System.Drawing.Size(1176, 358);
+            this.Controls.Add(this.Atualizar);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.LV_Fornecedor);
             this.Name = "ConsultaFornecedor";
             this.Text = "ConsultaFornecedor";
             this.Load += new System.EventHandler(this.ConsultaUsuarios_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -107,5 +265,20 @@
         private System.Windows.Forms.ColumnHeader Bairro;
         private System.Windows.Forms.ColumnHeader Cidade;
         private System.Windows.Forms.ColumnHeader CEP;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button Pesquisar;
+        private System.Windows.Forms.TextBox PSQ_Bairro;
+        private System.Windows.Forms.TextBox PSQ_Cidade;
+        private System.Windows.Forms.TextBox PSQ_CEP;
+        private System.Windows.Forms.TextBox PSQ_Nome;
+        private System.Windows.Forms.TextBox PSQ_CNPJ;
+        private System.Windows.Forms.TextBox PSQ_Rua;
+        private System.Windows.Forms.Button Atualizar;
     }
 }

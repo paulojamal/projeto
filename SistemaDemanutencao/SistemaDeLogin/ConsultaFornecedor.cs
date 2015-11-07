@@ -43,5 +43,48 @@ namespace SistemaDeLogin
                 LV_Fornecedor.Items.Add(objListView);
             }   
         }
+
+        private void Atualizar_Click(object sender, EventArgs e)
+        {
+            carregarListView();
+        }
+
+        
+        private void resultadoPesquisa()
+        {
+            string nome = PSQ_Nome.Text;
+            string cnpj = PSQ_CNPJ.Text;
+            string rua = PSQ_Rua.Text;
+            string bairro = PSQ_Bairro.Text;
+            string cidade = PSQ_Cidade.Text;
+            string cep = PSQ_CEP.Text;
+
+            ADM_BD_Fornecedor usu = new ADM_BD_Fornecedor();
+            List<ADM_BD_Fornecedor.Fornecedores> lstUsu = new List<ADM_BD_Fornecedor.Fornecedores>();
+            lstUsu = usu.Pesquisar(nome, cnpj, rua, bairro, cidade, cep);
+            LV_Fornecedor.Items.Clear();
+            foreach (var itemLista in lstUsu)
+            {
+                ListViewItem objListView = new ListViewItem();
+                objListView.Text = itemLista.Nome;
+                objListView.SubItems.Add(itemLista.CNPJ);
+                objListView.SubItems.Add(itemLista.Rua);
+                objListView.SubItems.Add(itemLista.Bairro);
+                objListView.SubItems.Add(itemLista.Cidade);
+                objListView.SubItems.Add(itemLista.CEP);
+
+                LV_Fornecedor.Items.Add(objListView);
+
+
+                
+
+
+            }
+        }
+
+        private void Pesquisar_Click(object sender, EventArgs e)
+        {
+            resultadoPesquisa();
+        }
     }
 }

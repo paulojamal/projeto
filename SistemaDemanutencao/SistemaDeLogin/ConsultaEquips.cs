@@ -43,6 +43,44 @@ namespace SistemaDeLogin
             
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            carregarListView();
+        }
+
+        
+        private void resultadoPesquisa()
+        {
+            string codigo = PSQ_Codigo.Text;
+            string cliente = PSQ_Cliente.Text;
+            string tipo = PSQ_Tipo.Text;
+            string prioridade = PSQ_Prioridade.Text;
+
+            ADM_BD_Equip usu = new ADM_BD_Equip();
+            List<ADM_BD_Equip.Equips> lstUsu = new List<ADM_BD_Equip.Equips>();
+            lstUsu = usu.Pesquisar(codigo, cliente, tipo, prioridade);
+            LV_Equip.Items.Clear();
+            foreach (var itemLista in lstUsu)
+            {
+                ListViewItem objListView = new ListViewItem();
+                objListView.Text = itemLista.Codigo;
+                objListView.SubItems.Add(itemLista.Cliente);
+                objListView.SubItems.Add(itemLista.Tipo);
+                objListView.SubItems.Add(itemLista.Prioridade);
+                LV_Equip.Items.Add(objListView);
+
+
+                
+
+
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            resultadoPesquisa();
+        }
+
         //private void carregarGrid()
         //{
         //    ADM_BD usu = new ADM_BD();

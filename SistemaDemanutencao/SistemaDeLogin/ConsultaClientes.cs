@@ -50,5 +50,57 @@ namespace SistemaDeLogin
                 LV_Cliente.Items.Add(objListView);
             }
         }
+        
+        private void resultadoPesquisa()
+        {
+            string login = PSQ_Login.Text;
+            string senha = PSQ_Senha.Text;
+            string nome = PSQ_Nome.Text;
+            string sobrenome = PSQ_Sobrenome.Text;
+            string id = PSQ_ID.Text;
+            string telefone = PSQ_Telefone.Text;
+            string rua = PSQ_Rua.Text;
+            string numero = PSQ_Numero.Text;
+            string bairro = PSQ_Bairro.Text;
+            string cidade = PSQ_Cidade.Text;
+            string estado = PSQ_Estado.Text;
+
+            ADM_BD_Cliente cli = new ADM_BD_Cliente();
+            List<ADM_BD_Cliente.Clientes> lstCli = new List<ADM_BD_Cliente.Clientes>();
+            lstCli = cli.Pesquisar(login, senha, nome, sobrenome, id, telefone, rua, numero, bairro, cidade, estado);
+            LV_Cliente.Items.Clear();
+            foreach (var itemLista in lstCli)
+            {
+                ListViewItem objListView = new ListViewItem();
+                objListView.Text = itemLista.NomeUser;
+                objListView.SubItems.Add(itemLista.SenhaUser);
+                objListView.SubItems.Add(itemLista.Name);
+                objListView.SubItems.Add(itemLista.Sobrenome);
+                objListView.SubItems.Add(itemLista.ID);
+                objListView.SubItems.Add(itemLista.Telefone);
+                objListView.SubItems.Add(itemLista.Rua);
+                objListView.SubItems.Add(itemLista.Numero);
+                objListView.SubItems.Add(itemLista.Bairro);
+                objListView.SubItems.Add(itemLista.Cidade);
+                objListView.SubItems.Add(itemLista.Estado);
+
+                LV_Cliente.Items.Add(objListView);
+
+
+                
+
+
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            resultadoPesquisa();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            carregarListView();
+        }
     }
 }

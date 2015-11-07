@@ -207,6 +207,139 @@ namespace SistemaDeLogin
                 return lstUsuarios;
             }
         }
+        
+        public List<Clientes> Pesquisar(String Login, String Senha, String Name, String Sobrenome, String ID, String Telefone, String Rua, String Numero, String Bairro, String Cidade, String Estado)
+        {
+            string strPesquisa = "SELECT NomeUser , SenhaUser , Name, Sobrenome, ID, Telefone, Rua, Numero, Bairro, Cidade, Estado FROM tb_Cliente WHERE 1=1 ";
+            List<Clientes> lstClientes = new List<Clientes>();
+            using (SqlConnection objCon = new SqlConnection(_strCon))
+            {
+                if (Login != "") {
+                    strPesquisa += " AND NomeUser LIKE @NomeUser ";
+                }
+                if (Senha != "")
+                {
+                    strPesquisa += " AND SenhaUser LIKE @SenhaUser ";
+                }
+                if (Name != "")
+                {
+                    strPesquisa += " AND Name LIKE @Name ";
+                }
+                if (Sobrenome != "")
+                {
+                    strPesquisa += " AND Sobrenome LIKE @Sobrenome ";
+                }
+                if (ID != "")
+                {
+                    strPesquisa += " AND ID LIKE @ID ";
+                }
+                if (Telefone != "")
+                {
+                    strPesquisa += " AND Telefone LIKE @Telefone ";
+                }
+                if (Rua != "")
+                {
+                    strPesquisa += " AND Rua LIKE @Rua ";
+                }
+                if (Numero != "")
+                {
+                    strPesquisa += " AND Numero LIKE @Numero ";
+                }
+                if (Bairro != "")
+                {
+                    strPesquisa += " AND Bairro LIKE @Bairro ";
+                }
+                if (Cidade != "")
+                {
+                    strPesquisa += " AND Cidade LIKE @Cidade ";
+                }
+                if (Estado != "")
+                {
+                    strPesquisa += " AND Estado LIKE @Estado ";
+                }
+                using (SqlCommand objCmd = new SqlCommand(strPesquisa, objCon))
+                {
+                    if (Login != "")
+                    {
+                        objCmd.Parameters.AddWithValue("@NomeUser", "%" + Login + "%");
+                    }
+                    if (Senha != "")
+                    {
+                        objCmd.Parameters.AddWithValue("@SenhaUser", "%" + Senha + "%");
+                    }
+                    if (Name != "")
+                    {
+                        objCmd.Parameters.AddWithValue("@Name", "%" + Name + "%");
+                    }
+                    if (Sobrenome != "")
+                    {
+                        objCmd.Parameters.AddWithValue("@Sobrenome", "%" + Sobrenome + "%");
+                    }
+                    if (ID != "")
+                    {
+                        objCmd.Parameters.AddWithValue("@ID", "%" + ID + "%");
+                    }
+                    if (Telefone != "")
+                    {
+                        objCmd.Parameters.AddWithValue("@Telefone", "%" + Telefone + "%");
+                    }
+                    if (Rua != "")
+                    {
+                        objCmd.Parameters.AddWithValue("@Rua", "%" + Rua + "%");
+                    }
+                    if (Numero != "")
+                    {
+                        objCmd.Parameters.AddWithValue("@Numero", "%" + Numero + "%");
+                    }
+                    if (Bairro != "")
+                    {
+                        objCmd.Parameters.AddWithValue("@Bairro", "%" + Bairro + "%");
+                    }
+                    if (Cidade != "")
+                    {
+                        objCmd.Parameters.AddWithValue("@Cidade", "%" + Cidade + "%");
+                    }
+                    if (Estado != "")
+                    {
+                        objCmd.Parameters.AddWithValue("@Estado", "%" + Estado + "%");
+                    }
+                    
+                    
+                    objCon.Open();
+
+                    SqlDataReader objDataReader = objCmd.ExecuteReader();
+                    if (objDataReader.HasRows)
+                    {
+
+                        while (objDataReader.Read())
+                        {
+                            Clientes objClientes = new Clientes();
+                            objClientes.NomeUser = objDataReader["NomeUser"].ToString();
+                            objClientes.SenhaUser = objDataReader["SenhaUser"].ToString();
+                            objClientes.Name = objDataReader["Name"].ToString();
+                            objClientes.Sobrenome = objDataReader["Sobrenome"].ToString();
+                            objClientes.ID = objDataReader["ID"].ToString();
+                            objClientes.Telefone = objDataReader["Telefone"].ToString();
+                            objClientes.Rua = objDataReader["Rua"].ToString();
+                            objClientes.Numero = objDataReader["Numero"].ToString();
+                            objClientes.Bairro = objDataReader["Bairro"].ToString();
+                            objClientes.Cidade = objDataReader["Cidade"].ToString();
+                            objClientes.Estado = objDataReader["Estado"].ToString();
+                            lstClientes.Add(objClientes);
+                        }
+
+                        objCon.Close();
+
+                    }
+
+
+                    objCon.Close();
+                }
+                return lstClientes;
+            }
+
+        }
+        
     }
 }
 
