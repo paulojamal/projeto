@@ -12,13 +12,14 @@ namespace SistemaDeLogin
     public class ADM_BD_Fornecedor
     {
         static String mp = Environment.CurrentDirectory;
-        private static string _strCon = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=" + mp + "\\BD_Usuario.mdf;Integrated Security=True;Connect Timeout=30";
+        private static String _strCon = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=" + mp + "\\BD_Usuario.mdf;Integrated Security=True;Connect Timeout=30";
 
         public const String strInserir = "INSERT INTO tb_Fornecedor(Nome, CNPJ, Rua, Bairro, Cidade, CEP) VALUES(@Nome, @CNPJ, @Rua, @Bairro, @Cidade, @CEP)";
         public const String strExcluir = "DELETE FROM tb_Fornecedor WHERE Nome = @Nome";
-        public const String strAlterar = "UPDATE tb_Fornecedor SET CNPJ = @CNPJ ,  Rua = @Rua , Bairro = @Bairro  , Cidade = @Cidade , CEP = @CEP WHERE Nome = @Nome";
+       // public const String strAlterar = "UPDATE tb_Fornecedor SET CNPJ = @CNPJ ,  Rua = @Rua , Bairro = @Bairro  , Cidade = @Cidade , CEP = @CEP WHERE Nome = @Nome";
         public const String strSelecionar = "SELECT COUNT(*) FROM tb_Fornecedor WHERE Nome = @Nome";
-        public const string strConsultar = "SELECT Nome , CNPJ , Rua, Bairro, Cidade, CEP FROM tb_Fornecedor";
+        public const String strConsultar = "SELECT Nome , CNPJ , Rua, Bairro, Cidade, CEP FROM tb_Fornecedor";
+
         public void Inserir(String Nome, String CNPJ, String Rua, String Bairro, String Cidade, String CEP)
         {
             using (SqlConnection objCon = new SqlConnection(_strCon))
@@ -42,18 +43,60 @@ namespace SistemaDeLogin
 
         public void Atualizar(String Nome, String CNPJ, String Rua, String Bairro, String Cidade, String CEP)
         {
+            String strAlterar = "UPDATE tb_Fornecedor SET Nome = @Nome";
+
+            if (CNPJ != "")
+            {
+                strAlterar += " , CNPJ = @CNPJ ";
+            }
+            if (Rua != "")
+            {
+                strAlterar += " , Rua = @Rua ";
+            }
+            if (Bairro != "")
+            {
+                strAlterar += " , Bairro = @Bairro ";
+            }
+            if (Cidade != "")
+            {
+                strAlterar += " , Cidade = @Cidade ";
+            }
+            if (CEP != "")
+            {
+                strAlterar += " , CEP = @CEP ";
+            }
+
+            strAlterar += " WHERE Nome = @Nome";
 
             using (SqlConnection objCon = new SqlConnection(_strCon))
             {
                 using (SqlCommand objCmd = new SqlCommand(strAlterar, objCon))
                 {
+                    if(Nome != "")
+                    {
+                        objCmd.Parameters.AddWithValue("@Nome",Nome);
+                    }
+                    if (CNPJ != "")
+                    {
+                        objCmd.Parameters.AddWithValue("@CNPJ",CNPJ);
+                    }
+                    if (Rua != "")
+                    {
+                        objCmd.Parameters.AddWithValue("@Rua",Rua);
+                    }
+                    if (Bairro != "")
+                    {
+                        objCmd.Parameters.AddWithValue("@Bairro",Bairro);
+                    }
+                    if (Cidade != "")
+                    {
+                        objCmd.Parameters.AddWithValue("@Cidade",Cidade);
+                    }
+                    if (CEP != "")
+                    {
+                        objCmd.Parameters.AddWithValue("@CEP",CEP);
+                    }
 
-                    objCmd.Parameters.AddWithValue("@Nome", Nome);
-                    objCmd.Parameters.AddWithValue("@CNPJ", CNPJ);
-                    objCmd.Parameters.AddWithValue("@Rua", Rua);
-                    objCmd.Parameters.AddWithValue("@Bairro", Bairro);
-                    objCmd.Parameters.AddWithValue("@Cidade", Cidade);
-                    objCmd.Parameters.AddWithValue("@CEP", CEP);
                     objCon.Open();
                     objCmd.ExecuteNonQuery();
                     objCon.Close();
