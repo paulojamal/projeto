@@ -12,11 +12,12 @@ namespace SistemaDeLogin
     class ADM_BD_Equip
     {
         static String mp = Environment.CurrentDirectory;
-        private static String _strCon = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=" + mp + "\\BD_Usuario.mdf;Integrated Security=True;Connect Timeout=30";
+        private static string _strCon = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=" + mp + "\\BD_Usuario.mdf;Integrated Security=True;Connect Timeout=30";
 
         public const String strInserir = "INSERT INTO tb_Equip(Codigo, Cliente, Tipo, Prioridade) VALUES(@Codigo, @Cliente, @Tipo, @Prioridade)";
         public const String strExcluir = "DELETE FROM tb_Equip WHERE Codigo = @Codigo";
-        public const String strConsultar = "SELECT Codigo , Cliente, Tipo, Prioridade FROM tb_Equip";
+        public const String strAlterar = "UPDATE tb_Equip SET Cliente = @Cliente , Tipo = @Tipo ,  Prioridade = @Prioridade WHERE Codigo = @Codigo";
+        public const string strConsultar = "SELECT Codigo , Cliente, Tipo, Prioridade FROM tb_Equip";
 
         public class Equips
         {
@@ -24,6 +25,8 @@ namespace SistemaDeLogin
             public String Cliente { get; set; }
             public String Tipo { get; set; }
             public String Prioridade { get; set; }
+
+
         }
 
         public void Inserir(String Codigo, String Cliente, String Tipo, String Prioridade)
@@ -47,45 +50,16 @@ namespace SistemaDeLogin
 
         public void Atualizar(String Codigo, String Cliente, String Tipo, String Prioridade)
         {
-            String strAlterar = "UPDATE tb_Equip SET Codigo = @Codigo";
-            
+
             using (SqlConnection objCon = new SqlConnection(_strCon))
             {
-                if (Cliente != "")
-                {
-                    strAlterar += ", Cliente = @Cliente ";
-                }
-                if (Tipo != "")
-                {
-                    strAlterar += ", Tipo = @Tipo ";
-                }
-                if (Prioridade != "")
-                {
-                    strAlterar += " , Prioridade = @Prioridade ";
-                }
-               
-                    strAlterar += " WHERE Codigo = @Codigo";
-                
-
-
                 using (SqlCommand objCmd = new SqlCommand(strAlterar, objCon))
                 {
-                    if (Codigo != "")
-                    {
-                        objCmd.Parameters.AddWithValue("@Codigo", Codigo);
-                    }
-                    if (Cliente != "")
-                    {
-                        objCmd.Parameters.AddWithValue("@Cliente",Cliente);
-                    }
-                    if (Tipo != "")
-                    {
-                        objCmd.Parameters.AddWithValue("@Tipo",Tipo);
-                    }
-                    if (Prioridade != "")
-                    {
-                        objCmd.Parameters.AddWithValue("@Prioridade",Prioridade);
-                    }
+
+                    objCmd.Parameters.AddWithValue("@Codigo", Codigo);
+                    objCmd.Parameters.AddWithValue("@Cliente", Cliente);
+                    objCmd.Parameters.AddWithValue("@Tipo", Tipo);
+                    objCmd.Parameters.AddWithValue("@Prioridade", Prioridade);
                     objCon.Open();
                     objCmd.ExecuteNonQuery();
                     objCon.Close();
@@ -111,6 +85,8 @@ namespace SistemaDeLogin
             }
         }
 
+
+
         public List<Equips> Consultar()
         {
             List<Equips> lstEquips = new List<Equips>();
@@ -135,13 +111,16 @@ namespace SistemaDeLogin
                         }
 
                         objCon.Close();
+
                     }
+
 
                     objCon.Close();
                 }
                 return lstEquips;
             }
         }
+
 
         public List<Equips> Pesquisar(String Codigo, String Cliente, String Tipo, String Prioridade)
         {
@@ -213,6 +192,8 @@ namespace SistemaDeLogin
             }
 
         }
+
+
 
     }
 }

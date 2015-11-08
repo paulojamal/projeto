@@ -14,13 +14,13 @@ namespace SistemaDeLogin
     {
         public  static string mp = Environment.CurrentDirectory;
 
-        public static String _strCon = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=" + mp + "\\BD_Usuario.mdf;Integrated Security=True;Connect Timeout=30";
+        public static string _strCon = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=" + mp + "\\BD_Usuario.mdf;Integrated Security=True;Connect Timeout=30";
 
         public const String strInserir = "INSERT INTO tb_Usuarios(NomeUser, SenhaUser) VALUES(@NomeUser, @SenhaUser)";
         public const String strExcluir = "DELETE FROM tb_Usuarios WHERE NomeUser = @NomeUser";
         public const String strAlterar = "UPDATE tb_Usuarios SET SenhaUser = @SenhaUser WHERE NomeUser = @NomeUser";
         public const String strSelecionar = "SELECT COUNT(*) FROM tb_Usuarios WHERE NomeUser = @NomeUser AND SenhaUser =@SenhaUser";
-        public const String strConsultar = "SELECT NomeUser , SenhaUser FROM tb_Usuarios";
+        public const string strConsultar = "SELECT NomeUser , SenhaUser FROM tb_Usuarios";
         
 
         public class Usuarios

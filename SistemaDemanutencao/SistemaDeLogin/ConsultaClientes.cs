@@ -37,8 +37,8 @@ namespace SistemaDeLogin
 
                 objListView.Text = itemLista.NomeUser;
                 objListView.SubItems.Add(itemLista.SenhaUser);
-                objListView.SubItems.Add(itemLista.Nome);
-                objListView.SubItems.Add(itemLista.SobreNome);
+                objListView.SubItems.Add(itemLista.Name);
+                objListView.SubItems.Add(itemLista.Sobrenome);
                 objListView.SubItems.Add(itemLista.ID);
                 objListView.SubItems.Add(itemLista.Telefone);
                 objListView.SubItems.Add(itemLista.Rua);
@@ -74,8 +74,8 @@ namespace SistemaDeLogin
                 ListViewItem objListView = new ListViewItem();
                 objListView.Text = itemLista.NomeUser;
                 objListView.SubItems.Add(itemLista.SenhaUser);
-                objListView.SubItems.Add(itemLista.Nome);
-                objListView.SubItems.Add(itemLista.SobreNome);
+                objListView.SubItems.Add(itemLista.Name);
+                objListView.SubItems.Add(itemLista.Sobrenome);
                 objListView.SubItems.Add(itemLista.ID);
                 objListView.SubItems.Add(itemLista.Telefone);
                 objListView.SubItems.Add(itemLista.Rua);
