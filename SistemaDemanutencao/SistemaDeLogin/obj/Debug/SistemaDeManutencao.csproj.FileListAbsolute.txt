@@ -111,6 +111,6 @@ C:\Users\Filipe\Desktop\Projeto\projeto\SistemaDemanutencao\SistemaDeLogin\obj\D
 C:\Users\Filipe\Desktop\Projeto\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeLogin.ExcluirEquip.resources
 C:\Users\Filipe\Desktop\Projeto\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeLogin.ExcluirFornecedor.resources
 C:\Users\Filipe\Desktop\Projeto\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeLogin.IncluirEquip.resources
-C:\Users\Filipe\Desktop\Projeto\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeLogin.AlterarFornecedor.resources
 C:\Users\Filipe\Desktop\Projeto\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeLogin.IncluirFornecedor.resources
 C:\Users\Filipe\Desktop\Projeto\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeLogin.Menu_Cliente.resources
+C:\Users\Filipe\Desktop\Projeto\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeLogin.ALT_Funcionario.resources

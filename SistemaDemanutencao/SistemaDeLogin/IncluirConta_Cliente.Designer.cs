@@ -30,7 +30,6 @@
         {
             this.label11 = new System.Windows.Forms.Label();
             this.estado = new System.Windows.Forms.TextBox();
-            this.id = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -54,6 +53,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.id = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -73,13 +73,6 @@
             this.estado.Name = "estado";
             this.estado.Size = new System.Drawing.Size(158, 20);
             this.estado.TabIndex = 48;
-            // 
-            // id
-            // 
-            this.id.Location = new System.Drawing.Point(69, 76);
-            this.id.Name = "id";
-            this.id.Size = new System.Drawing.Size(100, 20);
-            this.id.TabIndex = 47;
             // 
             // label10
             // 
@@ -274,6 +267,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.id);
             this.groupBox2.Controls.Add(this.name);
             this.groupBox2.Controls.Add(this.sobrenome);
             this.groupBox2.Controls.Add(this.rua);
@@ -281,7 +275,6 @@
             this.groupBox2.Controls.Add(this.n);
             this.groupBox2.Controls.Add(this.estado);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.id);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label6);
@@ -298,6 +291,14 @@
             this.groupBox2.TabIndex = 52;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dados para o cadastro";
+            // 
+            // id
+            // 
+            this.id.Location = new System.Drawing.Point(69, 76);
+            this.id.Mask = "000,000,000-00";
+            this.id.Name = "id";
+            this.id.Size = new System.Drawing.Size(85, 20);
+            this.id.TabIndex = 58;
             // 
             // IncluirConta_Cliente
             // 
@@ -322,7 +323,6 @@
 
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox estado;
-        private System.Windows.Forms.TextBox id;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label3;
@@ -346,5 +346,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.MaskedTextBox id;
     }
 }
