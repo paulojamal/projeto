@@ -52,8 +52,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.identidade = new System.Windows.Forms.MaskedTextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -161,7 +161,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(36, 39);
+            this.label3.Location = new System.Drawing.Point(31, 39);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 13);
             this.label3.TabIndex = 48;
@@ -281,15 +281,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados para alterar";
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(-1, 411);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(347, 13);
-            this.label13.TabIndex = 59;
-            this.label13.Text = "* os campos que ficarem em branco farão que não altere o valor anterior";
-            // 
             // identidade
             // 
             this.identidade.Location = new System.Drawing.Point(75, 91);
@@ -297,6 +288,15 @@
             this.identidade.Name = "identidade";
             this.identidade.Size = new System.Drawing.Size(85, 20);
             this.identidade.TabIndex = 57;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(9, 411);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(224, 13);
+            this.label13.TabIndex = 59;
+            this.label13.Text = "* campos vazios não irão alterar o antigo valor";
             // 
             // AlterarConta_Cliente
             // 

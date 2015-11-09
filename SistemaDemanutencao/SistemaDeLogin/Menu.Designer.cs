@@ -212,8 +212,8 @@
             this.excuirContaToolStripMenuItem,
             this.lISTAToolStripMenuItem});
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
-            this.usuariosToolStripMenuItem.Text = "Usuarios";
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
+            this.usuariosToolStripMenuItem.Text = "Funcionários";
             // 
             // incluirContaToolStripMenuItem
             // 
@@ -379,9 +379,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 120);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(408, 16);
+            this.label1.Size = new System.Drawing.Size(390, 16);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Bem-Vindo! Você está logado com privilégios de um Administrador";
+            this.label1.Text = "Bem-Vindo! Você está logado com privilégios de um funcionário";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // Menu

@@ -38,8 +38,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.newPrioridade = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -95,7 +95,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(21, 42);
+            this.label3.Location = new System.Drawing.Point(6, 42);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 13);
             this.label3.TabIndex = 7;
@@ -104,7 +104,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(35, 68);
+            this.label4.Location = new System.Drawing.Point(6, 68);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 13);
             this.label4.TabIndex = 8;
@@ -138,15 +138,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados para alterar";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(9, 228);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(347, 13);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "* os campos que ficarem em branco farão que não altere o valor anterior";
-            // 
             // newPrioridade
             // 
             this.newPrioridade.FormattingEnabled = true;
@@ -160,6 +151,15 @@
             this.newPrioridade.Name = "newPrioridade";
             this.newPrioridade.Size = new System.Drawing.Size(100, 21);
             this.newPrioridade.TabIndex = 12;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(9, 228);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(224, 13);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "* campos vazios não irão alterar o antigo valor";
             // 
             // AlterarEquip
             // 

@@ -381,11 +381,11 @@
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.SystemColors.Control;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(153, 18);
+            this.label12.Location = new System.Drawing.Point(204, 9);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(407, 31);
+            this.label12.Size = new System.Drawing.Size(269, 31);
             this.label12.TabIndex = 6;
-            this.label12.Text = "Clientes cadastrados no sistema";
+            this.label12.Text = "Clientes cadastrados";
             this.label12.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // groupBox2

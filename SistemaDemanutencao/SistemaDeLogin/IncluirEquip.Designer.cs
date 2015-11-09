@@ -39,8 +39,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.tipo = new System.Windows.Forms.ComboBox();
             this.prioridade = new System.Windows.Forms.ComboBox();
+            this.tipo = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -93,7 +93,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(7, 93);
+            this.label4.Location = new System.Drawing.Point(7, 92);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 13);
             this.label4.TabIndex = 8;
@@ -139,20 +139,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados para a inclusão";
             // 
-            // tipo
-            // 
-            this.tipo.FormattingEnabled = true;
-            this.tipo.Items.AddRange(new object[] {
-            "",
-            "Computador",
-            "Tablet",
-            "Impressora",
-            "Componentes"});
-            this.tipo.Location = new System.Drawing.Point(70, 65);
-            this.tipo.Name = "tipo";
-            this.tipo.Size = new System.Drawing.Size(100, 21);
-            this.tipo.TabIndex = 13;
-            // 
             // prioridade
             // 
             this.prioridade.FormattingEnabled = true;
@@ -166,6 +152,20 @@
             this.prioridade.Name = "prioridade";
             this.prioridade.Size = new System.Drawing.Size(100, 21);
             this.prioridade.TabIndex = 14;
+            // 
+            // tipo
+            // 
+            this.tipo.FormattingEnabled = true;
+            this.tipo.Items.AddRange(new object[] {
+            "",
+            "Computador",
+            "Tablet",
+            "Impressora",
+            "Componentes"});
+            this.tipo.Location = new System.Drawing.Point(70, 65);
+            this.tipo.Name = "tipo";
+            this.tipo.Size = new System.Drawing.Size(100, 21);
+            this.tipo.TabIndex = 13;
             // 
             // IncluirEquip
             // 
