@@ -23,6 +23,8 @@ namespace SistemaDeLogin
         private void ConsultaUsuarios_Load(object sender, EventArgs e)
         {
             carregarListView();
+            PSQ_Login.Text = "";
+            PSQ_Senha.Text = "";
         }
 
         private void carregarListView()
@@ -83,6 +85,11 @@ namespace SistemaDeLogin
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PSQ_Login_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -38,7 +38,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(77, 86);
+            this.label1.Location = new System.Drawing.Point(12, 83);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 13);
             this.label1.TabIndex = 0;
@@ -46,7 +46,7 @@
             // 
             // Enviar
             // 
-            this.Enviar.Location = new System.Drawing.Point(61, 128);
+            this.Enviar.Location = new System.Drawing.Point(12, 125);
             this.Enviar.Name = "Enviar";
             this.Enviar.Size = new System.Drawing.Size(75, 23);
             this.Enviar.TabIndex = 1;
@@ -56,7 +56,7 @@
             // 
             // nDel
             // 
-            this.nDel.Location = new System.Drawing.Point(48, 102);
+            this.nDel.Location = new System.Drawing.Point(12, 99);
             this.nDel.Name = "nDel";
             this.nDel.Size = new System.Drawing.Size(100, 20);
             this.nDel.TabIndex = 2;
@@ -87,7 +87,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(190, 209);
+            this.ClientSize = new System.Drawing.Size(171, 172);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.nDel);

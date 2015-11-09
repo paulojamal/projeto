@@ -18,7 +18,7 @@ namespace SistemaDeLogin
 
         public const String strInserir = "INSERT INTO tb_Cliente(NomeUser, SenhaUser, Name, Sobrenome, ID, Telefone, Rua, Numero, Bairro, Cidade, Estado) VALUES(@NomeUser, @SenhaUser, @Name, @Sobrenome, @ID, @Telefone, @Rua, @Numero, @Bairro, @Cidade, @Estado)";
         public const String strExcluir = "DELETE FROM tb_Cliente WHERE NomeUser = @NomeUser";
-        public const String strAlterar = "UPDATE tb_Cliente SET SenhaUser = @SenhaUser , Name = @Name ,  Sobrenome = @Sobrenome , ID = @ID  , Telefone = @Telefone , Rua = @Rua , Numero = @Numero , Bairro = @Bairro, Cidade = @Cidade, Estado = @Estado  WHERE NomeUser = @NomeUser";
+        //public const String strAlterar = "UPDATE tb_Cliente SET SenhaUser = @SenhaUser , Name = @Name ,  Sobrenome = @Sobrenome , ID = @ID  , Telefone = @Telefone , Rua = @Rua , Numero = @Numero , Bairro = @Bairro, Cidade = @Cidade, Estado = @Estado  WHERE NomeUser = @NomeUser";
         public const String strSelecionar = "SELECT COUNT(*) FROM tb_Cliente WHERE NomeUser = @NomeUser AND SenhaUser =@SenhaUser";
         public const string strConsultar = "SELECT NomeUser , SenhaUser , Name, Sobrenome, ID, Telefone, Rua, Numero, Bairro, Cidade, Estado FROM tb_Cliente";
 
@@ -48,25 +48,94 @@ namespace SistemaDeLogin
 
         }
 
-        public void Atualizar(String Login, String Senha, String Nome, String Sobrenome, String Identidade, String Telefone, String Rua, String N, String Bairro, String Cidade, String Estado)
+        public void Atualizar(String Login, String Senha, String Name, String Sobrenome, String Identidade, String Telefone, String Rua, String N, String Bairro, String Cidade, String Estado)
         {
+            String strAlterar = "UPDATE tb_Cliente SET NomeUser = @NomeUser ";
 
             using (SqlConnection objCon = new SqlConnection(_strCon))
             {
+                if (Senha != "")
+                {
+                    strAlterar += " , SenhaUser = @SenhaUser ";
+                }
+                if (Name != "")
+                {
+                    strAlterar += " , Name = @Name ";
+                }
+                if (Sobrenome != "")
+                {
+                    strAlterar += " , SobreNome = @SobreNome ";
+                }
+                if (Telefone != "")
+                {
+                    strAlterar += " , Telefone = @Telefone ";
+                }
+                if (Rua != "")
+                {
+                    strAlterar += " , Rua = @Rua ";
+                }
+                if (strAlterar != "")
+                {
+                    strAlterar += " , Numero = @Numero ";
+                }
+                if (Bairro != "")
+                {
+                    strAlterar += " , Bairro = @Bairro ";
+                }
+                if (Cidade != "")
+                {
+                    strAlterar += " , Cidade = @Cidade ";
+                }
+                if (Estado != "")
+                {
+                    strAlterar += " , Estado = @Estado ";
+                }
+
+                strAlterar += "WHERE NomeUser = @NomeUser";
+
                 using (SqlCommand objCmd = new SqlCommand(strAlterar, objCon))
                 {
+                    if (Login != "")
+                    {
+                        objCmd.Parameters.AddWithValue("@NomeUser", Login);
+                    }
+                    if (Senha != "")
+                    {
+                        objCmd.Parameters.AddWithValue("@SenhaUser", Senha);
+                    }
+                    if (Name != "")
+                    {
+                        objCmd.Parameters.AddWithValue("@Name", Name);
+                    }
+                    if (Sobrenome != "")
+                    {
+                        objCmd.Parameters.AddWithValue("@SobreNome", Sobrenome);
+                    }
+                    if (Telefone != "")
+                    {
+                        objCmd.Parameters.AddWithValue("@Telefone", Telefone);
+                    }
+                    if (Rua != "")
+                    {
+                        objCmd.Parameters.AddWithValue("@Rua", Rua);
+                    }
+                    if (N != "")
+                    {
+                        objCmd.Parameters.AddWithValue("@Numero", N);
+                    }
+                    if (Bairro != "")
+                    {
+                        objCmd.Parameters.AddWithValue("@Bairro", Bairro);
+                    }
+                    if (Cidade != "")
+                    {
+                        objCmd.Parameters.AddWithValue("@Cidade", Cidade);
+                    }
+                    if (Estado != "")
+                    {
+                        objCmd.Parameters.AddWithValue("@Estado", Estado);
+                    }
 
-                    objCmd.Parameters.AddWithValue("@NomeUser", Login);
-                    objCmd.Parameters.AddWithValue("@SenhaUser", Senha);
-                    objCmd.Parameters.AddWithValue("@Name", Nome);
-                    objCmd.Parameters.AddWithValue("@Sobrenome", Sobrenome);
-                    objCmd.Parameters.AddWithValue("@ID", Identidade);
-                    objCmd.Parameters.AddWithValue("@Telefone", Telefone);
-                    objCmd.Parameters.AddWithValue("@Rua", Rua);
-                    objCmd.Parameters.AddWithValue("@Numero", N);
-                    objCmd.Parameters.AddWithValue("@Bairro", Bairro);
-                    objCmd.Parameters.AddWithValue("@Cidade", Cidade);
-                    objCmd.Parameters.AddWithValue("@Estado", Estado);
                     objCon.Open();
                     objCmd.ExecuteNonQuery();
                     objCon.Close();

@@ -37,6 +37,8 @@ namespace SistemaDeLogin
         private void button2_Click(object sender, EventArgs e)
         {
             ExcluirBD();
+            nDel.Text = "";
+            this.Close();
         }
 
         private void nDel_TextChanged(object sender, EventArgs e)
@@ -50,6 +52,11 @@ namespace SistemaDeLogin
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ExcluirConta_Load(object sender, EventArgs e)
         {
 
         }

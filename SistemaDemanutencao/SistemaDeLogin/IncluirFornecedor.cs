@@ -34,6 +34,13 @@ namespace SistemaDeLogin
         private void button1_Click(object sender, EventArgs e)
         {
             IncluirBD();
+            nome.Text = "";
+            CNPJ.Text = "";
+            rua.Text = "";
+            bairro.Text = "";
+            cidade.Text = "";
+            CEP.Text = "";
+            this.Close();
         }
 
         private void label4_Click(object sender, EventArgs e)

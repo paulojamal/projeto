@@ -38,6 +38,16 @@ namespace SistemaDeLogin
         private void button2_Click(object sender, EventArgs e)
         {
             AlterarBD();
+
+            pesquisaLogin.Text = "";
+            alteraSenha.Text = "";
+
+            this.Close();
+        }
+
+        private void AlterarConta_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

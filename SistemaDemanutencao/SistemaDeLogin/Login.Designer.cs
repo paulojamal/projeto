@@ -40,7 +40,7 @@
             // 
             this.textLogin.Location = new System.Drawing.Point(76, 59);
             this.textLogin.Name = "textLogin";
-            this.textLogin.Size = new System.Drawing.Size(100, 20);
+            this.textLogin.Size = new System.Drawing.Size(96, 20);
             this.textLogin.TabIndex = 0;
             // 
             // textSenha
@@ -52,7 +52,7 @@
             // 
             // B_Entrar
             // 
-            this.B_Entrar.Location = new System.Drawing.Point(85, 133);
+            this.B_Entrar.Location = new System.Drawing.Point(76, 133);
             this.B_Entrar.Name = "B_Entrar";
             this.B_Entrar.Size = new System.Drawing.Size(75, 23);
             this.B_Entrar.TabIndex = 2;

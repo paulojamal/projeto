@@ -33,6 +33,11 @@ namespace SistemaDeLogin
         private void button1_Click(object sender, EventArgs e)
         {
             IncluirBD();
+            codigo.Text = "";
+            cliente.Text = "";
+            tipo.Text = "";
+            prioridade.Text = "";
+            this.Close();
         }
 
         private void codigo_TextChanged(object sender, EventArgs e)

@@ -38,6 +38,18 @@ namespace SistemaDeLogin
         private void Enviar_Click(object sender, EventArgs e)
         {
             IncluirBD();
+            newLogin.Text = "";
+            newSenha.Text = "";
+            name.Text = "";
+            sobrenome.Text = "";
+            id.Text = "";
+            tel.Text = "";
+            rua.Text = "";
+            n.Text = "";
+            bairro.Text = "";
+            cidade.Text = "";
+            estado.Text = "";
+            this.Close();
         }
     }
     }

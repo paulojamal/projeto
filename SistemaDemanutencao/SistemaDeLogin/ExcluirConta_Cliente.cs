@@ -37,6 +37,8 @@ namespace SistemaDeLogin
         private void Enviar_Click(object sender, EventArgs e)
         {
             ExcluirBD();
+            nDel.Text = "";
+            this.Close();
         }
     }
 }

@@ -87,9 +87,9 @@
             this.Estado});
             this.LV_Cliente.FullRowSelect = true;
             this.LV_Cliente.GridLines = true;
-            this.LV_Cliente.Location = new System.Drawing.Point(12, 66);
+            this.LV_Cliente.Location = new System.Drawing.Point(12, 52);
             this.LV_Cliente.Name = "LV_Cliente";
-            this.LV_Cliente.Size = new System.Drawing.Size(1152, 332);
+            this.LV_Cliente.Size = new System.Drawing.Size(669, 332);
             this.LV_Cliente.TabIndex = 1;
             this.LV_Cliente.UseCompatibleStateImageBehavior = false;
             this.LV_Cliente.View = System.Windows.Forms.View.Details;
@@ -97,37 +97,37 @@
             // Login
             // 
             this.Login.Text = "Login";
-            this.Login.Width = 110;
+            this.Login.Width = 56;
             // 
             // Senha
             // 
             this.Senha.Text = "Senha";
-            this.Senha.Width = 111;
+            this.Senha.Width = 58;
             // 
             // Nome
             // 
             this.Nome.Text = "Nome";
-            this.Nome.Width = 149;
+            this.Nome.Width = 65;
             // 
             // Sobrenome
             // 
             this.Sobrenome.Text = "Sobrenome";
-            this.Sobrenome.Width = 142;
+            this.Sobrenome.Width = 73;
             // 
             // ID
             // 
             this.ID.Text = "ID";
-            this.ID.Width = 84;
+            this.ID.Width = 30;
             // 
             // Telefone
             // 
             this.Telefone.Text = "Telefone";
-            this.Telefone.Width = 110;
+            this.Telefone.Width = 75;
             // 
             // Rua
             // 
             this.Rua.Text = "Rua";
-            this.Rua.Width = 115;
+            this.Rua.Width = 62;
             // 
             // Numero
             // 
@@ -136,12 +136,12 @@
             // Bairro
             // 
             this.Bairro.Text = "Bairro";
-            this.Bairro.Width = 106;
+            this.Bairro.Width = 59;
             // 
             // Cidade
             // 
             this.Cidade.Text = "Cidade";
-            this.Cidade.Width = 104;
+            this.Cidade.Width = 79;
             // 
             // Estado
             // 
@@ -387,7 +387,7 @@
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.SystemColors.Control;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(365, 18);
+            this.label12.Location = new System.Drawing.Point(153, 18);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(407, 31);
             this.label12.TabIndex = 6;
@@ -408,7 +408,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1176, 562);
+            this.ClientSize = new System.Drawing.Size(691, 562);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.groupBox1);

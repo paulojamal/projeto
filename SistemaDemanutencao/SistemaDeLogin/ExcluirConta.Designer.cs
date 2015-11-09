@@ -65,7 +65,7 @@
             // 
             // nDel
             // 
-            this.nDel.Location = new System.Drawing.Point(41, 95);
+            this.nDel.Location = new System.Drawing.Point(12, 99);
             this.nDel.Name = "nDel";
             this.nDel.Size = new System.Drawing.Size(100, 20);
             this.nDel.TabIndex = 0;
@@ -73,7 +73,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(54, 121);
+            this.button2.Location = new System.Drawing.Point(12, 125);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 1;
@@ -84,7 +84,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(68, 79);
+            this.label2.Location = new System.Drawing.Point(12, 83);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 13);
             this.label2.TabIndex = 2;
@@ -116,7 +116,7 @@
             // 
             // ExcluirConta
             // 
-            this.ClientSize = new System.Drawing.Size(183, 173);
+            this.ClientSize = new System.Drawing.Size(178, 173);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -124,6 +124,7 @@
             this.Controls.Add(this.nDel);
             this.Name = "ExcluirConta";
             this.Text = "ExcluirConta";
+            this.Load += new System.EventHandler(this.ExcluirConta_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -22,6 +22,12 @@ namespace SistemaDeLogin
         private void ConsultaUsuarios_Load(object sender, EventArgs e)
         {
             carregarListView();
+            PSQ_Nome.Text ="";
+            PSQ_CNPJ.Text = "";
+            PSQ_Rua.Text = "";
+            PSQ_Bairro.Text = "";
+            PSQ_Cidade.Text = "";
+            PSQ_CEP.Text = "";
         }
 
         private void carregarListView()

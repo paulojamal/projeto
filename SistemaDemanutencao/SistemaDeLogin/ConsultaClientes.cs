@@ -23,6 +23,17 @@ namespace SistemaDeLogin
         private void ConsultaUsuarios_Load(object sender, EventArgs e)
         {
             carregarListView();
+            PSQ_Login.Text ="";
+            PSQ_Senha.Text = "";
+            PSQ_Nome.Text = "";
+            PSQ_Sobrenome.Text = "";
+            PSQ_ID.Text = "";
+            PSQ_Telefone.Text = "";
+            PSQ_Rua.Text = "";
+            PSQ_Numero.Text = "";
+            PSQ_Bairro.Text = "";
+            PSQ_Cidade.Text = "";
+            PSQ_Estado.Text = "";
         }
         private void carregarListView(){
 
@@ -37,8 +48,8 @@ namespace SistemaDeLogin
 
                 objListView.Text = itemLista.NomeUser;
                 objListView.SubItems.Add(itemLista.SenhaUser);
-                objListView.SubItems.Add(itemLista.Nome);
-                objListView.SubItems.Add(itemLista.SobreNome);
+                objListView.SubItems.Add(itemLista.Name);
+                objListView.SubItems.Add(itemLista.Sobrenome);
                 objListView.SubItems.Add(itemLista.ID);
                 objListView.SubItems.Add(itemLista.Telefone);
                 objListView.SubItems.Add(itemLista.Rua);
@@ -74,8 +85,8 @@ namespace SistemaDeLogin
                 ListViewItem objListView = new ListViewItem();
                 objListView.Text = itemLista.NomeUser;
                 objListView.SubItems.Add(itemLista.SenhaUser);
-                objListView.SubItems.Add(itemLista.Nome);
-                objListView.SubItems.Add(itemLista.SobreNome);
+                objListView.SubItems.Add(itemLista.Name);
+                objListView.SubItems.Add(itemLista.Sobrenome);
                 objListView.SubItems.Add(itemLista.ID);
                 objListView.SubItems.Add(itemLista.Telefone);
                 objListView.SubItems.Add(itemLista.Rua);

@@ -24,6 +24,10 @@ namespace SistemaDeLogin
         {
 
             carregarListView();
+            PSQ_Codigo.Text = "";
+            PSQ_Cliente.Text = "";
+            PSQ_Tipo.Text = "";
+            PSQ_Prioridade.Text = "";
         }
 
         private void carregarListView()

@@ -34,6 +34,8 @@ namespace SistemaDeLogin
         private void button1_Click(object sender, EventArgs e)
         {
             ExcluirBD();
+            excCodigo.Text = "";
+            this.Close();
         }
 
         private void ExcluirEquip_Load(object sender, EventArgs e)

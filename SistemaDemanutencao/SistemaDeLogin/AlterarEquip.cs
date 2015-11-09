@@ -32,6 +32,22 @@ namespace SistemaDeLogin
         private void button1_Click(object sender, EventArgs e)
         {
             AlterarBD();
+            pesquisaCod.Text = "";
+            newCliente.Text = "";
+            newTipo.Text = "";
+            newPrioridade.Text = "";
+            this.Close();
+
+        }
+
+        private void AlterarEquip_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

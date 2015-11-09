@@ -32,8 +32,23 @@ namespace SistemaDeLogin
         private void button1_Click(object sender, EventArgs e)
         {
             AlterarBD();
+            pesquisaNome.Text = "";
+            newCNPJ.Text = "";
+            newRua.Text = "";
+            newBairro.Text = "";
+            newCidade.Text = "";
+            newCEP.Text = "";
+            this.Close();
         }
 
+        private void AlterarFornecedor_Load(object sender, EventArgs e)
+        {
 
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

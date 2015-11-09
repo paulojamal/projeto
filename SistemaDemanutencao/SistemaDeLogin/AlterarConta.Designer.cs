@@ -31,6 +31,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // SenhaMudar
@@ -76,7 +78,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(130, 146);
+            this.button2.Location = new System.Drawing.Point(74, 39);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 0;
@@ -86,14 +88,14 @@
             // 
             // pesquisaLogin
             // 
-            this.pesquisaLogin.Location = new System.Drawing.Point(121, 55);
+            this.pesquisaLogin.Location = new System.Drawing.Point(12, 87);
             this.pesquisaLogin.Name = "pesquisaLogin";
             this.pesquisaLogin.Size = new System.Drawing.Size(100, 20);
             this.pesquisaLogin.TabIndex = 1;
             // 
             // alteraSenha
             // 
-            this.alteraSenha.Location = new System.Drawing.Point(121, 95);
+            this.alteraSenha.Location = new System.Drawing.Point(74, 13);
             this.alteraSenha.Name = "alteraSenha";
             this.alteraSenha.Size = new System.Drawing.Size(100, 20);
             this.alteraSenha.TabIndex = 2;
@@ -101,7 +103,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 55);
+            this.label3.Location = new System.Drawing.Point(9, 62);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 13);
             this.label3.TabIndex = 3;
@@ -110,7 +112,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 98);
+            this.label4.Location = new System.Drawing.Point(6, 16);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 13);
             this.label4.TabIndex = 4;
@@ -121,24 +123,37 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.SystemColors.Control;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(9, 9);
+            this.label5.Location = new System.Drawing.Point(31, 9);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(333, 31);
+            this.label5.Size = new System.Drawing.Size(168, 31);
             this.label5.TabIndex = 6;
-            this.label5.Text = "Alterar conta - Funcionário";
+            this.label5.Text = "Alterar conta";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.alteraSenha);
+            this.groupBox1.Location = new System.Drawing.Point(12, 113);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(187, 70);
+            this.groupBox1.TabIndex = 8;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Dados para alterar";
             // 
             // AlterarConta
             // 
-            this.ClientSize = new System.Drawing.Size(338, 189);
+            this.ClientSize = new System.Drawing.Size(207, 196);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.alteraSenha);
             this.Controls.Add(this.pesquisaLogin);
-            this.Controls.Add(this.button2);
             this.Name = "AlterarConta";
             this.Text = "AlterarConta";
+            this.Load += new System.EventHandler(this.AlterarConta_Load_1);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -157,5 +172,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

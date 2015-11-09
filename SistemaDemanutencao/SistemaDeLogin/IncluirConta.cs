@@ -35,6 +35,9 @@ namespace SistemaDeLogin
         private void button1_Click(object sender, EventArgs e)
         {
             IncluirBD();
+            newLogin.Text = "";
+            newSenha.Text = "";
+            this.Close();
         }
 
         private void newLogin_TextChanged(object sender, EventArgs e)
