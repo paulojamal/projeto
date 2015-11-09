@@ -32,7 +32,6 @@
             this.codigo = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cliente = new System.Windows.Forms.TextBox();
-            this.prioridade = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,6 +40,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tipo = new System.Windows.Forms.ComboBox();
+            this.prioridade = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,17 +58,10 @@
             // 
             // cliente
             // 
-            this.cliente.Location = new System.Drawing.Point(70, 40);
+            this.cliente.Location = new System.Drawing.Point(70, 39);
             this.cliente.Name = "cliente";
             this.cliente.Size = new System.Drawing.Size(100, 20);
             this.cliente.TabIndex = 2;
-            // 
-            // prioridade
-            // 
-            this.prioridade.Location = new System.Drawing.Point(70, 98);
-            this.prioridade.Name = "prioridade";
-            this.prioridade.Size = new System.Drawing.Size(100, 20);
-            this.prioridade.TabIndex = 4;
             // 
             // label1
             // 
@@ -82,7 +75,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 40);
+            this.label2.Location = new System.Drawing.Point(22, 39);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(42, 13);
             this.label2.TabIndex = 6;
@@ -91,7 +84,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(33, 73);
+            this.label3.Location = new System.Drawing.Point(33, 68);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(31, 13);
             this.label3.TabIndex = 7;
@@ -100,7 +93,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(7, 98);
+            this.label4.Location = new System.Drawing.Point(7, 93);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 13);
             this.label4.TabIndex = 8;
@@ -108,7 +101,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(70, 124);
+            this.button1.Location = new System.Drawing.Point(70, 119);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 9;
@@ -130,13 +123,13 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.prioridade);
             this.groupBox1.Controls.Add(this.tipo);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.codigo);
             this.groupBox1.Controls.Add(this.cliente);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.prioridade);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(18, 58);
@@ -155,16 +148,30 @@
             "Tablet",
             "Impressora",
             "Componentes"});
-            this.tipo.Location = new System.Drawing.Point(70, 70);
+            this.tipo.Location = new System.Drawing.Point(70, 65);
             this.tipo.Name = "tipo";
             this.tipo.Size = new System.Drawing.Size(100, 21);
             this.tipo.TabIndex = 13;
+            // 
+            // prioridade
+            // 
+            this.prioridade.FormattingEnabled = true;
+            this.prioridade.Items.AddRange(new object[] {
+            "",
+            "Baixa",
+            "Média",
+            "Alta",
+            "Urgente"});
+            this.prioridade.Location = new System.Drawing.Point(70, 92);
+            this.prioridade.Name = "prioridade";
+            this.prioridade.Size = new System.Drawing.Size(100, 21);
+            this.prioridade.TabIndex = 14;
             // 
             // IncluirEquip
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(267, 244);
+            this.ClientSize = new System.Drawing.Size(267, 233);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label5);
             this.Name = "IncluirEquip";
@@ -181,7 +188,6 @@
         private System.Windows.Forms.TextBox codigo;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.TextBox cliente;
-        private System.Windows.Forms.TextBox prioridade;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -190,5 +196,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox tipo;
+        private System.Windows.Forms.ComboBox prioridade;
     }
 }

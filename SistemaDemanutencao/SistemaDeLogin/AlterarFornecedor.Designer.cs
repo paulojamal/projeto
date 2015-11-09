@@ -1,6 +1,6 @@
 ﻿namespace SistemaDeLogin
 {
-    partial class AlterarFornecedor
+    partial class ALT_Funcionario
     {
         /// <summary>
         /// Required designer variable.
@@ -30,19 +30,19 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.pesquisaNome = new System.Windows.Forms.TextBox();
-            this.newCNPJ = new System.Windows.Forms.TextBox();
             this.newRua = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.newBairro = new System.Windows.Forms.TextBox();
             this.newCidade = new System.Windows.Forms.TextBox();
-            this.newCEP = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.newCNPJ = new System.Windows.Forms.MaskedTextBox();
+            this.newCep = new System.Windows.Forms.MaskedTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -63,18 +63,11 @@
             this.pesquisaNome.Size = new System.Drawing.Size(100, 20);
             this.pesquisaNome.TabIndex = 1;
             // 
-            // newCNPJ
-            // 
-            this.newCNPJ.Location = new System.Drawing.Point(49, 13);
-            this.newCNPJ.Name = "newCNPJ";
-            this.newCNPJ.Size = new System.Drawing.Size(100, 20);
-            this.newCNPJ.TabIndex = 2;
-            // 
             // newRua
             // 
             this.newRua.Location = new System.Drawing.Point(49, 39);
             this.newRua.Name = "newRua";
-            this.newRua.Size = new System.Drawing.Size(100, 20);
+            this.newRua.Size = new System.Drawing.Size(108, 20);
             this.newRua.TabIndex = 3;
             // 
             // label2
@@ -99,22 +92,15 @@
             // 
             this.newBairro.Location = new System.Drawing.Point(49, 65);
             this.newBairro.Name = "newBairro";
-            this.newBairro.Size = new System.Drawing.Size(100, 20);
+            this.newBairro.Size = new System.Drawing.Size(108, 20);
             this.newBairro.TabIndex = 6;
             // 
             // newCidade
             // 
             this.newCidade.Location = new System.Drawing.Point(49, 91);
             this.newCidade.Name = "newCidade";
-            this.newCidade.Size = new System.Drawing.Size(100, 20);
+            this.newCidade.Size = new System.Drawing.Size(108, 20);
             this.newCidade.TabIndex = 7;
-            // 
-            // newCEP
-            // 
-            this.newCEP.Location = new System.Drawing.Point(49, 117);
-            this.newCEP.Name = "newCEP";
-            this.newCEP.Size = new System.Drawing.Size(100, 20);
-            this.newCEP.TabIndex = 8;
             // 
             // label4
             // 
@@ -167,8 +153,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.newCNPJ);
+            this.groupBox1.Controls.Add(this.newCep);
+            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.newRua);
             this.groupBox1.Controls.Add(this.label6);
@@ -177,13 +164,28 @@
             this.groupBox1.Controls.Add(this.newBairro);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.newCidade);
-            this.groupBox1.Controls.Add(this.newCEP);
             this.groupBox1.Location = new System.Drawing.Point(12, 98);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(167, 172);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados para alterar";
+            // 
+            // newCNPJ
+            // 
+            this.newCNPJ.Location = new System.Drawing.Point(49, 13);
+            this.newCNPJ.Mask = "00,000,000/0000-00";
+            this.newCNPJ.Name = "newCNPJ";
+            this.newCNPJ.Size = new System.Drawing.Size(108, 20);
+            this.newCNPJ.TabIndex = 16;
+            // 
+            // newCep
+            // 
+            this.newCep.Location = new System.Drawing.Point(50, 117);
+            this.newCep.Mask = "000,00-000";
+            this.newCep.Name = "newCep";
+            this.newCep.Size = new System.Drawing.Size(61, 20);
+            this.newCep.TabIndex = 16;
             // 
             // label8
             // 
@@ -194,7 +196,7 @@
             this.label8.TabIndex = 15;
             this.label8.Text = "* os campos que ficarem em branco farão que não altere o valor anterior";
             // 
-            // AlterarFornecedor
+            // ALT_Funcionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -204,7 +206,7 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.pesquisaNome);
             this.Controls.Add(this.label1);
-            this.Name = "AlterarFornecedor";
+            this.Name = "ALT_Funcionario";
             this.Text = "AlterarFornecedor";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -217,13 +219,11 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox pesquisaNome;
-        private System.Windows.Forms.TextBox newCNPJ;
         private System.Windows.Forms.TextBox newRua;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox newBairro;
         private System.Windows.Forms.TextBox newCidade;
-        private System.Windows.Forms.TextBox newCEP;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -231,5 +231,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.MaskedTextBox newCep;
+        private System.Windows.Forms.MaskedTextBox newCNPJ;
     }
 }

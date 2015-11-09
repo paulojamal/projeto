@@ -30,7 +30,6 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.nome = new System.Windows.Forms.TextBox();
-            this.CNPJ = new System.Windows.Forms.TextBox();
             this.rua = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,6 +42,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.CNPJ = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,21 +59,14 @@
             // 
             this.nome.Location = new System.Drawing.Point(50, 13);
             this.nome.Name = "nome";
-            this.nome.Size = new System.Drawing.Size(100, 20);
+            this.nome.Size = new System.Drawing.Size(108, 20);
             this.nome.TabIndex = 1;
-            // 
-            // CNPJ
-            // 
-            this.CNPJ.Location = new System.Drawing.Point(50, 37);
-            this.CNPJ.Name = "CNPJ";
-            this.CNPJ.Size = new System.Drawing.Size(100, 20);
-            this.CNPJ.TabIndex = 2;
             // 
             // rua
             // 
             this.rua.Location = new System.Drawing.Point(50, 62);
             this.rua.Name = "rua";
-            this.rua.Size = new System.Drawing.Size(100, 20);
+            this.rua.Size = new System.Drawing.Size(108, 20);
             this.rua.TabIndex = 3;
             // 
             // label2
@@ -98,21 +91,21 @@
             // 
             this.bairro.Location = new System.Drawing.Point(50, 88);
             this.bairro.Name = "bairro";
-            this.bairro.Size = new System.Drawing.Size(100, 20);
+            this.bairro.Size = new System.Drawing.Size(108, 20);
             this.bairro.TabIndex = 6;
             // 
             // cidade
             // 
             this.cidade.Location = new System.Drawing.Point(50, 114);
             this.cidade.Name = "cidade";
-            this.cidade.Size = new System.Drawing.Size(100, 20);
+            this.cidade.Size = new System.Drawing.Size(108, 20);
             this.cidade.TabIndex = 7;
             // 
             // CEP
             // 
             this.CEP.Location = new System.Drawing.Point(50, 142);
             this.CEP.Name = "CEP";
-            this.CEP.Size = new System.Drawing.Size(100, 20);
+            this.CEP.Size = new System.Drawing.Size(108, 20);
             this.CEP.TabIndex = 8;
             // 
             // label4
@@ -166,10 +159,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.CNPJ);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.nome);
             this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.CNPJ);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.rua);
             this.groupBox1.Controls.Add(this.label5);
@@ -187,11 +180,19 @@
             this.groupBox1.Tag = "Dados da inclusão";
             this.groupBox1.Text = "Dados da inclusão";
             // 
+            // CNPJ
+            // 
+            this.CNPJ.Location = new System.Drawing.Point(50, 37);
+            this.CNPJ.Mask = "00,000,000/0000-00";
+            this.CNPJ.Name = "CNPJ";
+            this.CNPJ.Size = new System.Drawing.Size(108, 20);
+            this.CNPJ.TabIndex = 15;
+            // 
             // IncluirFornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(242, 283);
+            this.ClientSize = new System.Drawing.Size(314, 283);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label7);
             this.Name = "IncluirFornecedor";
@@ -207,7 +208,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox nome;
-        private System.Windows.Forms.TextBox CNPJ;
         private System.Windows.Forms.TextBox rua;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -220,5 +220,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.MaskedTextBox CNPJ;
     }
 }

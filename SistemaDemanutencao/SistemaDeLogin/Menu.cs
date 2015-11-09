@@ -26,7 +26,7 @@ namespace SistemaDeLogin
         AlterarEquip alequi = new AlterarEquip();
         ExcluirEquip exclqui = new ExcluirEquip();
         IncluirFornecedor incfor = new IncluirFornecedor();
-        AlterarFornecedor altfor = new AlterarFornecedor();
+        newCep altfor = new newCep();
         ExcluirFornecedor excfor = new ExcluirFornecedor();
         public Menu()
         {

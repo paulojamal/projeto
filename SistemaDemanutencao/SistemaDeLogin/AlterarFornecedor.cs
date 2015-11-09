@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace SistemaDeLogin
 {
-    public partial class AlterarFornecedor : Form
+    public partial class ALT_Funcionario : Form
     {
-        public AlterarFornecedor()
+        public ALT_Funcionario()
         {
             InitializeComponent();
         }
         private void AlterarBD()
         {
             ADM_BD_Fornecedor a = new ADM_BD_Fornecedor();
-            a.Atualizar(pesquisaNome.Text, newCNPJ.Text, newRua.Text, newBairro.Text, newCidade.Text, newCEP.Text);
+            a.Atualizar(pesquisaNome.Text, newCNPJ.Text, newRua.Text, newBairro.Text, newCidade.Text, newCep.Text);
             try
             {
                 MessageBox.Show("DADOS MODIFICADOS !");
@@ -37,7 +37,7 @@ namespace SistemaDeLogin
             newRua.Text = "";
             newBairro.Text = "";
             newCidade.Text = "";
-            newCEP.Text = "";
+            newCep.Text = "";
             this.Close();
         }
     }

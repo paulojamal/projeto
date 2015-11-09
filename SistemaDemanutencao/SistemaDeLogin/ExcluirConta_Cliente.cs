@@ -40,6 +40,8 @@ namespace SistemaDeLogin
             nDel.Text = "";
             this.Close();
         }
+
+
     }
 }
 
