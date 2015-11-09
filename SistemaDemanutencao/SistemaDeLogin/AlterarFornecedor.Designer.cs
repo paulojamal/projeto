@@ -82,7 +82,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 42);
+            this.label3.Location = new System.Drawing.Point(6, 42);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(30, 13);
             this.label3.TabIndex = 5;
@@ -114,7 +114,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(0, 94);
+            this.label5.Location = new System.Drawing.Point(6, 94);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(43, 13);
             this.label5.TabIndex = 10;
@@ -123,7 +123,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 120);
+            this.label6.Location = new System.Drawing.Point(6, 120);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(31, 13);
             this.label6.TabIndex = 11;
@@ -190,11 +190,11 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(9, 287);
+            this.label8.Location = new System.Drawing.Point(9, 273);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(347, 13);
+            this.label8.Size = new System.Drawing.Size(224, 13);
             this.label8.TabIndex = 15;
-            this.label8.Text = "* os campos que ficarem em branco farão que não altere o valor anterior";
+            this.label8.Text = "* campos vazios não irão alterar o antigo valor";
             // 
             // ALT_Funcionario
             // 

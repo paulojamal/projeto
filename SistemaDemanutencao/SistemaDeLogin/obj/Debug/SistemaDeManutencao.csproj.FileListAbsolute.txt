@@ -114,3 +114,30 @@ C:\Users\Filipe\Desktop\Projeto\projeto\SistemaDemanutencao\SistemaDeLogin\obj\D
 C:\Users\Filipe\Desktop\Projeto\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeLogin.IncluirFornecedor.resources
 C:\Users\Filipe\Desktop\Projeto\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeLogin.Menu_Cliente.resources
 C:\Users\Filipe\Desktop\Projeto\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeLogin.ALT_Funcionario.resources
+C:\Users\Guilherme\Desktop\projeto final\projeto\SistemaDemanutencao\SistemaDeLogin\bin\Debug\SistemaDeLogin.exe.config
+C:\Users\Guilherme\Desktop\projeto final\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeLogin.exe
+C:\Users\Guilherme\Desktop\projeto final\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeLogin.pdb
+C:\Users\Guilherme\Desktop\projeto final\projeto\SistemaDemanutencao\SistemaDeLogin\bin\Debug\SistemaDeLogin.exe
+C:\Users\Guilherme\Desktop\projeto final\projeto\SistemaDemanutencao\SistemaDeLogin\bin\Debug\SistemaDeLogin.pdb
+C:\Users\Guilherme\Desktop\projeto final\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeManutencao.csprojResolveAssemblyReference.cache
+C:\Users\Guilherme\Desktop\projeto final\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeLogin.AlterarConta.resources
+C:\Users\Guilherme\Desktop\projeto final\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeLogin.AlterarConta_Cliente.resources
+C:\Users\Guilherme\Desktop\projeto final\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeLogin.AlterarEquip.resources
+C:\Users\Guilherme\Desktop\projeto final\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeLogin.ConsultaClientes.resources
+C:\Users\Guilherme\Desktop\projeto final\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeLogin.ConsultaFornecedor.resources
+C:\Users\Guilherme\Desktop\projeto final\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeLogin.ConsultaEquips.resources
+C:\Users\Guilherme\Desktop\projeto final\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeLogin.ConsultaUsuarios.resources
+C:\Users\Guilherme\Desktop\projeto final\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeLogin.ExcluirConta.resources
+C:\Users\Guilherme\Desktop\projeto final\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeLogin.ExcluirConta_Cliente.resources
+C:\Users\Guilherme\Desktop\projeto final\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeLogin.ExcluirEquip.resources
+C:\Users\Guilherme\Desktop\projeto final\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeLogin.ExcluirFornecedor.resources
+C:\Users\Guilherme\Desktop\projeto final\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeLogin.IncluirConta.resources
+C:\Users\Guilherme\Desktop\projeto final\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeLogin.IncluirConta_Cliente.resources
+C:\Users\Guilherme\Desktop\projeto final\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeLogin.IncluirEquip.resources
+C:\Users\Guilherme\Desktop\projeto final\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeLogin.ALT_Funcionario.resources
+C:\Users\Guilherme\Desktop\projeto final\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeLogin.IncluirFornecedor.resources
+C:\Users\Guilherme\Desktop\projeto final\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeLogin.Login.resources
+C:\Users\Guilherme\Desktop\projeto final\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeLogin.Menu.resources
+C:\Users\Guilherme\Desktop\projeto final\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeLogin.Menu_Cliente.resources
+C:\Users\Guilherme\Desktop\projeto final\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeLogin.Properties.Resources.resources
+C:\Users\Guilherme\Desktop\projeto final\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeManutencao.csproj.GenerateResource.Cache

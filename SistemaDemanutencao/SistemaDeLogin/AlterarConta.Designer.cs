@@ -98,9 +98,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(9, 62);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 13);
+            this.label3.Size = new System.Drawing.Size(36, 13);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Usuário:";
+            this.label3.Text = "Login:";
             // 
             // label4
             // 
@@ -116,7 +116,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.SystemColors.Control;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(31, 9);
+            this.label5.Location = new System.Drawing.Point(18, 9);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(168, 31);
             this.label5.TabIndex = 6;
