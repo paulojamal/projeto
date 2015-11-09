@@ -221,7 +221,6 @@
             this.label10.Size = new System.Drawing.Size(43, 13);
             this.label10.TabIndex = 18;
             this.label10.Text = "Estado:";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // label9
             // 
@@ -238,7 +237,6 @@
             this.PSQ_Estado.Name = "PSQ_Estado";
             this.PSQ_Estado.Size = new System.Drawing.Size(100, 20);
             this.PSQ_Estado.TabIndex = 3;
-            this.PSQ_Estado.TextChanged += new System.EventHandler(this.PSQ_Estado_TextChanged);
             // 
             // label8
             // 
@@ -266,7 +264,6 @@
             this.label6.Size = new System.Drawing.Size(52, 13);
             this.label6.TabIndex = 14;
             this.label6.Text = "Telefone:";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
             // 
@@ -294,7 +291,6 @@
             this.label3.Size = new System.Drawing.Size(38, 13);
             this.label3.TabIndex = 11;
             this.label3.Text = "Nome:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -327,7 +323,6 @@
             this.PSQ_Cidade.Name = "PSQ_Cidade";
             this.PSQ_Cidade.Size = new System.Drawing.Size(100, 20);
             this.PSQ_Cidade.TabIndex = 6;
-            this.PSQ_Cidade.TextChanged += new System.EventHandler(this.PSQ_Cidade_TextChanged);
             // 
             // PSQ_Nome
             // 
@@ -342,7 +337,6 @@
             this.PSQ_Rua.Name = "PSQ_Rua";
             this.PSQ_Rua.Size = new System.Drawing.Size(100, 20);
             this.PSQ_Rua.TabIndex = 4;
-            this.PSQ_Rua.TextChanged += new System.EventHandler(this.PSQ_Rua_TextChanged);
             // 
             // PSQ_Login
             // 

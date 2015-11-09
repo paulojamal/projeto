@@ -81,21 +81,12 @@ namespace SistemaDeLogin
 
                 LV_Fornecedor.Items.Add(objListView);
 
-
-                
-
-
             }
         }
 
         private void Pesquisar_Click(object sender, EventArgs e)
         {
             resultadoPesquisa();
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

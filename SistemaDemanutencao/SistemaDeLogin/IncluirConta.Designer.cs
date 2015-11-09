@@ -45,12 +45,12 @@
             this.newLogin.Name = "newLogin";
             this.newLogin.Size = new System.Drawing.Size(100, 20);
             this.newLogin.TabIndex = 0;
-            this.newLogin.TextChanged += new System.EventHandler(this.newLogin_TextChanged);
             // 
             // newSenha
             // 
             this.newSenha.Location = new System.Drawing.Point(42, 61);
             this.newSenha.Name = "newSenha";
+            this.newSenha.PasswordChar = '*';
             this.newSenha.Size = new System.Drawing.Size(100, 20);
             this.newSenha.TabIndex = 1;
             // 

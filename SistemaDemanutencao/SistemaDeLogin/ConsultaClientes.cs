@@ -12,14 +12,11 @@ namespace SistemaDeLogin
 {
     public partial class ConsultaClientes : Form
     {
-        
-
         public ConsultaClientes()
         {
             InitializeComponent();
            
         }
-
         private void ConsultaUsuarios_Load(object sender, EventArgs e)
         {
             carregarListView();
@@ -80,8 +77,9 @@ namespace SistemaDeLogin
             List<ADM_BD_Cliente.Clientes> lstCli = new List<ADM_BD_Cliente.Clientes>();
             lstCli = cli.Pesquisar(login, senha, nome, sobrenome, id, telefone, rua, numero, bairro, cidade, estado);
             LV_Cliente.Items.Clear();
-            foreach (var itemLista in lstCli)
-            {
+
+            foreach (var itemLista in lstCli) { 
+
                 ListViewItem objListView = new ListViewItem();
                 objListView.Text = itemLista.NomeUser;
                 objListView.SubItems.Add(itemLista.SenhaUser);
@@ -96,11 +94,6 @@ namespace SistemaDeLogin
                 objListView.SubItems.Add(itemLista.Estado);
 
                 LV_Cliente.Items.Add(objListView);
-
-
-                
-
-
             }
         }
 
@@ -112,36 +105,6 @@ namespace SistemaDeLogin
         private void button2_Click(object sender, EventArgs e)
         {
             carregarListView();
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PSQ_Cidade_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PSQ_Estado_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PSQ_Rua_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

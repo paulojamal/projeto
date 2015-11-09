@@ -32,7 +32,6 @@
             this.codigo = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cliente = new System.Windows.Forms.TextBox();
-            this.tipo = new System.Windows.Forms.TextBox();
             this.prioridade = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,6 +40,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tipo = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +50,6 @@
             this.codigo.Name = "codigo";
             this.codigo.Size = new System.Drawing.Size(100, 20);
             this.codigo.TabIndex = 0;
-            this.codigo.TextChanged += new System.EventHandler(this.codigo_TextChanged);
             // 
             // contextMenuStrip1
             // 
@@ -63,13 +62,6 @@
             this.cliente.Name = "cliente";
             this.cliente.Size = new System.Drawing.Size(100, 20);
             this.cliente.TabIndex = 2;
-            // 
-            // tipo
-            // 
-            this.tipo.Location = new System.Drawing.Point(70, 70);
-            this.tipo.Name = "tipo";
-            this.tipo.Size = new System.Drawing.Size(100, 20);
-            this.tipo.TabIndex = 3;
             // 
             // prioridade
             // 
@@ -138,11 +130,11 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.tipo);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.codigo);
             this.groupBox1.Controls.Add(this.cliente);
             this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.tipo);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.prioridade);
             this.groupBox1.Controls.Add(this.label3);
@@ -153,7 +145,20 @@
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados para a inclusão";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // tipo
+            // 
+            this.tipo.FormattingEnabled = true;
+            this.tipo.Items.AddRange(new object[] {
+            "",
+            "Computador",
+            "Tablet",
+            "Impressora",
+            "Componentes"});
+            this.tipo.Location = new System.Drawing.Point(70, 70);
+            this.tipo.Name = "tipo";
+            this.tipo.Size = new System.Drawing.Size(100, 21);
+            this.tipo.TabIndex = 13;
             // 
             // IncluirEquip
             // 
@@ -176,7 +181,6 @@
         private System.Windows.Forms.TextBox codigo;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.TextBox cliente;
-        private System.Windows.Forms.TextBox tipo;
         private System.Windows.Forms.TextBox prioridade;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -185,5 +189,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ComboBox tipo;
     }
 }

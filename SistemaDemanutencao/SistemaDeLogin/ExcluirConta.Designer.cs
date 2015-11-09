@@ -69,7 +69,6 @@
             this.nDel.Name = "nDel";
             this.nDel.Size = new System.Drawing.Size(100, 20);
             this.nDel.TabIndex = 0;
-            this.nDel.TextChanged += new System.EventHandler(this.nDel_TextChanged);
             // 
             // button2
             // 
@@ -89,7 +88,6 @@
             this.label2.Size = new System.Drawing.Size(46, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Usuário:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -102,7 +100,6 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Excluir conta";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -124,7 +121,6 @@
             this.Controls.Add(this.nDel);
             this.Name = "ExcluirConta";
             this.Text = "ExcluirConta";
-            this.Load += new System.EventHandler(this.ExcluirConta_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

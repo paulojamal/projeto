@@ -12,30 +12,26 @@ namespace SistemaDeLogin
 {
     public partial class ConsultaEquips : Form
     {
-        
-
         public ConsultaEquips()
         {
             InitializeComponent();
             
         }
-
         private void ConsultaUsuarios_Load(object sender, EventArgs e)
         {
-
             carregarListView();
             PSQ_Codigo.Text = "";
             PSQ_Cliente.Text = "";
             PSQ_Tipo.Text = "";
             PSQ_Prioridade.Text = "";
         }
-
         private void carregarListView()
         {
             ADM_BD_Equip equip = new ADM_BD_Equip();
             List<ADM_BD_Equip.Equips> lstEquip = new List<ADM_BD_Equip.Equips>();
             lstEquip = equip.Consultar();
             LV_Equip.Items.Clear();
+
             foreach (var itemLista in lstEquip) {
                 ListViewItem objListView = new ListViewItem();
                 objListView.Text = itemLista.Codigo;
@@ -44,15 +40,12 @@ namespace SistemaDeLogin
                 objListView.SubItems.Add(itemLista.Prioridade);
                 LV_Equip.Items.Add(objListView);
             }
-            
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             carregarListView();
         }
-
-        
         private void resultadoPesquisa()
         {
             string codigo = PSQ_Codigo.Text;
@@ -72,11 +65,6 @@ namespace SistemaDeLogin
                 objListView.SubItems.Add(itemLista.Tipo);
                 objListView.SubItems.Add(itemLista.Prioridade);
                 LV_Equip.Items.Add(objListView);
-
-
-                
-
-
             }
         }
 
@@ -84,7 +72,5 @@ namespace SistemaDeLogin
         {
             resultadoPesquisa();
         }
-
-
     }
 }

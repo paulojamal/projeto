@@ -32,9 +32,6 @@ namespace SistemaDeLogin
                 MessageBox.Show("ERRO NA INSERSÃO !" + ex.Message);
             }
         }
-
-
-
         private void Enviar_Click(object sender, EventArgs e)
         {
             IncluirBD();

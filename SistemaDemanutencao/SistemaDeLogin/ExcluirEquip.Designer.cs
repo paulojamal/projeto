@@ -97,7 +97,6 @@
             this.Controls.Add(this.excCodigo);
             this.Name = "ExcluirEquip";
             this.Text = "ExcluirEquip";
-            this.Load += new System.EventHandler(this.ExcluirEquip_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

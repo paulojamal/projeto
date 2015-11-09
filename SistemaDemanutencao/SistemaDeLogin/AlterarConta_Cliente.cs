@@ -51,25 +51,5 @@ namespace SistemaDeLogin
             estado.Text = "";
             this.Close();
         }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pesquisaLogin_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AlterarConta_Cliente_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

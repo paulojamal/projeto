@@ -123,7 +123,6 @@
             this.label4.Size = new System.Drawing.Size(37, 13);
             this.label4.TabIndex = 9;
             this.label4.Text = "Bairro:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -187,7 +186,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Tag = "Dados da inclusão";
             this.groupBox1.Text = "Dados da inclusão";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // IncluirFornecedor
             // 

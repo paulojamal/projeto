@@ -207,6 +207,7 @@
             // 
             this.newSenha.Location = new System.Drawing.Point(64, 48);
             this.newSenha.Name = "newSenha";
+            this.newSenha.PasswordChar = '*';
             this.newSenha.Size = new System.Drawing.Size(100, 20);
             this.newSenha.TabIndex = 31;
             // 

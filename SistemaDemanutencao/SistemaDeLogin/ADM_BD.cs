@@ -13,7 +13,6 @@ namespace SistemaDeLogin
     public class ADM_BD
     {
         public  static string mp = Environment.CurrentDirectory;
-
         public static String _strCon = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=" + mp + "\\BD_Usuario.mdf;Integrated Security=True;Connect Timeout=30";
 
         public const String strInserir = "INSERT INTO tb_Usuarios(NomeUser, SenhaUser) VALUES(@NomeUser, @SenhaUser)";
@@ -22,13 +21,10 @@ namespace SistemaDeLogin
         public const String strSelecionar = "SELECT COUNT(*) FROM tb_Usuarios WHERE NomeUser = @NomeUser AND SenhaUser =@SenhaUser";
         public const String strConsultar = "SELECT NomeUser , SenhaUser FROM tb_Usuarios";
         
-
         public class Usuarios
         {
             public String NomeUser { get; set; }
             public String SenhaUser { get; set; }
-
-
         }
  
         public void Inserir(String Nome, String Senha)
@@ -43,43 +39,35 @@ namespace SistemaDeLogin
                     objCmd.ExecuteNonQuery();
                     objCon.Close();
                 }
-
             }
-
         }
 
         public void Atualizar(String Nome, String Senha)
         {
-
             using (SqlConnection objCon = new SqlConnection(_strCon))
             {
                 using (SqlCommand objCmd = new SqlCommand(strAlterar, objCon))
                 {
-
                     objCmd.Parameters.AddWithValue("@NomeUser", Nome);
                     objCmd.Parameters.AddWithValue("@SenhaUser", Senha);
                     objCon.Open();
                     objCmd.ExecuteNonQuery();
                     objCon.Close();
                 }
-
             }
         }
 
         public void Excluir(String Nome)
         {
-
             using (SqlConnection objCon = new SqlConnection(_strCon))
             {
                 using (SqlCommand objCmd = new SqlCommand(strExcluir, objCon))
                 {
-
                     objCmd.Parameters.AddWithValue("@NomeUser", Nome);
                     objCon.Open();
                     objCmd.ExecuteNonQuery();
                     objCon.Close();
                 }
-
             }
         }
 
@@ -117,11 +105,10 @@ namespace SistemaDeLogin
                 using (SqlCommand objCmd = new SqlCommand(strConsultar, objCon))
                 {
                     objCon.Open();
-
                     SqlDataReader objDataReader = objCmd.ExecuteReader();
+
                     if (objDataReader.HasRows)
                     {
-
                         while (objDataReader.Read())
                         {
                             Usuarios objUsuarios = new Usuarios();
@@ -129,20 +116,13 @@ namespace SistemaDeLogin
                             objUsuarios.SenhaUser = objDataReader["SenhaUser"].ToString();
                             lstUsuarios.Add(objUsuarios);
                         }
-
                         objCon.Close();
-
                     }
-
-
                     objCon.Close();
                 }
                 return lstUsuarios;
             }
-
         }
-
-
                public List<Usuarios> Pesquisar(String Nome, String Senha)
         {
              string strPesquisa = "SELECT NomeUser , SenhaUser FROM tb_Usuarios WHERE 1=1 " ;
@@ -166,15 +146,11 @@ namespace SistemaDeLogin
                     {
                         objCmd.Parameters.AddWithValue("@SenhaUser", "%" + Senha + "%");
                     }
-
-                    
-                    
                     objCon.Open();
 
                     SqlDataReader objDataReader = objCmd.ExecuteReader();
                     if (objDataReader.HasRows)
                     {
-
                         while (objDataReader.Read())
                         {
                             Usuarios objUsuarios = new Usuarios();
@@ -184,17 +160,14 @@ namespace SistemaDeLogin
                         }
 
                         objCon.Close();
-
                     }
-
-
                     objCon.Close();
                 }
                 return lstUsuarios;
             }
 
         }
-        }
+    }
 }
 
 

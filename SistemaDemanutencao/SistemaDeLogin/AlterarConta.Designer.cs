@@ -27,11 +27,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.pesquisaLogin = new System.Windows.Forms.TextBox();
-            this.alteraSenha = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.alteraSenha = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -93,13 +93,6 @@
             this.pesquisaLogin.Size = new System.Drawing.Size(100, 20);
             this.pesquisaLogin.TabIndex = 1;
             // 
-            // alteraSenha
-            // 
-            this.alteraSenha.Location = new System.Drawing.Point(74, 13);
-            this.alteraSenha.Name = "alteraSenha";
-            this.alteraSenha.Size = new System.Drawing.Size(100, 20);
-            this.alteraSenha.TabIndex = 2;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -142,6 +135,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados para alterar";
             // 
+            // alteraSenha
+            // 
+            this.alteraSenha.Location = new System.Drawing.Point(74, 13);
+            this.alteraSenha.Name = "alteraSenha";
+            this.alteraSenha.PasswordChar = '*';
+            this.alteraSenha.Size = new System.Drawing.Size(100, 20);
+            this.alteraSenha.TabIndex = 2;
+            // 
             // AlterarConta
             // 
             this.ClientSize = new System.Drawing.Size(207, 196);
@@ -151,7 +152,6 @@
             this.Controls.Add(this.pesquisaLogin);
             this.Name = "AlterarConta";
             this.Text = "AlterarConta";
-            this.Load += new System.EventHandler(this.AlterarConta_Load_1);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -168,10 +168,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox pesquisaLogin;
-        private System.Windows.Forms.TextBox alteraSenha;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox alteraSenha;
     }
 }

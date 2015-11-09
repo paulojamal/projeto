@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.pesquisaCod = new System.Windows.Forms.TextBox();
-            this.newPrioridade = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -40,6 +39,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.newPrioridade = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,13 +49,6 @@
             this.pesquisaCod.Name = "pesquisaCod";
             this.pesquisaCod.Size = new System.Drawing.Size(100, 20);
             this.pesquisaCod.TabIndex = 0;
-            // 
-            // newPrioridade
-            // 
-            this.newPrioridade.Location = new System.Drawing.Point(93, 13);
-            this.newPrioridade.Name = "newPrioridade";
-            this.newPrioridade.Size = new System.Drawing.Size(100, 20);
-            this.newPrioridade.TabIndex = 1;
             // 
             // label1
             // 
@@ -128,12 +121,11 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "Alterar equipamento";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.newPrioridade);
+            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label3);
@@ -155,6 +147,20 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "* os campos que ficarem em branco farão que não altere o valor anterior";
             // 
+            // newPrioridade
+            // 
+            this.newPrioridade.FormattingEnabled = true;
+            this.newPrioridade.Items.AddRange(new object[] {
+            "",
+            "Baixa",
+            "Média",
+            "Alta",
+            "Urgente"});
+            this.newPrioridade.Location = new System.Drawing.Point(93, 13);
+            this.newPrioridade.Name = "newPrioridade";
+            this.newPrioridade.Size = new System.Drawing.Size(100, 21);
+            this.newPrioridade.TabIndex = 12;
+            // 
             // AlterarEquip
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -167,7 +173,6 @@
             this.Controls.Add(this.pesquisaCod);
             this.Name = "AlterarEquip";
             this.Text = "AlterarEquip";
-            this.Load += new System.EventHandler(this.AlterarEquip_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -178,7 +183,6 @@
         #endregion
 
         private System.Windows.Forms.TextBox pesquisaCod;
-        private System.Windows.Forms.TextBox newPrioridade;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
@@ -189,5 +193,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox newPrioridade;
     }
 }

@@ -35,7 +35,6 @@
             this.alteraSenha = new System.Windows.Forms.TextBox();
             this.nome = new System.Windows.Forms.TextBox();
             this.sobrenome = new System.Windows.Forms.TextBox();
-            this.identidade = new System.Windows.Forms.TextBox();
             this.telefone = new System.Windows.Forms.MaskedTextBox();
             this.rua = new System.Windows.Forms.TextBox();
             this.n = new System.Windows.Forms.TextBox();
@@ -54,6 +53,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.identidade = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -91,14 +91,15 @@
             this.pesquisaLogin.Name = "pesquisaLogin";
             this.pesquisaLogin.Size = new System.Drawing.Size(100, 20);
             this.pesquisaLogin.TabIndex = 3;
-            this.pesquisaLogin.TextChanged += new System.EventHandler(this.pesquisaLogin_TextChanged);
             // 
             // alteraSenha
             // 
             this.alteraSenha.Location = new System.Drawing.Point(75, 13);
             this.alteraSenha.Name = "alteraSenha";
+            this.alteraSenha.PasswordChar = '*';
             this.alteraSenha.Size = new System.Drawing.Size(100, 20);
             this.alteraSenha.TabIndex = 4;
+            this.alteraSenha.TabStop = false;
             // 
             // nome
             // 
@@ -114,19 +115,12 @@
             this.sobrenome.Size = new System.Drawing.Size(100, 20);
             this.sobrenome.TabIndex = 6;
             // 
-            // identidade
-            // 
-            this.identidade.Location = new System.Drawing.Point(75, 91);
-            this.identidade.Name = "identidade";
-            this.identidade.Size = new System.Drawing.Size(100, 20);
-            this.identidade.TabIndex = 7;
-            // 
             // telefone
             // 
             this.telefone.Location = new System.Drawing.Point(75, 117);
             this.telefone.Mask = "(00)0000-0000";
             this.telefone.Name = "telefone";
-            this.telefone.Size = new System.Drawing.Size(100, 20);
+            this.telefone.Size = new System.Drawing.Size(85, 20);
             this.telefone.TabIndex = 42;
             // 
             // rua
@@ -244,7 +238,6 @@
             this.label11.Size = new System.Drawing.Size(43, 13);
             this.label11.TabIndex = 56;
             this.label11.Text = "Estado:";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label12
             // 
@@ -257,10 +250,10 @@
             this.label12.TabIndex = 57;
             this.label12.Text = "Alterar conta";
             this.label12.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.identidade);
             this.groupBox1.Controls.Add(this.alteraSenha);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label11);
@@ -270,7 +263,6 @@
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.sobrenome);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.identidade);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.telefone);
             this.groupBox1.Controls.Add(this.label6);
@@ -298,6 +290,14 @@
             this.label13.TabIndex = 59;
             this.label13.Text = "* os campos que ficarem em branco farão que não altere o valor anterior";
             // 
+            // identidade
+            // 
+            this.identidade.Location = new System.Drawing.Point(75, 91);
+            this.identidade.Mask = "000,000,000-00";
+            this.identidade.Name = "identidade";
+            this.identidade.Size = new System.Drawing.Size(85, 20);
+            this.identidade.TabIndex = 57;
+            // 
             // AlterarConta_Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -310,7 +310,6 @@
             this.Controls.Add(this.label1);
             this.Name = "AlterarConta_Cliente";
             this.Text = "AlterarConta_Cliente";
-            this.Load += new System.EventHandler(this.AlterarConta_Cliente_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -327,7 +326,6 @@
         private System.Windows.Forms.TextBox alteraSenha;
         private System.Windows.Forms.TextBox nome;
         private System.Windows.Forms.TextBox sobrenome;
-        private System.Windows.Forms.TextBox identidade;
         private System.Windows.Forms.MaskedTextBox telefone;
         private System.Windows.Forms.TextBox rua;
         private System.Windows.Forms.TextBox n;
@@ -346,5 +344,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.MaskedTextBox identidade;
     }
 }

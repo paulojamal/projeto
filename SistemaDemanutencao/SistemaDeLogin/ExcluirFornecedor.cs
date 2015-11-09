@@ -37,15 +37,5 @@ namespace SistemaDeLogin
             excNome.Text = "";
             this.Close();
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ExcluirFornecedor_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

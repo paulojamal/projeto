@@ -50,7 +50,6 @@
             this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Nome:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button1
             // 
@@ -98,7 +97,6 @@
             this.Controls.Add(this.excNome);
             this.Name = "ExcluirFornecedor";
             this.Text = "ExcluirFornecedor";
-            this.Load += new System.EventHandler(this.ExcluirFornecedor_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

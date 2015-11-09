@@ -47,6 +47,7 @@
             // 
             this.textSenha.Location = new System.Drawing.Point(76, 95);
             this.textSenha.Name = "textSenha";
+            this.textSenha.PasswordChar = '*';
             this.textSenha.Size = new System.Drawing.Size(96, 20);
             this.textSenha.TabIndex = 1;
             // 

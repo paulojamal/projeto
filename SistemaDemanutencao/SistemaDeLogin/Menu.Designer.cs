@@ -185,7 +185,7 @@
             this.fornecedoresToolStripMenuItem});
             this.menuStrip3.Location = new System.Drawing.Point(0, 0);
             this.menuStrip3.Name = "menuStrip3";
-            this.menuStrip3.Size = new System.Drawing.Size(436, 24);
+            this.menuStrip3.Size = new System.Drawing.Size(444, 24);
             this.menuStrip3.TabIndex = 0;
             this.menuStrip3.Text = "menuStrip3";
             // 
@@ -377,16 +377,16 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.Control;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(24, 120);
+            this.label1.Location = new System.Drawing.Point(12, 120);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(390, 16);
+            this.label1.Size = new System.Drawing.Size(408, 16);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Bem-Vindo! Você está logado com privilégios de um funcionário";
+            this.label1.Text = "Bem-Vindo! Você está logado com privilégios de um Administrador";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // Menu
             // 
-            this.ClientSize = new System.Drawing.Size(436, 190);
+            this.ClientSize = new System.Drawing.Size(444, 190);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.menuStrip3);

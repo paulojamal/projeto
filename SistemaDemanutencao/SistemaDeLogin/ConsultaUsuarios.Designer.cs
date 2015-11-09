@@ -84,7 +84,6 @@
             this.PSQ_Login.Name = "PSQ_Login";
             this.PSQ_Login.Size = new System.Drawing.Size(100, 20);
             this.PSQ_Login.TabIndex = 3;
-            this.PSQ_Login.TextChanged += new System.EventHandler(this.PSQ_Login_TextChanged);
             // 
             // PSQ_Senha
             // 
@@ -101,7 +100,6 @@
             this.label1.Size = new System.Drawing.Size(36, 13);
             this.label1.TabIndex = 5;
             this.label1.Text = "Login:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -147,7 +145,6 @@
             this.label3.TabIndex = 9;
             this.label3.Text = "Funcionários cadastrados";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // groupBox2
             // 

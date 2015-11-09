@@ -22,7 +22,6 @@ namespace SistemaDeLogin
             try
             {
                 ADM_BD_Fornecedor cbd = new ADM_BD_Fornecedor();
-
                 cbd.Inserir(nome.Text, CNPJ.Text, rua.Text, bairro.Text, cidade.Text, CEP.Text);
                 MessageBox.Show("FORNECEDOR INSERIDO !");
             }
@@ -41,16 +40,6 @@ namespace SistemaDeLogin
             cidade.Text = "";
             CEP.Text = "";
             this.Close();
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -13,20 +13,17 @@ namespace SistemaDeLogin
     public partial class ConsultaUsuarios : Form
     {
         
-
         public ConsultaUsuarios()
         {
             InitializeComponent();
             
         }
-        
         private void ConsultaUsuarios_Load(object sender, EventArgs e)
         {
             carregarListView();
             PSQ_Login.Text = "";
             PSQ_Senha.Text = "";
         }
-
         private void carregarListView()
         {
             ADM_BD usu = new ADM_BD();
@@ -59,11 +56,6 @@ namespace SistemaDeLogin
                 objListView.SubItems.Add(itemLista.SenhaUser);
 
                 LV_Usuario.Items.Add(objListView);
-
-
-                
-
-
             }
         }
 
@@ -71,27 +63,10 @@ namespace SistemaDeLogin
         {
             resultadoPesquisa();
 
-
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             carregarListView();
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PSQ_Login_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -253,7 +253,6 @@
             this.label7.TabIndex = 14;
             this.label7.Text = "Fornecedores cadastrados";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // groupBox2
             // 

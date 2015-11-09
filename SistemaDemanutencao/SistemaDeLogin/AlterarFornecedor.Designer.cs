@@ -164,7 +164,6 @@
             this.label7.TabIndex = 13;
             this.label7.Text = "Alterar fornecedor";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // groupBox1
             // 
@@ -207,7 +206,6 @@
             this.Controls.Add(this.label1);
             this.Name = "AlterarFornecedor";
             this.Text = "AlterarFornecedor";
-            this.Load += new System.EventHandler(this.AlterarFornecedor_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

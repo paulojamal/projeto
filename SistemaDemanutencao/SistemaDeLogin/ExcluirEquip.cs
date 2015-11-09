@@ -37,10 +37,5 @@ namespace SistemaDeLogin
             excCodigo.Text = "";
             this.Close();
         }
-
-        private void ExcluirEquip_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

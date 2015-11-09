@@ -39,10 +39,5 @@ namespace SistemaDeLogin
             newSenha.Text = "";
             this.Close();
         }
-
-        private void newLogin_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
-    }
+}

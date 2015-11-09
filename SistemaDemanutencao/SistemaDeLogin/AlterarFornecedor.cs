@@ -40,15 +40,5 @@ namespace SistemaDeLogin
             newCEP.Text = "";
             this.Close();
         }
-
-        private void AlterarFornecedor_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

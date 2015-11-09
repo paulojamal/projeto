@@ -44,10 +44,5 @@ namespace SistemaDeLogin
 
             this.Close();
         }
-
-        private void AlterarConta_Load_1(object sender, EventArgs e)
-        {
-
-        }
     }
 }

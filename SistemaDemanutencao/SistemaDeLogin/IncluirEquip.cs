@@ -39,15 +39,5 @@ namespace SistemaDeLogin
             prioridade.Text = "";
             this.Close();
         }
-
-        private void codigo_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
     }
 }
