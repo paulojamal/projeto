@@ -66,7 +66,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.Control;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(9, 9);
+            this.label3.Location = new System.Drawing.Point(6, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(169, 31);
             this.label3.TabIndex = 6;
@@ -77,7 +77,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(9, 40);
+            this.label2.Location = new System.Drawing.Point(6, 40);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(99, 31);
             this.label2.TabIndex = 7;
@@ -85,9 +85,10 @@
             // 
             // ExcluirConta_Cliente
             // 
+            this.AcceptButton = this.Enviar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(171, 172);
+            this.ClientSize = new System.Drawing.Size(180, 172);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.nDel);

@@ -115,7 +115,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.SystemColors.Control;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(52, 9);
+            this.label5.Location = new System.Drawing.Point(3, 9);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(257, 31);
             this.label5.TabIndex = 9;
@@ -163,9 +163,10 @@
             // 
             // AlterarEquip
             // 
+            this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(355, 254);
+            this.ClientSize = new System.Drawing.Size(262, 254);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label5);

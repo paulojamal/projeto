@@ -144,7 +144,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.SystemColors.Control;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(55, 9);
+            this.label7.Location = new System.Drawing.Point(6, 9);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(231, 31);
             this.label7.TabIndex = 13;
@@ -198,9 +198,10 @@
             // 
             // ALT_Funcionario
             // 
+            this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(358, 309);
+            this.ClientSize = new System.Drawing.Size(245, 309);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label7);

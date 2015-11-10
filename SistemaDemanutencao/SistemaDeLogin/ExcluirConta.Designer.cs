@@ -113,6 +113,7 @@
             // 
             // ExcluirConta
             // 
+            this.AcceptButton = this.button2;
             this.ClientSize = new System.Drawing.Size(178, 173);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);

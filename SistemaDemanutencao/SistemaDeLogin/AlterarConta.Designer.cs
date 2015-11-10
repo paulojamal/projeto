@@ -145,6 +145,7 @@
             // 
             // AlterarConta
             // 
+            this.AcceptButton = this.button2;
             this.ClientSize = new System.Drawing.Size(207, 196);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label5);

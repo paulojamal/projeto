@@ -244,7 +244,7 @@
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.SystemColors.Control;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(96, 9);
+            this.label12.Location = new System.Drawing.Point(31, 9);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(168, 31);
             this.label12.TabIndex = 57;
@@ -300,9 +300,10 @@
             // 
             // AlterarConta_Cliente
             // 
+            this.AcceptButton = this.Enviar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(345, 446);
+            this.ClientSize = new System.Drawing.Size(240, 446);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label12);

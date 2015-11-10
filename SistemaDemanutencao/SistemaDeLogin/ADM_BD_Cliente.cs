@@ -74,7 +74,7 @@ namespace SistemaDeLogin
                 {
                     strAlterar += " , Rua = @Rua ";
                 }
-                if (strAlterar != "")
+                if (N != "")
                 {
                     strAlterar += " , Numero = @Numero ";
                 }

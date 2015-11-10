@@ -121,7 +121,7 @@
             this.groupBox1.Controls.Add(this.PSQ_Rua);
             this.groupBox1.Location = new System.Drawing.Point(478, 123);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(237, 216);
+            this.groupBox1.Size = new System.Drawing.Size(237, 195);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pesquisa";
@@ -182,7 +182,7 @@
             // 
             // Pesquisar
             // 
-            this.Pesquisar.Location = new System.Drawing.Point(11, 187);
+            this.Pesquisar.Location = new System.Drawing.Point(79, 165);
             this.Pesquisar.Name = "Pesquisar";
             this.Pesquisar.Size = new System.Drawing.Size(75, 23);
             this.Pesquisar.TabIndex = 6;
@@ -266,6 +266,7 @@
             // 
             // ConsultaFornecedor
             // 
+            this.AcceptButton = this.Pesquisar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(734, 419);
