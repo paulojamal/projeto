@@ -32,14 +32,22 @@ namespace SistemaDeLogin
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            IncluirBD();
-            nome.Text = "";
-            CNPJ.Text = "";
-            rua.Text = "";
-            bairro.Text = "";
-            cidade.Text = "";
-            CEP.Text = "";
-            this.Close();
+            if (nome.Text != "" && CNPJ.Text != "  .   .   /    -" && rua.Text != "" && bairro.Text != "" && cidade.Text != "" && CEP.Text != "   .  -")
+            {
+                IncluirBD();
+                nome.Text = "";
+                CNPJ.Text = "";
+                rua.Text = "";
+                bairro.Text = "";
+                cidade.Text = "";
+                CEP.Text = "";
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("PREENCHA TODOS OS CAMPOS !");
+            }
+
         }
     }
 }

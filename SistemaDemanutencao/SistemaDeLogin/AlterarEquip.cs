@@ -30,13 +30,21 @@ namespace SistemaDeLogin
             }
         }
         private void button1_Click(object sender, EventArgs e)
-        {
-            AlterarBD();
-            pesquisaCod.Text = "";
-            newCliente.Text = "";
-            newTipo.Text = "";
-            newPrioridade.Text = "";
-            this.Close();
+        {   
+            if(pesquisaCod.Text != "")
+            {
+                AlterarBD();
+                pesquisaCod.Text = "";
+                newCliente.Text = "";
+                newTipo.Text = "";
+                newPrioridade.Text = "";
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("DIGITE O CÓDIGO PARA MUDAR OS DADOS !");
+            }
+
 
         }
     }

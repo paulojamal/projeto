@@ -35,7 +35,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.bairro = new System.Windows.Forms.TextBox();
             this.cidade = new System.Windows.Forms.TextBox();
-            this.CEP = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -43,6 +42,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.CNPJ = new System.Windows.Forms.MaskedTextBox();
+            this.CEP = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -101,13 +101,6 @@
             this.cidade.Size = new System.Drawing.Size(108, 20);
             this.cidade.TabIndex = 7;
             // 
-            // CEP
-            // 
-            this.CEP.Location = new System.Drawing.Point(50, 142);
-            this.CEP.Name = "CEP";
-            this.CEP.Size = new System.Drawing.Size(108, 20);
-            this.CEP.TabIndex = 8;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -159,6 +152,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.CEP);
             this.groupBox1.Controls.Add(this.CNPJ);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.nome);
@@ -169,7 +163,6 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.CEP);
             this.groupBox1.Controls.Add(this.bairro);
             this.groupBox1.Controls.Add(this.cidade);
             this.groupBox1.Location = new System.Drawing.Point(18, 65);
@@ -187,6 +180,14 @@
             this.CNPJ.Name = "CNPJ";
             this.CNPJ.Size = new System.Drawing.Size(108, 20);
             this.CNPJ.TabIndex = 15;
+            // 
+            // CEP
+            // 
+            this.CEP.Location = new System.Drawing.Point(50, 142);
+            this.CEP.Mask = "000,00-000";
+            this.CEP.Name = "CEP";
+            this.CEP.Size = new System.Drawing.Size(61, 20);
+            this.CEP.TabIndex = 17;
             // 
             // IncluirFornecedor
             // 
@@ -214,7 +215,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox bairro;
         private System.Windows.Forms.TextBox cidade;
-        private System.Windows.Forms.TextBox CEP;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -222,5 +222,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.MaskedTextBox CNPJ;
+        private System.Windows.Forms.MaskedTextBox CEP;
     }
 }

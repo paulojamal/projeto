@@ -48,7 +48,7 @@ namespace SistemaDeLogin
 
         }
 
-        public void Atualizar(String Login, String Senha, String Name, String Sobrenome, String Identidade, String Telefone, String Rua, String N, String Bairro, String Cidade, String Estado)
+        public void Atualizar(String Login, String Senha, String Name, String Sobrenome, String ID, String Telefone, String Rua, String N, String Bairro, String Cidade, String Estado)
         {
             String strAlterar = "UPDATE tb_Cliente SET NomeUser = @NomeUser ";
 
@@ -66,7 +66,11 @@ namespace SistemaDeLogin
                 {
                     strAlterar += " , SobreNome = @SobreNome ";
                 }
-                if (Telefone != "")
+                if (ID != "   .   .   -")
+                {
+                    strAlterar += " , ID = @ID ";
+                }
+                if (Telefone != "(  )    -")
                 {
                     strAlterar += " , Telefone = @Telefone ";
                 }
@@ -111,7 +115,11 @@ namespace SistemaDeLogin
                     {
                         objCmd.Parameters.AddWithValue("@SobreNome", Sobrenome);
                     }
-                    if (Telefone != "")
+                    if (ID != "   .   .   -")
+                    {
+                        objCmd.Parameters.AddWithValue("@ID", ID);
+                    }
+                    if (Telefone != "(  )    -")
                     {
                         objCmd.Parameters.AddWithValue("@Telefone", Telefone);
                     }

@@ -45,7 +45,7 @@ namespace SistemaDeLogin
         {
             String strAlterar = "UPDATE tb_Fornecedor SET Nome = @Nome";
 
-            if (CNPJ != "")
+            if (CNPJ != "  .   .   /    -")
             {
                 strAlterar += " , CNPJ = @CNPJ ";
             }
@@ -61,7 +61,7 @@ namespace SistemaDeLogin
             {
                 strAlterar += " , Cidade = @Cidade ";
             }
-            if (CEP != "")
+            if (CEP != "   .  -")
             {
                 strAlterar += " , CEP = @CEP ";
             }
@@ -76,7 +76,7 @@ namespace SistemaDeLogin
                     {
                         objCmd.Parameters.AddWithValue("@Nome",Nome);
                     }
-                    if (CNPJ != "")
+                    if (CNPJ != "  .   .   /    -")
                     {
                         objCmd.Parameters.AddWithValue("@CNPJ",CNPJ);
                     }
@@ -92,7 +92,7 @@ namespace SistemaDeLogin
                     {
                         objCmd.Parameters.AddWithValue("@Cidade",Cidade);
                     }
-                    if (CEP != "")
+                    if (CEP != "   .  -")
                     {
                         objCmd.Parameters.AddWithValue("@CEP",CEP);
                     }

@@ -71,6 +71,12 @@
     <Compile Include="AlterarConta.Designer.cs">
       <DependentUpon>AlterarConta.cs</DependentUpon>
     </Compile>
+    <Compile Include="AlterarConta_Cliente_Logado_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlterarConta_Cliente_Logado_Cliente.Designer.cs">
+      <DependentUpon>AlterarConta_Cliente_Logado_Cliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="AlterarConta_Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +189,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AlterarConta.resx">
       <DependentUpon>AlterarConta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlterarConta_Cliente_Logado_Cliente.resx">
+      <DependentUpon>AlterarConta_Cliente_Logado_Cliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AlterarConta_Cliente.resx">
       <DependentUpon>AlterarConta_Cliente.cs</DependentUpon>

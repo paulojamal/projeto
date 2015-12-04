@@ -36,9 +36,17 @@ namespace SistemaDeLogin
         }
         private void Enviar_Click(object sender, EventArgs e)
         {
-            ExcluirBD();
-            nDel.Text = "";
-            this.Close();
+            if (nDel.Text != "")
+            {
+                ExcluirBD();
+                nDel.Text = "";
+                this.Close();
+
+            }
+            else
+            {
+                MessageBox.Show("DIGITE O LOGIN PARA DELETAR !");
+            }
         }
 
 

@@ -37,12 +37,20 @@ namespace SistemaDeLogin
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AlterarBD();
+            if (pesquisaLogin.Text != "" && alteraSenha.Text != "")
+            {
+                AlterarBD();
 
-            pesquisaLogin.Text = "";
-            alteraSenha.Text = "";
+                pesquisaLogin.Text = "";
+                alteraSenha.Text = "";
 
-            this.Close();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("PREENCHA TODOS OS CAMPOS CORRETAMENTE !");
+            }
+
         }
     }
 }

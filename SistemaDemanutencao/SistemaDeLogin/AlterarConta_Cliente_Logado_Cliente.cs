@@ -12,9 +12,9 @@ using System.Data.SqlClient;
 
 namespace SistemaDeLogin
 {
-    public partial class AlterarConta_Cliente : Form
+    public partial class AlterarConta_Cliente_Logado_Cliente : Form
     {
-        public AlterarConta_Cliente()
+        public AlterarConta_Cliente_Logado_Cliente()
         {
             InitializeComponent();
         }
@@ -37,7 +37,9 @@ namespace SistemaDeLogin
 
         private void Enviar_Click_1(object sender, EventArgs e)
         {
-            if (pesquisaLogin.Text != "")
+            ADM_BD_Cliente cli = new ADM_BD_Cliente();
+            Menu_Cliente mc = new Menu_Cliente();
+            if (cli.Logou(pesquisaLogin.Text, senhadi.Text) && pesquisaLogin.Text != "" && senhadi.Text !="")
             {
                 AlterarBD();
                 pesquisaLogin.Text = "";
@@ -51,13 +53,16 @@ namespace SistemaDeLogin
                 bairro.Text = "";
                 cidade.Text = "";
                 estado.Text = "";
+                senhadi.Text = "";
                 this.Close();
             }
             else
             {
-                MessageBox.Show("INSIRA O LOGIN PARA PODER MODIFICAR OS DADOS !");
+                MessageBox.Show("LOGIN OU SENHA INCORRETOS !");
+                pesquisaLogin.Text = "";
+                senhadi.Text = "";
             }
-
+            
         }
     }
 }

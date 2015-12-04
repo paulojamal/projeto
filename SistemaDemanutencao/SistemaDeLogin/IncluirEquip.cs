@@ -32,12 +32,20 @@ namespace SistemaDeLogin
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            IncluirBD();
-            codigo.Text = "";
-            cliente.Text = "";
-            tipo.Text = "";
-            prioridade.Text = "";
-            this.Close();
+            if (codigo.Text != "" && cliente.Text != "" && tipo.Text != "" && prioridade.Text != "")
+            {
+                IncluirBD();
+                codigo.Text = "";
+                cliente.Text = "";
+                tipo.Text = "";
+                prioridade.Text = "";
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("PREENCHA TODOS OS CAMPOS !");
+            }
+
         }
     }
 }

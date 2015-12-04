@@ -31,14 +31,22 @@ namespace SistemaDeLogin
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            AlterarBD();
-            pesquisaNome.Text = "";
-            newCNPJ.Text = "";
-            newRua.Text = "";
-            newBairro.Text = "";
-            newCidade.Text = "";
-            newCep.Text = "";
-            this.Close();
+            if(pesquisaNome.Text != "")
+            {
+                AlterarBD();
+                pesquisaNome.Text = "";
+                newCNPJ.Text = "";
+                newRua.Text = "";
+                newBairro.Text = "";
+                newCidade.Text = "";
+                newCep.Text = "";
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("DIGITE O NOME PARA MUDAR OS DADOS !");
+            }
+
         }
     }
 }

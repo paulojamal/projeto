@@ -1,6 +1,6 @@
 ﻿namespace SistemaDeLogin
 {
-    partial class AlterarConta_Cliente
+    partial class AlterarConta_Cliente_Logado_Cliente
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Enviar = new System.Windows.Forms.Button();
@@ -54,17 +55,21 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.identidade = new System.Windows.Forms.MaskedTextBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.senhadi = new System.Windows.Forms.TextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 59);
+            this.label1.Location = new System.Drawing.Point(29, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 13);
+            this.label1.Size = new System.Drawing.Size(57, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Login para mudar os dados:";
+            this.label1.Text = "Login para";
             // 
             // label2
             // 
@@ -298,18 +303,52 @@
             this.label13.TabIndex = 59;
             this.label13.Text = "* campos vazios não irão alterar o antigo valor";
             // 
-            // AlterarConta_Cliente
+            // senhadi
+            // 
+            this.senhadi.Location = new System.Drawing.Point(128, 76);
+            this.senhadi.Name = "senhadi";
+            this.senhadi.PasswordChar = '*';
+            this.senhadi.Size = new System.Drawing.Size(100, 20);
+            this.senhadi.TabIndex = 60;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(125, 59);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(92, 13);
+            this.label14.TabIndex = 62;
+            this.label14.Text = "Confirme a senha:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(22, 59);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(85, 13);
+            this.label15.TabIndex = 63;
+            this.label15.Text = "mudar os dados:";
+            // 
+            // AlterarConta_Cliente_Logado_Cliente
             // 
             this.AcceptButton = this.Enviar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(240, 446);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.senhadi);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.pesquisaLogin);
             this.Controls.Add(this.label1);
-            this.Name = "AlterarConta_Cliente";
+            this.Name = "AlterarConta_Cliente_Logado_Cliente";
             this.Text = "AlterarConta_Cliente";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -346,5 +385,9 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.MaskedTextBox identidade;
+        private System.Windows.Forms.TextBox senhadi;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
     }
 }

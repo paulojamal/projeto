@@ -12,7 +12,7 @@ namespace SistemaDeLogin
 {
     public partial class Menu_Cliente : Form
     {
-        AlterarConta_Cliente alc = new AlterarConta_Cliente();
+        AlterarConta_Cliente_Logado_Cliente alc = new AlterarConta_Cliente_Logado_Cliente();
         public Menu_Cliente()
         {
             InitializeComponent();

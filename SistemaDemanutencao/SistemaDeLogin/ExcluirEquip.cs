@@ -33,9 +33,17 @@ namespace SistemaDeLogin
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            ExcluirBD();
-            excCodigo.Text = "";
-            this.Close();
+            if (excCodigo.Text != "")
+            {
+                ExcluirBD();
+                excCodigo.Text = "";
+                this.Close();
+
+            }
+            else
+            {
+                MessageBox.Show("DIGITE O CÓDIGO PARA DELETAR !");
+            }
         }
     }
 }

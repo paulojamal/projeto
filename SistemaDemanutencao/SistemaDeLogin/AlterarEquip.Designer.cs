@@ -33,13 +33,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.newCliente = new System.Windows.Forms.TextBox();
-            this.newTipo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.newPrioridade = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.newTipo = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -85,13 +85,6 @@
             this.newCliente.Size = new System.Drawing.Size(100, 20);
             this.newCliente.TabIndex = 5;
             // 
-            // newTipo
-            // 
-            this.newTipo.Location = new System.Drawing.Point(93, 65);
-            this.newTipo.Name = "newTipo";
-            this.newTipo.Size = new System.Drawing.Size(100, 20);
-            this.newTipo.TabIndex = 6;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -124,13 +117,13 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.newTipo);
             this.groupBox1.Controls.Add(this.newPrioridade);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.newCliente);
-            this.groupBox1.Controls.Add(this.newTipo);
             this.groupBox1.Location = new System.Drawing.Point(9, 103);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 122);
@@ -161,6 +154,20 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "* campos vazios não irão alterar o antigo valor";
             // 
+            // newTipo
+            // 
+            this.newTipo.FormattingEnabled = true;
+            this.newTipo.Items.AddRange(new object[] {
+            "",
+            "Computador",
+            "Tablet",
+            "Impressora",
+            "Componentes"});
+            this.newTipo.Location = new System.Drawing.Point(93, 65);
+            this.newTipo.Name = "newTipo";
+            this.newTipo.Size = new System.Drawing.Size(100, 21);
+            this.newTipo.TabIndex = 14;
+            // 
             // AlterarEquip
             // 
             this.AcceptButton = this.button1;
@@ -188,12 +195,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox newCliente;
-        private System.Windows.Forms.TextBox newTipo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox newPrioridade;
+        private System.Windows.Forms.ComboBox newTipo;
     }
 }

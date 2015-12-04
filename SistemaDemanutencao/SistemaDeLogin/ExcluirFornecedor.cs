@@ -33,9 +33,17 @@ namespace SistemaDeLogin
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            ExcluirBD();
-            excNome.Text = "";
-            this.Close();
+            if (excNome.Text != "")
+            {
+                ExcluirBD();
+                excNome.Text = "";
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("DIGITE O NOME DO FORNECEDOR PARA DELETAR !");
+            }
+
         }
     }
 }

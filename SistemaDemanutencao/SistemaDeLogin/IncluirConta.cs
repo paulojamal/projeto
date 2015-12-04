@@ -34,10 +34,17 @@ namespace SistemaDeLogin
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            IncluirBD();
-            newLogin.Text = "";
-            newSenha.Text = "";
-            this.Close();
+            if(newLogin.Text != "" && newSenha.Text != "")
+            {
+                IncluirBD();
+                newLogin.Text = "";
+                newSenha.Text = "";
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("PREENCHA TODOS OS CAMPOS !");
+            }
         }
     }
 }
