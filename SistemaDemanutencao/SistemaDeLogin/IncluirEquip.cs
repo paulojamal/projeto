@@ -47,5 +47,12 @@ namespace SistemaDeLogin
             }
 
         }
+
+        private void IncluirEquip_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'bD_UsuarioDataSet.tb_Cliente' table. You can move, or remove it, as needed.
+            this.tb_ClienteTableAdapter.Fill(this.bD_UsuarioDataSet.tb_Cliente);
+
+        }
     }
 }

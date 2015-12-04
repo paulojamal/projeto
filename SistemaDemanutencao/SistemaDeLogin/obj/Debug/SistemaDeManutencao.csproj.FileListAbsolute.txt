@@ -142,3 +142,4 @@ C:\Users\Guilherme\Desktop\projeto final\projeto\SistemaDemanutencao\SistemaDeLo
 C:\Users\Guilherme\Desktop\projeto final\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeLogin.Properties.Resources.resources
 C:\Users\Guilherme\Desktop\projeto final\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeManutencao.csproj.GenerateResource.Cache
 C:\Users\Guilherme\Desktop\projeto final\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeLogin.AlterarConta_Cliente_Logado_Cliente.resources
+C:\Users\Filipe\Desktop\Projeto\projeto\SistemaDemanutencao\SistemaDeLogin\obj\Debug\SistemaDeLogin.AlterarConta_Cliente_Logado_Cliente.resources

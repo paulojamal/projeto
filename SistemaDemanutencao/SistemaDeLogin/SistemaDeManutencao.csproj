@@ -89,6 +89,16 @@
     <Compile Include="AlterarEquip.Designer.cs">
       <DependentUpon>AlterarEquip.cs</DependentUpon>
     </Compile>
+    <Compile Include="BD_UsuarioDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD_UsuarioDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BD_UsuarioDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD_UsuarioDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ConsultaClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -256,6 +266,28 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="BD_UsuarioDataSet.xsc">
+      <DependentUpon>BD_UsuarioDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BD_UsuarioDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BD_UsuarioDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BD_UsuarioDataSet.xss">
+      <DependentUpon>BD_UsuarioDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BD_UsuarioDataSet1.xsc">
+      <DependentUpon>BD_UsuarioDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="BD_UsuarioDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BD_UsuarioDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BD_UsuarioDataSet1.xss">
+      <DependentUpon>BD_UsuarioDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

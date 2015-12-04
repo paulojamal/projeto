@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.codigo = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.cliente = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,7 +40,13 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.prioridade = new System.Windows.Forms.ComboBox();
             this.tipo = new System.Windows.Forms.ComboBox();
+            this.cliente = new System.Windows.Forms.ComboBox();
+            this.bD_UsuarioDataSet = new SistemaDeLogin.BD_UsuarioDataSet();
+            this.tbClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tb_ClienteTableAdapter = new SistemaDeLogin.BD_UsuarioDataSetTableAdapters.tb_ClienteTableAdapter();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bD_UsuarioDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbClienteBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // codigo
@@ -55,13 +60,6 @@
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // cliente
-            // 
-            this.cliente.Location = new System.Drawing.Point(70, 39);
-            this.cliente.Name = "cliente";
-            this.cliente.Size = new System.Drawing.Size(100, 20);
-            this.cliente.TabIndex = 2;
             // 
             // label1
             // 
@@ -123,11 +121,11 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cliente);
             this.groupBox1.Controls.Add(this.prioridade);
             this.groupBox1.Controls.Add(this.tipo);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.codigo);
-            this.groupBox1.Controls.Add(this.cliente);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
@@ -167,6 +165,32 @@
             this.tipo.Size = new System.Drawing.Size(100, 21);
             this.tipo.TabIndex = 13;
             // 
+            // cliente
+            // 
+            this.cliente.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tbClienteBindingSource, "Name", true));
+            this.cliente.DataSource = this.tbClienteBindingSource;
+            this.cliente.DisplayMember = "Name";
+            this.cliente.FormattingEnabled = true;
+            this.cliente.Location = new System.Drawing.Point(70, 39);
+            this.cliente.Name = "cliente";
+            this.cliente.Size = new System.Drawing.Size(100, 21);
+            this.cliente.TabIndex = 15;
+            this.cliente.ValueMember = "Name";
+            // 
+            // bD_UsuarioDataSet
+            // 
+            this.bD_UsuarioDataSet.DataSetName = "BD_UsuarioDataSet";
+            this.bD_UsuarioDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tbClienteBindingSource
+            // 
+            this.tbClienteBindingSource.DataMember = "tb_Cliente";
+            this.tbClienteBindingSource.DataSource = this.bD_UsuarioDataSet;
+            // 
+            // tb_ClienteTableAdapter
+            // 
+            this.tb_ClienteTableAdapter.ClearBeforeFill = true;
+            // 
             // IncluirEquip
             // 
             this.AcceptButton = this.button1;
@@ -177,8 +201,11 @@
             this.Controls.Add(this.label5);
             this.Name = "IncluirEquip";
             this.Text = "IncluirEquip";
+            this.Load += new System.EventHandler(this.IncluirEquip_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bD_UsuarioDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbClienteBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,7 +215,6 @@
 
         private System.Windows.Forms.TextBox codigo;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.TextBox cliente;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -198,5 +224,9 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox tipo;
         private System.Windows.Forms.ComboBox prioridade;
+        private System.Windows.Forms.ComboBox cliente;
+        private BD_UsuarioDataSet bD_UsuarioDataSet;
+        private System.Windows.Forms.BindingSource tbClienteBindingSource;
+        private BD_UsuarioDataSetTableAdapters.tb_ClienteTableAdapter tb_ClienteTableAdapter;
     }
 }

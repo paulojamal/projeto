@@ -28,19 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pesquisaCod = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.newCliente = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.newTipo = new System.Windows.Forms.ComboBox();
             this.newPrioridade = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.newTipo = new System.Windows.Forms.ComboBox();
+            this.newCliente = new System.Windows.Forms.ComboBox();
+            this.bD_UsuarioDataSet1 = new SistemaDeLogin.BD_UsuarioDataSet1();
+            this.tbClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tb_ClienteTableAdapter = new SistemaDeLogin.BD_UsuarioDataSet1TableAdapters.tb_ClienteTableAdapter();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bD_UsuarioDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbClienteBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pesquisaCod
@@ -78,13 +84,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // newCliente
-            // 
-            this.newCliente.Location = new System.Drawing.Point(93, 39);
-            this.newCliente.Name = "newCliente";
-            this.newCliente.Size = new System.Drawing.Size(100, 20);
-            this.newCliente.TabIndex = 5;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -117,19 +116,33 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.newCliente);
             this.groupBox1.Controls.Add(this.newTipo);
             this.groupBox1.Controls.Add(this.newPrioridade);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.newCliente);
             this.groupBox1.Location = new System.Drawing.Point(9, 103);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 122);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados para alterar";
+            // 
+            // newTipo
+            // 
+            this.newTipo.FormattingEnabled = true;
+            this.newTipo.Items.AddRange(new object[] {
+            "",
+            "Computador",
+            "Tablet",
+            "Impressora",
+            "Componentes"});
+            this.newTipo.Location = new System.Drawing.Point(93, 65);
+            this.newTipo.Name = "newTipo";
+            this.newTipo.Size = new System.Drawing.Size(100, 21);
+            this.newTipo.TabIndex = 14;
             // 
             // newPrioridade
             // 
@@ -154,19 +167,31 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "* campos vazios não irão alterar o antigo valor";
             // 
-            // newTipo
+            // newCliente
             // 
-            this.newTipo.FormattingEnabled = true;
-            this.newTipo.Items.AddRange(new object[] {
-            "",
-            "Computador",
-            "Tablet",
-            "Impressora",
-            "Componentes"});
-            this.newTipo.Location = new System.Drawing.Point(93, 65);
-            this.newTipo.Name = "newTipo";
-            this.newTipo.Size = new System.Drawing.Size(100, 21);
-            this.newTipo.TabIndex = 14;
+            this.newCliente.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tbClienteBindingSource, "Name", true));
+            this.newCliente.DataSource = this.tbClienteBindingSource;
+            this.newCliente.DisplayMember = "Name";
+            this.newCliente.FormattingEnabled = true;
+            this.newCliente.Location = new System.Drawing.Point(93, 40);
+            this.newCliente.Name = "newCliente";
+            this.newCliente.Size = new System.Drawing.Size(100, 21);
+            this.newCliente.TabIndex = 16;
+            this.newCliente.ValueMember = "Name";
+            // 
+            // bD_UsuarioDataSet1
+            // 
+            this.bD_UsuarioDataSet1.DataSetName = "BD_UsuarioDataSet1";
+            this.bD_UsuarioDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tbClienteBindingSource
+            // 
+            this.tbClienteBindingSource.DataMember = "tb_Cliente";
+            this.tbClienteBindingSource.DataSource = this.bD_UsuarioDataSet1;
+            // 
+            // tb_ClienteTableAdapter
+            // 
+            this.tb_ClienteTableAdapter.ClearBeforeFill = true;
             // 
             // AlterarEquip
             // 
@@ -181,8 +206,11 @@
             this.Controls.Add(this.pesquisaCod);
             this.Name = "AlterarEquip";
             this.Text = "AlterarEquip";
+            this.Load += new System.EventHandler(this.AlterarEquip_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bD_UsuarioDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbClienteBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,7 +222,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox newCliente;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -202,5 +229,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox newPrioridade;
         private System.Windows.Forms.ComboBox newTipo;
+        private System.Windows.Forms.ComboBox newCliente;
+        private BD_UsuarioDataSet1 bD_UsuarioDataSet1;
+        private System.Windows.Forms.BindingSource tbClienteBindingSource;
+        private BD_UsuarioDataSet1TableAdapters.tb_ClienteTableAdapter tb_ClienteTableAdapter;
     }
 }
